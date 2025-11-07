@@ -1,4 +1,5 @@
-import { Button } from "@/components/ui/button";
+import { AnimatedButton } from "@/components/AnimatedButton";
+import { ProjectsSection } from "@/components/ProjectsSection";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { APP_TITLE, PROJECTS } from "../../../shared/const";
 import { ArrowRight, BookOpen, Briefcase, Cpu, ExternalLink, Lightbulb, PieChart, TrendingUp, Sparkles, Target } from "lucide-react";
@@ -122,18 +123,18 @@ export default function Home() {
               
               <h1 className="text-4xl md:text-6xl font-bold tracking-tight">
                 <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent animate-gradient">
-                  Creative Tech
+                  Keep Your Business
                 </span>
                 <br />
-                <span className="text-foreground">Built for Your Mission</span>
+                <span className="text-foreground">In Your Control</span>
               </h1>
               
               <p className="text-lg md:text-xl text-muted-foreground">
-                We design AI systems, data tools, and intelligent platforms for schools, startups, collectors, and organizations—helping you build technology that serves your unique goals.
+                AI is transforming business—but you don't have to lose control. We build custom systems, data tools, and intelligent platforms that <span className="text-foreground font-medium">amplify your expertise</span> without replacing it. Stay competitive, stay efficient, and stay in control.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 pt-4">
-                <Button 
+                <AnimatedButton 
                   size="lg" 
                   className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white shadow-lg shadow-cyan-500/50 group"
                   asChild
@@ -142,15 +143,15 @@ export default function Home() {
                     Schedule a Call
                     <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
                   </a>
-                </Button>
-                <Button 
+                </AnimatedButton>
+                <AnimatedButton 
                   size="lg" 
                   variant="outline" 
                   className="border-purple-500/50 hover:bg-purple-500/10"
                 >
                   Explore Our Work
                   <ExternalLink className="ml-2 h-4 w-4" />
-                </Button>
+                </AnimatedButton>
               </div>
             </div>
 
@@ -192,6 +193,9 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+        {/* Recent Projects Section */}
+        <ProjectsSection />
 
         {/* What We Build */}
         <section className="container mx-auto px-4 py-16 md:py-24">
@@ -363,12 +367,12 @@ export default function Home() {
                 <p className="text-muted-foreground">
                   Apex Commons is where we give back. Focused on civic tech, educational access, and creative empowerment, this branch supports schools, educators, and community orgs with free tools, curriculum resources, and workshops.
                 </p>
-                <Button variant="outline" size="sm" className="w-full" asChild>
+                <AnimatedButton variant="outline" size="sm" className="w-full" asChild>
                   <a href={PROJECTS.commons.url} target="_blank" rel="noopener noreferrer">
                     Visit Site
                     <ExternalLink className="ml-2 h-3 w-3" />
                   </a>
-                </Button>
+                </AnimatedButton>
               </CardContent>
             </Card>
 
@@ -383,12 +387,12 @@ export default function Home() {
                 <p className="text-muted-foreground">
                   Inspired by trading cards, strategy games, and real-world data, Apex Intelligence Society is a unique platform that blends research, curation, and gamified intelligence.
                 </p>
-                <Button variant="outline" size="sm" className="w-full" asChild>
+                <AnimatedButton variant="outline" size="sm" className="w-full" asChild>
                   <a href={PROJECTS.society.url} target="_blank" rel="noopener noreferrer">
                     Follow on X
                     <ExternalLink className="ml-2 h-3 w-3" />
                   </a>
-                </Button>
+                </AnimatedButton>
               </CardContent>
             </Card>
 
@@ -403,12 +407,12 @@ export default function Home() {
                 <p className="text-muted-foreground">
                   ApexIntelligence.io is our publishing layer—the digital library of Apex Omnis Studios. It's where we share original research, insights, tools, and thoughts on AI, data, society, and creativity.
                 </p>
-                <Button variant="outline" size="sm" className="w-full" asChild>
+                <AnimatedButton variant="outline" size="sm" className="w-full" asChild>
                   <a href={PROJECTS.intelligence.url} target="_blank" rel="noopener noreferrer">
                     Read More
                     <ExternalLink className="ml-2 h-3 w-3" />
                   </a>
-                </Button>
+                </AnimatedButton>
               </CardContent>
             </Card>
           </div>
@@ -426,7 +430,7 @@ export default function Home() {
                 Whether you're a collector, entrepreneur, or creative, we're here to help you design systems that turn your passion into a sustainable business.
               </p>
               <div className="flex justify-center">
-                <Button 
+                <AnimatedButton 
                   size="lg" 
                   className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white shadow-lg shadow-cyan-500/50 group"
                   asChild
@@ -435,7 +439,7 @@ export default function Home() {
                     Schedule a Strategy Call
                     <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
                   </a>
-                </Button>
+                </AnimatedButton>
               </div>
             </div>
           </div>
