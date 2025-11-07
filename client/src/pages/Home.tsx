@@ -190,7 +190,7 @@ export default function Home() {
             
             <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
               <p>
-                Apex Omnis Studios was born at the crossroads of passion, curiosity, and purpose. With a background in International Studies—including diplomacy, geography, and geospatial analysis—I started as a business teacher in a California high school, where I helped students explore careers, technology, and creativity. Before that, I worked in public service—supporting families through health and food assistance programs.
+                Apex Omnis Studios was born at the crossroads of passion, curiosity, and purpose. I started as a business teacher in a California high school, where I helped students explore careers, technology, and creativity. Before that, I worked in public service—supporting families through health and food assistance programs.
               </p>
               
               <p>
