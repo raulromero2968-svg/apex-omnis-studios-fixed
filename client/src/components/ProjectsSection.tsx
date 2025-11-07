@@ -125,19 +125,16 @@ export function ProjectsSection() {
                 </div>
 
                 {/* View Case Study Button */}
-                <AnimatedButton
-                  variant="outline"
-                  size="sm"
-                  className="w-full border-cyan-500/50 hover:bg-cyan-500/10"
-                  asChild
-                >
-                  <Link href={project.projectUrl}>
-                    <a>
-                      View Case Study
-                      <ArrowRight className="ml-2 h-3 w-3" />
-                    </a>
-                  </Link>
-                </AnimatedButton>
+                <Link href={project.projectUrl}>
+                  <AnimatedButton
+                    variant="outline"
+                    size="sm"
+                    className="w-full border-cyan-500/50 hover:bg-cyan-500/10"
+                  >
+                    View Case Study
+                    <ArrowRight className="ml-2 h-3 w-3" />
+                  </AnimatedButton>
+                </Link>
               </CardContent>
             </Card>
           </motion.div>

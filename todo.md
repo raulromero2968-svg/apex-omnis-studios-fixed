@@ -153,4 +153,5 @@
 - [x] Update homepage Recent Projects section to link to project pages
 - [x] Add routing for project pages in App.tsx
 - [x] Test all project page navigation
+- [x] Fix nested anchor tag error in ProjectsSection
 - [ ] Save checkpoint with project pages and UI fixes
