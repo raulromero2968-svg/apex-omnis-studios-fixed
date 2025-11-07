@@ -5,7 +5,7 @@ export default function DataDashboard() {
     <ProjectPage
       title="Data Analysis Dashboard"
       subtitle="Real-time analytics platform for collection management and market intelligence"
-      heroImage="/portfolio-data-dashboard.png"
+      heroImage="/data-dashboard-hero.png"
       problem="Collectors and small business owners struggle to make data-driven decisions without expensive enterprise tools. They need insights into inventory trends, market values, and performance metrics—but most solutions are either too complex or too expensive."
       solution="We built a custom analytics dashboard that transforms raw data into actionable insights. The platform integrates with existing databases, provides real-time visualizations, and generates automated reports. Users can track collection values, identify trends, and make informed decisions without technical expertise."
       techStack={[

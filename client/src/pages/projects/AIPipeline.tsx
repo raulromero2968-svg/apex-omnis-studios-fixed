@@ -5,7 +5,7 @@ export default function AIPipeline() {
     <ProjectPage
       title="AI Content Pipeline"
       subtitle="Intelligent automation system for content creation and curation"
-      heroImage="/ai-pipeline-workflow.png"
+      heroImage="/ai-pipeline-hero.png"
       problem="Content creators need to maintain consistent publishing schedules across multiple platforms while ensuring quality and brand consistency. Manual content creation, approval workflows, and multi-channel distribution consume significant time and resources."
       solution="We built an intelligent content generation and distribution system using GPT-4 for automated content creation, with approval workflows and multi-channel publishing. The system includes a content calendar, human-in-the-loop review, and automated distribution to websites, LinkedIn, Twitter, and custom channels."
       techStack={[
