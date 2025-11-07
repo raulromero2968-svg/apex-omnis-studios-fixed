@@ -1,10 +1,19 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { forwardRef, ComponentPropsWithoutRef } from "react";
+import { forwardRef, ComponentPropsWithoutRef, Children, cloneElement, isValidElement } from "react";
+import { ArrowRight } from "lucide-react";
 
 export const AnimatedButton = forwardRef<HTMLButtonElement, ComponentPropsWithoutRef<typeof Button>>(
   ({ children, className, variant, ...props }, ref) => {
     const isOutline = variant === "outline";
+    
+    // Check if children already contains an arrow icon
+    const hasArrow = typeof children === 'string' ? false : 
+      Children.toArray(children).some(child => {
+        if (!isValidElement(child)) return false;
+        const props = child.props as any;
+        return child.type === ArrowRight || props?.className?.includes('lucide-arrow-right');
+      });
     
     return (
       <motion.div
@@ -44,11 +53,28 @@ export const AnimatedButton = forwardRef<HTMLButtonElement, ComponentPropsWithou
         
         <Button 
           ref={ref} 
-          className={`relative ${className} transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/50`} 
+          className={`relative ${className} transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/50 group`} 
           variant={variant}
           {...props}
         >
-          {children}
+          {hasArrow ? (
+            // If button already has an arrow, just render children as-is
+            children
+          ) : (
+            // Otherwise, add animated arrow on hover
+            <span className="flex items-center gap-2">
+              {children}
+              {/* Animated arrow that appears on hover */}
+              <motion.span
+                className="inline-flex"
+                initial={{ x: -4, opacity: 0 }}
+                whileHover={{ x: 0, opacity: 1 }}
+                transition={{ duration: 0.2 }}
+              >
+                <ArrowRight className="w-4 h-4" />
+              </motion.span>
+            </span>
+          )}
         </Button>
       </motion.div>
     );

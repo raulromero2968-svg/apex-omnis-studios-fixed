@@ -228,34 +228,40 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
             <Card className="group hover:shadow-xl hover:shadow-cyan-500/10 transition-all duration-300 bg-card/50 backdrop-blur border-border/50 hover:border-cyan-500/50">
-              <CardHeader>
-                <AnimatedIconBox Icon={Briefcase} color="cyan" size="lg" />
-                <CardTitle className="text-xl mt-4">Collector Platforms</CardTitle>
-                <CardDescription>
-                  Build marketplaces, databases, and tools for your niche—whether it's Pokémon cards, vintage toys, or rare collectibles.
-                </CardDescription>
+              <CardHeader className="text-center space-y-4 py-8">
+                <div className="flex justify-center">
+                  <AnimatedIconBox Icon={Briefcase} color="cyan" size="lg" />
+                </div>
+                <CardTitle className="text-xl">Collector Platforms</CardTitle>
+                <p className="text-sm text-muted-foreground">
+                  Marketplaces, databases, and tools for niche collectors
+                </p>
               </CardHeader>
             </Card>
 
             <Card className="group hover:shadow-xl hover:shadow-purple-500/10 transition-all duration-300 bg-card/50 backdrop-blur border-border/50 hover:border-purple-500/50">
-              <CardHeader>
-                <AnimatedIconBox Icon={PieChart} color="magenta" size="lg" />
-                <CardTitle className="text-xl mt-4">Data Intelligence</CardTitle>
-                <CardDescription>
-                  Track market trends, analyze pricing data, and make smarter buying/selling decisions with custom dashboards.
-                </CardDescription>
+              <CardHeader className="text-center space-y-4 py-8">
+                <div className="flex justify-center">
+                  <AnimatedIconBox Icon={PieChart} color="purple" size="lg" />
+                </div>
+                <CardTitle className="text-xl">Data Intelligence</CardTitle>
+                <p className="text-sm text-muted-foreground">
+                  Market analysis and custom dashboards for smarter decisions
+                </p>
               </CardHeader>
             </Card>
 
-            <Card className="group hover:shadow-xl hover:shadow-blue-500/10 transition-all duration-300 bg-card/50 backdrop-blur border-border/50 hover:border-blue-500/50">
-              <CardHeader>
-                <AnimatedIconBox Icon={Lightbulb} color="blue" size="lg" />
-                <CardTitle className="text-xl mt-4">Strategy & Consulting</CardTitle>
-                <CardDescription>
-                  Need guidance turning your collection knowledge into a business? We help you design systems, automate workflows, and scale.
-                </CardDescription>
+            <Card className="group hover:shadow-xl hover:shadow-cyan-500/10 transition-all duration-300 bg-card/50 backdrop-blur border-border/50 hover:border-cyan-500/50">
+              <CardHeader className="text-center space-y-4 py-8">
+                <div className="flex justify-center">
+                  <AnimatedIconBox Icon={Lightbulb} color="cyan" size="lg" />
+                </div>
+                <CardTitle className="text-xl">Strategy & Consulting</CardTitle>
+                <p className="text-sm text-muted-foreground">
+                  Turn expertise into scalable systems and workflows
+                </p>
               </CardHeader>
             </Card>
           </div>
