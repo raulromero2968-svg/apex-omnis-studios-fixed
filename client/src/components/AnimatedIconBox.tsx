@@ -40,7 +40,7 @@ export function AnimatedIconBox({
       className={`${sizeClasses[size]} rounded-2xl ${colorClass} flex items-center justify-center shadow-lg`}
       whileHover={{ 
         scale: 1.1,
-        boxShadow: "0 10px 30px rgba(6, 182, 212, 0.4)"
+        boxShadow: "0 10px 30px rgba(0, 217, 255, 0.4)"
       }}
       transition={{ type: "spring", stiffness: 300, damping: 15 }}
     >

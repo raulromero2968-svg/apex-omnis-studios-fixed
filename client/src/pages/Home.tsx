@@ -48,7 +48,7 @@ export default function Home() {
 
         ctx.beginPath();
         ctx.arc(p.x, p.y, 2, 0, Math.PI * 2);
-        ctx.fillStyle = 'rgba(14, 184, 166, 0.6)';
+        ctx.fillStyle = 'rgba(0, 217, 255, 0.6)';
         ctx.fill();
 
         particles.forEach((p2, j) => {
@@ -61,7 +61,7 @@ export default function Home() {
             ctx.beginPath();
             ctx.moveTo(p.x, p.y);
             ctx.lineTo(p2.x, p2.y);
-            ctx.strokeStyle = `rgba(14, 184, 166, ${0.2 * (1 - dist / 120)})`;
+            ctx.strokeStyle = `rgba(0, 217, 255, ${0.2 * (1 - dist / 120)})`;
             ctx.lineWidth = 1;
             ctx.stroke();
           }
@@ -97,7 +97,7 @@ export default function Home() {
       {/* Gradient orbs */}
       <div className="fixed inset-0 pointer-events-none" style={{ zIndex: 0 }}>
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full blur-3xl animate-pulse" />
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
+        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-gradient-to-r from-purple-500/20 to-purple-600/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
       </div>
 
       {/* Content */}
@@ -165,7 +165,7 @@ export default function Home() {
             <div className="relative">
               {/* Floating decorative diamonds */}
               <div className="absolute -top-12 -right-12 w-24 h-24 bg-gradient-to-br from-cyan-500 to-purple-600 rotate-45 opacity-20 blur-sm animate-float" />
-              <div className="absolute top-1/2 -left-8 w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rotate-45 opacity-20 blur-sm animate-float" style={{ animationDelay: '1s' }} />
+              <div className="absolute top-1/2 -left-8 w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rotate-45 opacity-20 blur-sm animate-float" style={{ animationDelay: '1s' }} />
               <div className="absolute -bottom-8 right-1/4 w-20 h-20 bg-gradient-to-br from-blue-500 to-cyan-600 rotate-45 opacity-20 blur-sm animate-float" style={{ animationDelay: '2s' }} />
               <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-3xl blur-3xl" />
               
@@ -174,7 +174,7 @@ export default function Home() {
               
               {/* Diamond elements */}
               <div className="absolute top-10 right-10 w-12 h-12 rotate-45 bg-gradient-to-br from-cyan-400 to-purple-600 opacity-30 animate-pulse" />
-              <div className="absolute bottom-10 left-10 w-8 h-8 rotate-45 bg-gradient-to-br from-purple-400 to-pink-600 opacity-30 animate-pulse" style={{ animationDelay: '1s' }} />
+              <div className="absolute bottom-10 left-10 w-8 h-8 rotate-45 bg-gradient-to-br from-purple-400 to-purple-600 opacity-30 animate-pulse" style={{ animationDelay: '1s' }} />
             </div>
           </div>
         </section>

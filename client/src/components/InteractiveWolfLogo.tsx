@@ -14,9 +14,9 @@ export default function InteractiveWolfLogo() {
         className="w-full h-full object-contain"
         animate={{
           filter: [
-            "drop-shadow(0 0 20px rgba(6, 182, 212, 0.5))",
-            "drop-shadow(0 0 30px rgba(139, 92, 246, 0.5))",
-            "drop-shadow(0 0 20px rgba(6, 182, 212, 0.5))",
+            "drop-shadow(0 0 20px rgba(0, 217, 255, 0.5))",
+            "drop-shadow(0 0 30px rgba(123, 44, 191, 0.5))",
+            "drop-shadow(0 0 20px rgba(0, 217, 255, 0.5))",
           ],
         }}
         transition={{

@@ -18,8 +18,8 @@ export const AnimatedButton = forwardRef<HTMLButtonElement, ComponentPropsWithou
           className="absolute -inset-1 rounded-lg opacity-0 blur-lg"
           style={{
             background: isOutline 
-              ? "linear-gradient(135deg, #00f5ff 0%, #7b2cbf 50%, #ff006e 100%)"
-              : "linear-gradient(135deg, #00b4d8 0%, #0077b6 50%, #7b2cbf 100%)",
+              ? "linear-gradient(135deg, #00D9FF 0%, #7B2CBF 50%, #7B2CBF 100%)"
+              : "linear-gradient(135deg, #00D9FF 0%, #00D9FF 50%, #7B2CBF 100%)",
           }}
           whileHover={{ opacity: 0.75 }}
           transition={{ duration: 0.3 }}
@@ -29,7 +29,7 @@ export const AnimatedButton = forwardRef<HTMLButtonElement, ComponentPropsWithou
         <motion.div
           className="absolute inset-0 rounded-md opacity-0"
           style={{
-            background: "linear-gradient(90deg, transparent 0%, rgba(0, 245, 255, 0.4) 50%, transparent 100%)",
+            background: "linear-gradient(90deg, transparent 0%, rgba(0, 217, 255, 0.4) 50%, transparent 100%)",
             backgroundSize: "200% 100%",
           }}
           whileHover={{ 
