@@ -42,7 +42,7 @@ export function ProjectsSection() {
         title: "AI Content Pipeline",
         description: "Intelligent content generation and distribution system using GPT-4 for automated content creation, with approval workflows and multi-channel publishing.",
         category: "AI/ML",
-        screenshot: "/project-ai-pipeline-new.png",
+        screenshot: "/ai-pipeline-hero-flat.png",
         projectUrl: "/projects/ai-pipeline",
         techStack: ["GPT-4", "Make", "Notion"]
       }
