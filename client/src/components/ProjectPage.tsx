@@ -30,10 +30,10 @@ export function ProjectPage({
       {/* Back button */}
       <div className="container mx-auto px-4 py-8">
         <Link href="/">
-          <a className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 transition-colors">
+          <span className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 transition-colors cursor-pointer">
             <ArrowLeft className="w-4 h-4" />
             Back to Home
-          </a>
+          </span>
         </Link>
       </div>
 

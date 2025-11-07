@@ -167,4 +167,4 @@
 - [x] Shorten descriptions for cleaner look
 - [x] Test all button animations across the site
 - [x] Fix duplicate arrow issue in buttons
-- [ ] Save checkpoint with animated buttons and UI improvements
+- [x] Save checkpoint with animated buttons and UI improvements
