@@ -24,3 +24,14 @@
 - [ ] Target stressed/overwhelmed teachers who fear AI
 - [ ] Offer free consultation/case study opportunity
 - [ ] Position as "help a fellow teacher" approach
+
+## Visual Enhancements V2
+
+- [x] Fix button animations - make them more visible and holographic
+- [x] Add glow effects and shimmer to buttons on hover
+- [x] Add visual elements between text sections
+- [x] Include more images and graphics throughout
+- [x] Add decorative geometric elements
+- [x] Balance text-heavy sections with visuals
+- [x] Test all animations work properly
+- [ ] Save final checkpoint

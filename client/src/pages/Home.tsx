@@ -156,6 +156,10 @@ export default function Home() {
             </div>
 
             <div className="relative">
+              {/* Floating decorative diamonds */}
+              <div className="absolute -top-12 -right-12 w-24 h-24 bg-gradient-to-br from-cyan-500 to-purple-600 rotate-45 opacity-20 blur-sm animate-float" />
+              <div className="absolute top-1/2 -left-8 w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rotate-45 opacity-20 blur-sm animate-float" style={{ animationDelay: '1s' }} />
+              <div className="absolute -bottom-8 right-1/4 w-20 h-20 bg-gradient-to-br from-blue-500 to-cyan-600 rotate-45 opacity-20 blur-sm animate-float" style={{ animationDelay: '2s' }} />
               <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-3xl blur-3xl" />
               <img 
                 src="/apex-wolf-logo.png" 
@@ -211,8 +215,12 @@ export default function Home() {
           <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
             <Card className="group hover:shadow-xl hover:shadow-cyan-500/10 transition-all duration-300 bg-card/50 backdrop-blur border-border/50 hover:border-cyan-500/50">
               <CardHeader>
-                <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-cyan-500 to-blue-600 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                  <Cpu className="w-6 h-6 text-white" />
+                <div className="w-full h-48 mb-6 overflow-hidden rounded-lg">
+                  <img 
+                    src="/service-collector-platforms.png" 
+                    alt="Collector Platforms" 
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  />
                 </div>
                 <CardTitle className="text-xl">Collector Platforms</CardTitle>
                 <CardDescription>
@@ -223,8 +231,12 @@ export default function Home() {
 
             <Card className="group hover:shadow-xl hover:shadow-purple-500/10 transition-all duration-300 bg-card/50 backdrop-blur border-border/50 hover:border-purple-500/50">
               <CardHeader>
-                <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-purple-500 to-pink-600 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                  <PieChart className="w-6 h-6 text-white" />
+                <div className="w-full h-48 mb-6 overflow-hidden rounded-lg">
+                  <img 
+                    src="/service-data-intelligence.png" 
+                    alt="Data Intelligence" 
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  />
                 </div>
                 <CardTitle className="text-xl">Data Intelligence</CardTitle>
                 <CardDescription>
@@ -235,8 +247,12 @@ export default function Home() {
 
             <Card className="group hover:shadow-xl hover:shadow-blue-500/10 transition-all duration-300 bg-card/50 backdrop-blur border-border/50 hover:border-blue-500/50">
               <CardHeader>
-                <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-blue-500 to-cyan-600 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                  <Lightbulb className="w-6 h-6 text-white" />
+                <div className="w-full h-48 mb-6 overflow-hidden rounded-lg">
+                  <img 
+                    src="/service-strategy-consulting.png" 
+                    alt="Strategy & Consulting" 
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  />
                 </div>
                 <CardTitle className="text-xl">Strategy & Consulting</CardTitle>
                 <CardDescription>
