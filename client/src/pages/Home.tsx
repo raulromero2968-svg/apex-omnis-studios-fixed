@@ -7,10 +7,13 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { APP_TITLE, PROJECTS } from "../../../shared/const";
 import { ArrowRight, BookOpen, Briefcase, Cpu, ExternalLink, Lightbulb, PieChart, TrendingUp, Sparkles, Target } from "lucide-react";
 import { useEffect, useRef } from "react";
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 
 export default function Home() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
+  const { scrollY } = useScroll();
+  const heroY = useTransform(scrollY, [0, 500], [0, 150]);
+  const heroOpacity = useTransform(scrollY, [0, 300], [1, 0]);
 
   // Constellation background animation
   useEffect(() => {
@@ -128,7 +131,10 @@ export default function Home() {
         </header>
 
         {/* Hero Section */}
-        <section className="container mx-auto px-4 py-12 md:py-20">
+        <motion.section 
+          className="container mx-auto px-4 py-12 md:py-20"
+          style={{ y: heroY, opacity: heroOpacity }}
+        >
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-6 animate-fade-in">
               <div className="inline-block">
@@ -187,11 +193,17 @@ export default function Home() {
               <div className="absolute bottom-10 left-10 w-8 h-8 rotate-45 bg-gradient-to-br from-purple-400 to-purple-600 opacity-30 animate-pulse" style={{ animationDelay: '1s' }} />
             </div>
           </div>
-        </section>
+        </motion.section>
 
         {/* About Section */}
         <section id="about" className="container mx-auto px-4 py-16 md:py-24">
-          <div className="max-w-4xl mx-auto space-y-8">
+          <motion.div 
+            className="max-w-4xl mx-auto space-y-8"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true, margin: "-100px" }}
+          >
             <div className="text-center space-y-4">
               <h2 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-cyan-400 to-purple-600 bg-clip-text text-transparent">
                 About Apex Omnis Studios
@@ -211,7 +223,7 @@ export default function Home() {
                 Apex Omnis Studios is the result—a mission-driven studio focused on helping collectors and entrepreneurs build intelligent systems, creative tools, and platforms that turn passion into profit.
               </p>
             </div>
-          </div>
+          </motion.div>
         </section>
 
         {/* Recent Projects Section */}
@@ -229,16 +241,28 @@ export default function Home() {
               className="w-full h-16 object-cover opacity-80"
             />
           </div>
-          <div className="text-center space-y-4 mb-12">
+          <motion.div 
+            className="text-center space-y-4 mb-12"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true, margin: "-100px" }}
+          >
             <h2 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-cyan-400 to-purple-600 bg-clip-text text-transparent">
               What We Build
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               From idea to launch, we create the tools and platforms that help you monetize your expertise
             </p>
-          </div>
+          </motion.div>
 
-          <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+          <motion.div 
+            className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.6, staggerChildren: 0.1 }}
+            viewport={{ once: true, margin: "-100px" }}
+          >
             <Card className="group hover:shadow-xl hover:shadow-cyan-500/10 transition-all duration-300 bg-card/50 backdrop-blur border-border/50 hover:border-cyan-500/50">
               <CardHeader className="text-center space-y-4 py-8">
                 <div className="flex justify-center">
@@ -274,7 +298,7 @@ export default function Home() {
                 </p>
               </CardHeader>
             </Card>
-          </div>
+          </motion.div>
         </section>
 
         {/* Who We Serve Section */}
@@ -288,16 +312,28 @@ export default function Home() {
                 className="w-full h-16 object-cover opacity-80"
               />
             </div>
-            <div className="text-center space-y-4 mb-12">
+            <motion.div 
+              className="text-center space-y-4 mb-12"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              viewport={{ once: true, margin: "-100px" }}
+            >
               <h2 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-cyan-400 to-purple-600 bg-clip-text text-transparent">
                 Who We Serve
               </h2>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
                 From classrooms to startups, we build intelligent systems for diverse missions
               </p>
-            </div>
+            </motion.div>
 
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-4 max-w-4xl mx-auto">
+            <motion.div 
+              className="grid grid-cols-2 md:grid-cols-3 gap-4 max-w-4xl mx-auto"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true, margin: "-100px" }}
+            >
               <Card className="group hover:shadow-xl hover:shadow-cyan-500/10 transition-all duration-300 bg-card/50 backdrop-blur border-border/50">
                 <CardHeader>
                   <AnimatedIconBox Icon={BookOpen} color="cyan" />
@@ -369,7 +405,7 @@ export default function Home() {
                   </p>
                 </CardContent>
               </Card>
-            </div>
+            </motion.div>
           </div>
         </section>
 
@@ -383,13 +419,25 @@ export default function Home() {
               className="w-full h-16 object-cover opacity-80"
             />
           </div>
-          <div className="text-center space-y-4 mb-12">
+          <motion.div 
+            className="text-center space-y-4 mb-12"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true, margin: "-100px" }}
+          >
             <h2 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-cyan-400 to-purple-600 bg-clip-text text-transparent">
               The Apex Ecosystem
             </h2>
-          </div>
+          </motion.div>
 
-          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <motion.div 
+            className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true, margin: "-100px" }}
+          >
             <Card className="group hover:shadow-xl hover:shadow-cyan-500/10 transition-all duration-300 bg-card/50 backdrop-blur border-border/50">
               <CardHeader>
                 <img src="/apex-commons-card.png" alt="Apex Commons" className="w-full h-10 object-cover rounded-lg mb-4" />
@@ -452,7 +500,7 @@ export default function Home() {
                 </AnimatedButton>
               </CardContent>
             </Card>
-          </div>
+          </motion.div>
         </section>
 
         {/* CTA Section */}
