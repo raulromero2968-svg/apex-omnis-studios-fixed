@@ -25,7 +25,7 @@ export function ProjectsSection() {
         title: "Data Analysis Dashboard",
         description: "Real-time business intelligence dashboard with automated data collection, transformation, and visualization for executive decision-making.",
         category: "Data Analysis",
-        screenshot: "/portfolio-data-dashboard.png",
+        screenshot: "/project-dashboard.png",
         liveUrl: "https://www.apexomnis.io/demo/data-dashboard",
         techStack: ["Python", "Airtable", "Notion API"]
       },
@@ -33,14 +33,14 @@ export function ProjectsSection() {
         title: "Museum Tracker System",
         description: "Automated event tracking system for NYC museums that consolidates event data from multiple sources into a unified Notion workspace with filtered dashboards and automated reporting.",
         category: "Automation",
-        screenshot: "/portfolio-museum-tracker.png",
+        screenshot: "/project-museum-tracker.png",
         techStack: ["Zapier", "Notion", "API Integration"]
       },
       {
         title: "AI Content Pipeline",
         description: "Intelligent content generation and distribution system using GPT-4 for automated content creation, with approval workflows and multi-channel publishing.",
         category: "AI/ML",
-        screenshot: "/portfolio-ai-pipeline.png",
+        screenshot: "/project-ai-pipeline.png",
         techStack: ["GPT-4", "Make", "Notion"]
       }
     ];
