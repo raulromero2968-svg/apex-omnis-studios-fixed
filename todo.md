@@ -51,4 +51,30 @@
 - [x] Compress Who We Serve grid to smaller layout
 - [x] Fix tagline to include "Collectors, Educators, and Entrepreneurs"
 - [x] Test all navigation and animations
+- [x] Save final checkpoint
+
+## Fixes & Polish
+
+- [ ] Anchor constellation nodes to actual wolf image features (not floating awkwardly)
+- [ ] Replace emoji icons with holographic custom icons in node preview
+- [ ] Remove black box popup, make preview card more on-brand
+- [x] Update Data Dashboard project thumbnail with provided image
+- [x] Update Museum Tracker project thumbnail with provided image
+- [x] Update AI Content Pipeline project thumbnail with provided image
+- [ ] Verify Who We Serve icon animations are working properly
+- [ ] Create reusable AnimatedIcon component for easy reuse
+- [ ] Generate holographic banner for "What We Build" section header
+- [ ] Generate holographic banner for "Who We Serve" section header
+- [ ] Generate holographic banner for "Apex Ecosystem" section header
+- [ ] Test all fixes
+- [ ] Save final checkpoint
+
+## Navigation & Layout Fixes
+
+- [x] Remove constellation nodes from wolf logo (keep it clean)
+- [x] Create hamburger menu in top right corner for navigation
+- [x] Keep sticky nav banner that appears on scroll (working great!)
+- [x] Adjust section banner heights to medium size (not too thin, not too big)
+- [x] Replace final Who We Serve icon (Niche Communities) with AnimatedIconBox
+- [x] Test all navigation and layout changes
 - [ ] Save final checkpoint

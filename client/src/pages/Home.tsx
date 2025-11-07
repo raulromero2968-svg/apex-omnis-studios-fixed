@@ -2,6 +2,7 @@ import { AnimatedButton } from "@/components/AnimatedButton";
 import { ProjectsSection } from "@/components/ProjectsSection";
 import InteractiveWolfLogo from "@/components/InteractiveWolfLogo";
 import StickyNav from "@/components/StickyNav";
+import { AnimatedIconBox } from "@/components/AnimatedIconBox";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { APP_TITLE, PROJECTS } from "../../../shared/const";
 import { ArrowRight, BookOpen, Briefcase, Cpu, ExternalLink, Lightbulb, PieChart, TrendingUp, Sparkles, Target } from "lucide-react";
@@ -210,6 +211,14 @@ export default function Home() {
 
         {/* What We Build */}
         <section id="services" className="container mx-auto px-4 py-16 md:py-24">
+          {/* Section Banner */}
+          <div className="mb-8 rounded-xl overflow-hidden max-w-6xl mx-auto">
+            <img 
+              src="/banner-what-we-build.png" 
+              alt="What We Build" 
+              className="w-full h-24 object-cover opacity-80"
+            />
+          </div>
           <div className="text-center space-y-4 mb-12">
             <h2 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-cyan-400 to-purple-600 bg-clip-text text-transparent">
               What We Build
@@ -273,6 +282,14 @@ export default function Home() {
         {/* Who We Serve Section */}
         <section id="clients" className="container mx-auto px-4 py-16 md:py-24">
           <div className="max-w-5xl mx-auto">
+            {/* Section Banner */}
+            <div className="mb-8 rounded-xl overflow-hidden">
+              <img 
+                src="/banner-who-we-serve.png" 
+                alt="Who We Serve" 
+                className="w-full h-24 object-cover opacity-80"
+              />
+            </div>
             <div className="text-center space-y-4 mb-12">
               <h2 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-cyan-400 to-purple-600 bg-clip-text text-transparent">
                 Who We Serve
@@ -285,13 +302,7 @@ export default function Home() {
             <div className="grid grid-cols-2 md:grid-cols-3 gap-4 max-w-4xl mx-auto">
               <Card className="group hover:shadow-xl hover:shadow-cyan-500/10 transition-all duration-300 bg-card/50 backdrop-blur border-border/50">
                 <CardHeader>
-                  <motion.div 
-                    className="w-12 h-12 rounded-lg bg-gradient-to-br from-cyan-500 to-blue-600 flex items-center justify-center mb-3"
-                    whileHover={{ scale: 1.1, rotate: 5 }}
-                    transition={{ type: "spring", stiffness: 300 }}
-                  >
-                    <BookOpen className="w-6 h-6 text-white" />
-                  </motion.div>
+                  <AnimatedIconBox Icon={BookOpen} gradient="from-cyan-500 to-blue-600" rotateDirection="right" />
                   <CardTitle className="text-lg">Schools & Educators</CardTitle>
                 </CardHeader>
                 <CardContent>
@@ -303,13 +314,7 @@ export default function Home() {
 
               <Card className="group hover:shadow-xl hover:shadow-purple-500/10 transition-all duration-300 bg-card/50 backdrop-blur border-border/50">
                 <CardHeader>
-                  <motion.div 
-                    className="w-12 h-12 rounded-lg bg-gradient-to-br from-purple-500 to-pink-600 flex items-center justify-center mb-3"
-                    whileHover={{ scale: 1.1, rotate: -5 }}
-                    transition={{ type: "spring", stiffness: 300 }}
-                  >
-                    <Briefcase className="w-6 h-6 text-white" />
-                  </motion.div>
+                  <AnimatedIconBox Icon={Briefcase} gradient="from-purple-500 to-pink-600" rotateDirection="left" />
                   <CardTitle className="text-lg">Startups & Businesses</CardTitle>
                 </CardHeader>
                 <CardContent>
@@ -321,13 +326,7 @@ export default function Home() {
 
               <Card className="group hover:shadow-xl hover:shadow-blue-500/10 transition-all duration-300 bg-card/50 backdrop-blur border-border/50">
                 <CardHeader>
-                  <motion.div 
-                    className="w-12 h-12 rounded-lg bg-gradient-to-br from-blue-500 to-cyan-600 flex items-center justify-center mb-3"
-                    whileHover={{ scale: 1.1, rotate: 5 }}
-                    transition={{ type: "spring", stiffness: 300 }}
-                  >
-                    <TrendingUp className="w-6 h-6 text-white" />
-                  </motion.div>
+                  <AnimatedIconBox Icon={TrendingUp} gradient="from-blue-500 to-cyan-600" rotateDirection="right" />
                   <CardTitle className="text-lg">Collectors & Creators</CardTitle>
                 </CardHeader>
                 <CardContent>
@@ -339,13 +338,7 @@ export default function Home() {
 
               <Card className="group hover:shadow-xl hover:shadow-cyan-500/10 transition-all duration-300 bg-card/50 backdrop-blur border-border/50">
                 <CardHeader>
-                  <motion.div 
-                    className="w-12 h-12 rounded-lg bg-gradient-to-br from-cyan-500 to-blue-600 flex items-center justify-center mb-3"
-                    whileHover={{ scale: 1.1, rotate: -5 }}
-                    transition={{ type: "spring", stiffness: 300 }}
-                  >
-                    <Target className="w-6 h-6 text-white" />
-                  </motion.div>
+                  <AnimatedIconBox Icon={Target} gradient="from-cyan-500 to-blue-600" rotateDirection="left" />
                   <CardTitle className="text-lg">Nonprofits & Orgs</CardTitle>
                 </CardHeader>
                 <CardContent>
@@ -357,13 +350,7 @@ export default function Home() {
 
               <Card className="group hover:shadow-xl hover:shadow-purple-500/10 transition-all duration-300 bg-card/50 backdrop-blur border-border/50">
                 <CardHeader>
-                  <motion.div 
-                    className="w-12 h-12 rounded-lg bg-gradient-to-br from-purple-500 to-pink-600 flex items-center justify-center mb-3"
-                    whileHover={{ scale: 1.1, rotate: 5 }}
-                    transition={{ type: "spring", stiffness: 300 }}
-                  >
-                    <Sparkles className="w-6 h-6 text-white" />
-                  </motion.div>
+                  <AnimatedIconBox Icon={Sparkles} gradient="from-purple-500 to-pink-600" rotateDirection="right" />
                   <CardTitle className="text-lg">Entrepreneurs</CardTitle>
                 </CardHeader>
                 <CardContent>
@@ -375,13 +362,7 @@ export default function Home() {
 
               <Card className="group hover:shadow-xl hover:shadow-blue-500/10 transition-all duration-300 bg-card/50 backdrop-blur border-border/50">
                 <CardHeader>
-                  <motion.div 
-                    className="w-12 h-12 rounded-lg bg-gradient-to-br from-blue-500 to-cyan-600 flex items-center justify-center mb-3"
-                    whileHover={{ scale: 1.1, rotate: -5 }}
-                    transition={{ type: "spring", stiffness: 300 }}
-                  >
-                    <Lightbulb className="w-6 h-6 text-white" />
-                  </motion.div>
+                  <AnimatedIconBox Icon={Lightbulb} gradient="from-blue-500 to-cyan-600" rotateDirection="left" />
                   <CardTitle className="text-lg">Niche Communities</CardTitle>
                 </CardHeader>
                 <CardContent>
@@ -396,6 +377,14 @@ export default function Home() {
 
         {/* The Apex Ecosystem */}
         <section id="ecosystem" className="container mx-auto px-4 py-16 md:py-24">
+          {/* Section Banner */}
+          <div className="mb-8 rounded-xl overflow-hidden max-w-6xl mx-auto">
+            <img 
+              src="/banner-apex-ecosystem.png" 
+              alt="The Apex Ecosystem" 
+              className="w-full h-24 object-cover opacity-80"
+            />
+          </div>
           <div className="text-center space-y-4 mb-12">
             <h2 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-cyan-400 to-purple-600 bg-clip-text text-transparent">
               The Apex Ecosystem
