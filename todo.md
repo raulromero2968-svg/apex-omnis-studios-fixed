@@ -226,4 +226,36 @@
 - [x] Verify all 3 projects have hero + 2 gallery images
 - [x] Test all images display correctly
 - [x] Ensure consistent premium quality across all images
-- [ ] Save checkpoint with institutional-grade images
+- [x] Save checkpoint with institutional-grade images
+
+## Polish & Quality Improvements (User Feedback Round 2)
+
+### AI Pipeline Hero Image Issues
+- [x] Fix text readability on left sidebar above "Content Calendar"
+- [x] Check spelling and ensure all text is legible
+- [x] Verify "Content Generation" section text is clear
+
+### Gallery Image Quality
+- [x] Brighten multi-stage gallery image (AI Pipeline gallery 1) - currently too dark
+- [x] Ensure consistent brightness across all gallery images
+
+### Homepage Thumbnail Updates
+- [x] Update Museum Tracker thumbnail on homepage to use v2 image
+- [x] Verify all homepage project thumbnails use latest v2 versions
+
+### Museum Images Quality Enhancement
+- [ ] Visit Astro AI website (https://www.astroaiagency.com) for premium design inspiration
+- [ ] Analyze what makes their design feel premium and smooth
+- [ ] Consider regenerating museum images with higher-end aesthetic
+- [ ] Ensure museum images don't look "cheap" - match Astro AI quality level
+
+### Font Consistency Issues
+- [x] Audit Museum Tracker System page title font
+- [x] Standardize all project page title fonts
+- [x] Ensure consistent typography across entire website
+- [x] Document font system for future reference (Inter font applied globally)
+
+### Final Testing
+- [x] Test all fixes across all three project pages
+- [x] Verify smooth flow similar to Astro AI website
+- [ ] Save checkpoint with all improvements

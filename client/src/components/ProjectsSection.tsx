@@ -34,7 +34,7 @@ export function ProjectsSection() {
         title: "Museum Tracker System",
         description: "Automated event tracking system for NYC museums that consolidates event data from multiple sources into a unified Notion workspace with filtered dashboards and automated reporting.",
         category: "Automation",
-        screenshot: "/project-museum-tracker-v3.png",
+        screenshot: "/museum-tracker-hero-v2.png",
         projectUrl: "/projects/museum-tracker",
         techStack: ["Zapier", "Notion", "API Integration"]
       },
