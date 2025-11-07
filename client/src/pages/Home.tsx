@@ -231,7 +231,7 @@ export default function Home() {
           <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
             <Card className="group hover:shadow-xl hover:shadow-cyan-500/10 transition-all duration-300 bg-card/50 backdrop-blur border-border/50 hover:border-cyan-500/50">
               <CardHeader>
-                <AnimatedIconBox Icon={Briefcase} gradient="from-cyan-500 to-blue-600" size="lg" />
+                <AnimatedIconBox Icon={Briefcase} color="cyan" size="lg" />
                 <CardTitle className="text-xl mt-4">Collector Platforms</CardTitle>
                 <CardDescription>
                   Build marketplaces, databases, and tools for your niche—whether it's Pokémon cards, vintage toys, or rare collectibles.
@@ -241,7 +241,7 @@ export default function Home() {
 
             <Card className="group hover:shadow-xl hover:shadow-purple-500/10 transition-all duration-300 bg-card/50 backdrop-blur border-border/50 hover:border-purple-500/50">
               <CardHeader>
-                <AnimatedIconBox Icon={PieChart} gradient="from-purple-500 to-pink-600" size="lg" />
+                <AnimatedIconBox Icon={PieChart} color="magenta" size="lg" />
                 <CardTitle className="text-xl mt-4">Data Intelligence</CardTitle>
                 <CardDescription>
                   Track market trends, analyze pricing data, and make smarter buying/selling decisions with custom dashboards.
@@ -251,7 +251,7 @@ export default function Home() {
 
             <Card className="group hover:shadow-xl hover:shadow-blue-500/10 transition-all duration-300 bg-card/50 backdrop-blur border-border/50 hover:border-blue-500/50">
               <CardHeader>
-                <AnimatedIconBox Icon={Lightbulb} gradient="from-blue-500 to-cyan-600" size="lg" />
+                <AnimatedIconBox Icon={Lightbulb} color="blue" size="lg" />
                 <CardTitle className="text-xl mt-4">Strategy & Consulting</CardTitle>
                 <CardDescription>
                   Need guidance turning your collection knowledge into a business? We help you design systems, automate workflows, and scale.
@@ -284,7 +284,7 @@ export default function Home() {
             <div className="grid grid-cols-2 md:grid-cols-3 gap-4 max-w-4xl mx-auto">
               <Card className="group hover:shadow-xl hover:shadow-cyan-500/10 transition-all duration-300 bg-card/50 backdrop-blur border-border/50">
                 <CardHeader>
-                  <AnimatedIconBox Icon={BookOpen} gradient="from-cyan-500 to-blue-600" rotateDirection="right" />
+                  <AnimatedIconBox Icon={BookOpen} color="cyan" />
                   <CardTitle className="text-lg">Schools & Educators</CardTitle>
                 </CardHeader>
                 <CardContent>
@@ -296,7 +296,7 @@ export default function Home() {
 
               <Card className="group hover:shadow-xl hover:shadow-purple-500/10 transition-all duration-300 bg-card/50 backdrop-blur border-border/50">
                 <CardHeader>
-                  <AnimatedIconBox Icon={Briefcase} gradient="from-purple-500 to-pink-600" rotateDirection="left" />
+                  <AnimatedIconBox Icon={Briefcase} color="magenta" />
                   <CardTitle className="text-lg">Startups & Businesses</CardTitle>
                 </CardHeader>
                 <CardContent>
@@ -308,7 +308,7 @@ export default function Home() {
 
               <Card className="group hover:shadow-xl hover:shadow-blue-500/10 transition-all duration-300 bg-card/50 backdrop-blur border-border/50">
                 <CardHeader>
-                  <AnimatedIconBox Icon={TrendingUp} gradient="from-blue-500 to-cyan-600" rotateDirection="right" />
+                  <AnimatedIconBox Icon={TrendingUp} color="blue" />
                   <CardTitle className="text-lg">Collectors & Creators</CardTitle>
                 </CardHeader>
                 <CardContent>
@@ -320,7 +320,7 @@ export default function Home() {
 
               <Card className="group hover:shadow-xl hover:shadow-cyan-500/10 transition-all duration-300 bg-card/50 backdrop-blur border-border/50">
                 <CardHeader>
-                  <AnimatedIconBox Icon={Target} gradient="from-cyan-500 to-blue-600" rotateDirection="left" />
+                  <AnimatedIconBox Icon={Target} color="cyan" />
                   <CardTitle className="text-lg">Nonprofits & Orgs</CardTitle>
                 </CardHeader>
                 <CardContent>
@@ -332,7 +332,7 @@ export default function Home() {
 
               <Card className="group hover:shadow-xl hover:shadow-purple-500/10 transition-all duration-300 bg-card/50 backdrop-blur border-border/50">
                 <CardHeader>
-                  <AnimatedIconBox Icon={Sparkles} gradient="from-purple-500 to-pink-600" rotateDirection="right" />
+                  <AnimatedIconBox Icon={Sparkles} color="magenta" />
                   <CardTitle className="text-lg">Entrepreneurs</CardTitle>
                 </CardHeader>
                 <CardContent>
@@ -344,7 +344,7 @@ export default function Home() {
 
               <Card className="group hover:shadow-xl hover:shadow-blue-500/10 transition-all duration-300 bg-card/50 backdrop-blur border-border/50">
                 <CardHeader>
-                  <AnimatedIconBox Icon={Lightbulb} gradient="from-blue-500 to-cyan-600" rotateDirection="left" />
+                  <AnimatedIconBox Icon={Lightbulb} color="blue" />
                   <CardTitle className="text-lg">Niche Communities</CardTitle>
                 </CardHeader>
                 <CardContent>
@@ -376,7 +376,7 @@ export default function Home() {
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             <Card className="group hover:shadow-xl hover:shadow-cyan-500/10 transition-all duration-300 bg-card/50 backdrop-blur border-border/50">
               <CardHeader>
-                <img src="/apex-commons-card.png" alt="Apex Commons" className="w-full h-40 object-cover rounded-lg mb-4" />
+                <img src="/apex-commons-card.png" alt="Apex Commons" className="w-full h-20 object-cover rounded-lg mb-4" />
                 <CardTitle className="text-xl text-cyan-400">{PROJECTS.commons.name}</CardTitle>
                 <CardDescription className="text-sm text-muted-foreground">
                   {PROJECTS.commons.tagline}
@@ -397,7 +397,7 @@ export default function Home() {
 
             <Card className="group hover:shadow-xl hover:shadow-purple-500/10 transition-all duration-300 bg-card/50 backdrop-blur border-border/50">
               <CardHeader>
-                <img src="/apex-intelligence-society-card.png" alt="Apex Intelligence Society" className="w-full h-40 object-cover rounded-lg mb-4" />
+                <img src="/apex-intelligence-society-card.png" alt="Apex Intelligence Society" className="w-full h-20 object-cover rounded-lg mb-4" />
                 <CardTitle className="text-xl text-purple-400">{PROJECTS.society.name}</CardTitle>
                 <CardDescription className="text-sm text-muted-foreground">
                   {PROJECTS.society.tagline}
@@ -418,7 +418,7 @@ export default function Home() {
 
             <Card className="group hover:shadow-xl hover:shadow-blue-500/10 transition-all duration-300 bg-card/50 backdrop-blur border-border/50">
               <CardHeader>
-                <img src="/apex-intelligence-io-card.png" alt="ApexIntelligence.io" className="w-full h-40 object-cover rounded-lg mb-4" />
+                <img src="/apex-intelligence-io-card-v3.png" alt="ApexIntelligence.io" className="w-full h-20 object-cover rounded-lg mb-4" />
                 <CardTitle className="text-xl text-blue-400">{PROJECTS.intelligence.name}</CardTitle>
                 <CardDescription className="text-sm text-muted-foreground">
                   {PROJECTS.intelligence.tagline}

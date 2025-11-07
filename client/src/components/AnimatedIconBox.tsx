@@ -3,42 +3,48 @@ import { LucideIcon } from "lucide-react";
 
 interface AnimatedIconBoxProps {
   Icon: LucideIcon;
-  gradient?: string;
+  color?: string;
   size?: "sm" | "md" | "lg";
-  rotateDirection?: "left" | "right";
 }
 
 const sizeClasses = {
-  sm: "w-10 h-10",
-  md: "w-12 h-12",
+  sm: "w-12 h-12",
+  md: "w-14 h-14",
   lg: "w-16 h-16",
 };
 
 const iconSizes = {
-  sm: "w-5 h-5",
-  md: "w-6 h-6",
+  sm: "w-6 h-6",
+  md: "w-7 h-7",
   lg: "w-8 h-8",
+};
+
+// iOS-style solid colors for rounded square icons
+const colorClasses = {
+  cyan: "bg-gradient-to-br from-cyan-500 to-cyan-600",
+  blue: "bg-gradient-to-br from-blue-500 to-blue-600",
+  purple: "bg-gradient-to-br from-purple-500 to-purple-600",
+  magenta: "bg-gradient-to-br from-pink-500 to-pink-600",
+  teal: "bg-gradient-to-br from-teal-500 to-teal-600",
 };
 
 export function AnimatedIconBox({ 
   Icon, 
-  gradient = "from-cyan-500 to-blue-600",
-  size = "md",
-  rotateDirection = "right"
+  color = "cyan",
+  size = "md"
 }: AnimatedIconBoxProps) {
-  const rotateValue = rotateDirection === "right" ? 5 : -5;
+  const colorClass = colorClasses[color as keyof typeof colorClasses] || colorClasses.cyan;
   
   return (
     <motion.div 
-      className={`${sizeClasses[size]} rounded-lg bg-gradient-to-br ${gradient} flex items-center justify-center mb-3 shadow-lg`}
+      className={`${sizeClasses[size]} rounded-2xl ${colorClass} flex items-center justify-center shadow-lg`}
       whileHover={{ 
-        scale: 1.1, 
-        rotate: rotateValue,
-        boxShadow: "0 0 25px rgba(6, 182, 212, 0.6)"
+        scale: 1.1,
+        boxShadow: "0 10px 30px rgba(6, 182, 212, 0.4)"
       }}
       transition={{ type: "spring", stiffness: 300, damping: 15 }}
     >
-      <Icon className={`${iconSizes[size]} text-white`} />
+      <Icon className={`${iconSizes[size]} text-white`} strokeWidth={2.5} />
     </motion.div>
   );
 }

@@ -93,4 +93,14 @@
 - [x] Implement holographic/cyberpunk button animations with visible glow
 - [x] Add shimmer effects to buttons on hover
 - [x] Test all visual improvements
+- [x] Save final checkpoint
+
+## Final Polish V3
+
+- [x] Reduce Apex Ecosystem card image heights to half size (h-40 → h-20)
+- [x] Regenerate ApexIntelligence.io image with cyan-dominant, subtle magenta accents
+- [x] Regenerate Museum Tracker image with cyan-dominant, subtle magenta accents
+- [x] Replace Who We Serve icons with iOS-style rounded square icons
+- [x] Replace What We Build icons with iOS-style rounded square icons
+- [x] Test all visual changes
 - [ ] Save final checkpoint
