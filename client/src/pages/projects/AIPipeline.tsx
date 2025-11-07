@@ -30,9 +30,9 @@ export default function AIPipeline() {
           caption: "Multi-stage content workflow from research to publishing with AI-powered automation",
         },
         {
-          src: "/ai-pipeline-gallery-2-flat.png",
-          alt: "Content Publishing Dashboard",
-          caption: "Content calendar and scheduling interface with multi-channel distribution controls",
+          src: "/ai-pipeline-gallery-2-v2.png",
+          alt: "System Architecture with Multi-Channel Publishing",
+          caption: "AI content automation architecture with LinkedIn, Twitter, Instagram, and Facebook integration",
         },
       ]}
     />

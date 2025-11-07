@@ -114,6 +114,16 @@ export default function Home() {
                 <p className="text-sm text-muted-foreground">Collectors, Educators, and Entrepreneurs</p>
               </div>
             </div>
+            
+            {/* Desktop Navigation Links */}
+            <nav className="hidden lg:flex items-center gap-6">
+              <a href="#about" className="text-sm font-medium text-muted-foreground hover:text-cyan-400 transition-colors">About</a>
+              <a href="#projects" className="text-sm font-medium text-muted-foreground hover:text-cyan-400 transition-colors">Projects</a>
+              <a href="#services" className="text-sm font-medium text-muted-foreground hover:text-cyan-400 transition-colors">Services</a>
+              <a href="#clients" className="text-sm font-medium text-muted-foreground hover:text-cyan-400 transition-colors">Clients</a>
+              <a href="#ecosystem" className="text-sm font-medium text-muted-foreground hover:text-cyan-400 transition-colors">Ecosystem</a>
+              <a href="#cta" className="text-sm font-medium text-muted-foreground hover:text-cyan-400 transition-colors">Contact</a>
+            </nav>
           </div>
         </header>
 
@@ -500,7 +510,7 @@ export default function Home() {
               <h4 className="font-semibold mb-4 text-foreground">Connect</h4>
               <ul className="space-y-2 text-sm text-muted-foreground">
                 <li><a href="mailto:contact@apexomnis.io" className="hover:text-cyan-400 transition-colors">contact@apexomnis.io</a></li>
-                <li><a href="#" className="hover:text-cyan-400 transition-colors">Follow on X</a></li>
+                <li><a href="https://twitter.com/TCGAISociety" target="_blank" rel="noopener noreferrer" className="hover:text-cyan-400 transition-colors">Follow on X (@TCGAISociety)</a></li>
               </ul>
             </div>
           </div>

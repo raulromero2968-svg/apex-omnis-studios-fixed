@@ -1,6 +1,7 @@
 import { ArrowLeft, ExternalLink } from "lucide-react";
 import { Link } from "wouter";
 import { AnimatedButton } from "./AnimatedButton";
+import { useEffect } from "react";
 
 interface ProjectPageProps {
   title: string;
@@ -25,6 +26,11 @@ export function ProjectPage({
   gallery,
   liveDemo,
 }: ProjectPageProps) {
+  // Scroll to top when component mounts
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'instant' });
+  }, []);
+
   return (
     <div className="min-h-screen bg-background text-foreground">
       {/* Back button */}

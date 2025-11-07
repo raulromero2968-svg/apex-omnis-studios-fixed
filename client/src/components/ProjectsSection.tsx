@@ -26,7 +26,7 @@ export function ProjectsSection() {
         title: "Data Analysis Dashboard",
         description: "Real-time business intelligence dashboard with automated data collection, transformation, and visualization for executive decision-making.",
         category: "Data Analysis",
-        screenshot: "/project-dashboard.png",
+        screenshot: "/data-dashboard-hero-v4.png",
         projectUrl: "/projects/data-dashboard",
         techStack: ["Python", "Airtable", "Notion API"]
       },

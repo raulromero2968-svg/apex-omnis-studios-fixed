@@ -288,4 +288,25 @@
 - [x] Update all project page components with new flat-style image paths
 - [x] Test all images display correctly
 - [x] Ensure consistent flat aesthetic across all projects
-- [ ] Save checkpoint with professional flat diagram-style images
+- [x] Save checkpoint with professional flat diagram-style images
+
+## Urgent Fixes (Before Sleep)
+
+### Navigation Issues
+- [x] Fix global navigation menu not showing properly on homepage
+- [x] Ensure navigation is visible and functional on all pages
+
+### Social Media Links
+- [x] Update Twitter link from @apexintelligence to @TCGAISociety
+
+### Page Scroll Issues
+- [x] Fix all project pages to start at top of page (not middle/bottom)
+- [ ] Test Museum Tracker, Data Dashboard, AI Pipeline pages
+
+### Image Fixes
+- [x] Regenerate Data Dashboard hero image - remove card images, make generic collectibles only
+- [x] Add social media logos (LinkedIn, Twitter, Instagram, Facebook) to AI Pipeline images for legitimacy
+
+### Testing
+- [x] Test all fixes work correctly
+- [ ] Save final checkpoint
