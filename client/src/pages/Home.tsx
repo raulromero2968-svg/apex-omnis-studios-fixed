@@ -216,7 +216,7 @@ export default function Home() {
             <img 
               src="/banner-what-we-build.png" 
               alt="What We Build" 
-              className="w-full h-24 object-cover opacity-80"
+              className="w-full h-16 object-cover opacity-80"
             />
           </div>
           <div className="text-center space-y-4 mb-12">
@@ -231,14 +231,8 @@ export default function Home() {
           <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
             <Card className="group hover:shadow-xl hover:shadow-cyan-500/10 transition-all duration-300 bg-card/50 backdrop-blur border-border/50 hover:border-cyan-500/50">
               <CardHeader>
-                <div className="w-full h-48 mb-6 overflow-hidden rounded-lg">
-                  <img 
-                    src="/service-collector-platforms.png" 
-                    alt="Collector Platforms" 
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                  />
-                </div>
-                <CardTitle className="text-xl">Collector Platforms</CardTitle>
+                <AnimatedIconBox Icon={Briefcase} gradient="from-cyan-500 to-blue-600" size="lg" />
+                <CardTitle className="text-xl mt-4">Collector Platforms</CardTitle>
                 <CardDescription>
                   Build marketplaces, databases, and tools for your niche—whether it's Pokémon cards, vintage toys, or rare collectibles.
                 </CardDescription>
@@ -247,14 +241,8 @@ export default function Home() {
 
             <Card className="group hover:shadow-xl hover:shadow-purple-500/10 transition-all duration-300 bg-card/50 backdrop-blur border-border/50 hover:border-purple-500/50">
               <CardHeader>
-                <div className="w-full h-48 mb-6 overflow-hidden rounded-lg">
-                  <img 
-                    src="/service-data-intelligence.png" 
-                    alt="Data Intelligence" 
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                  />
-                </div>
-                <CardTitle className="text-xl">Data Intelligence</CardTitle>
+                <AnimatedIconBox Icon={PieChart} gradient="from-purple-500 to-pink-600" size="lg" />
+                <CardTitle className="text-xl mt-4">Data Intelligence</CardTitle>
                 <CardDescription>
                   Track market trends, analyze pricing data, and make smarter buying/selling decisions with custom dashboards.
                 </CardDescription>
@@ -263,14 +251,8 @@ export default function Home() {
 
             <Card className="group hover:shadow-xl hover:shadow-blue-500/10 transition-all duration-300 bg-card/50 backdrop-blur border-border/50 hover:border-blue-500/50">
               <CardHeader>
-                <div className="w-full h-48 mb-6 overflow-hidden rounded-lg">
-                  <img 
-                    src="/service-strategy-consulting.png" 
-                    alt="Strategy & Consulting" 
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                  />
-                </div>
-                <CardTitle className="text-xl">Strategy & Consulting</CardTitle>
+                <AnimatedIconBox Icon={Lightbulb} gradient="from-blue-500 to-cyan-600" size="lg" />
+                <CardTitle className="text-xl mt-4">Strategy & Consulting</CardTitle>
                 <CardDescription>
                   Need guidance turning your collection knowledge into a business? We help you design systems, automate workflows, and scale.
                 </CardDescription>
@@ -287,7 +269,7 @@ export default function Home() {
               <img 
                 src="/banner-who-we-serve.png" 
                 alt="Who We Serve" 
-                className="w-full h-24 object-cover opacity-80"
+                className="w-full h-16 object-cover opacity-80"
               />
             </div>
             <div className="text-center space-y-4 mb-12">
@@ -382,7 +364,7 @@ export default function Home() {
             <img 
               src="/banner-apex-ecosystem.png" 
               alt="The Apex Ecosystem" 
-              className="w-full h-24 object-cover opacity-80"
+              className="w-full h-16 object-cover opacity-80"
             />
           </div>
           <div className="text-center space-y-4 mb-12">
@@ -394,6 +376,7 @@ export default function Home() {
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             <Card className="group hover:shadow-xl hover:shadow-cyan-500/10 transition-all duration-300 bg-card/50 backdrop-blur border-border/50">
               <CardHeader>
+                <img src="/apex-commons-card.png" alt="Apex Commons" className="w-full h-40 object-cover rounded-lg mb-4" />
                 <CardTitle className="text-xl text-cyan-400">{PROJECTS.commons.name}</CardTitle>
                 <CardDescription className="text-sm text-muted-foreground">
                   {PROJECTS.commons.tagline}
@@ -414,6 +397,7 @@ export default function Home() {
 
             <Card className="group hover:shadow-xl hover:shadow-purple-500/10 transition-all duration-300 bg-card/50 backdrop-blur border-border/50">
               <CardHeader>
+                <img src="/apex-intelligence-society-card.png" alt="Apex Intelligence Society" className="w-full h-40 object-cover rounded-lg mb-4" />
                 <CardTitle className="text-xl text-purple-400">{PROJECTS.society.name}</CardTitle>
                 <CardDescription className="text-sm text-muted-foreground">
                   {PROJECTS.society.tagline}
@@ -434,6 +418,7 @@ export default function Home() {
 
             <Card className="group hover:shadow-xl hover:shadow-blue-500/10 transition-all duration-300 bg-card/50 backdrop-blur border-border/50">
               <CardHeader>
+                <img src="/apex-intelligence-io-card.png" alt="ApexIntelligence.io" className="w-full h-40 object-cover rounded-lg mb-4" />
                 <CardTitle className="text-xl text-blue-400">{PROJECTS.intelligence.name}</CardTitle>
                 <CardDescription className="text-sm text-muted-foreground">
                   {PROJECTS.intelligence.tagline}

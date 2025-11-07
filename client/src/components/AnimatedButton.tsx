@@ -13,21 +13,38 @@ export const AnimatedButton = forwardRef<HTMLButtonElement, ComponentPropsWithou
         whileTap={{ scale: 0.95 }}
         transition={{ type: "spring", stiffness: 400, damping: 17 }}
       >
-        {/* Holographic glow effect on hover */}
+        {/* Outer holographic glow effect */}
         <motion.div
-          className="absolute inset-0 rounded-md opacity-0 blur-xl"
+          className="absolute -inset-1 rounded-lg opacity-0 blur-lg"
           style={{
             background: isOutline 
-              ? "linear-gradient(45deg, rgba(6, 182, 212, 0.6), rgba(168, 85, 247, 0.6))"
-              : "linear-gradient(45deg, rgba(6, 182, 212, 0.8), rgba(59, 130, 246, 0.8))",
+              ? "linear-gradient(135deg, #00f5ff 0%, #7b2cbf 50%, #ff006e 100%)"
+              : "linear-gradient(135deg, #00b4d8 0%, #0077b6 50%, #7b2cbf 100%)",
           }}
-          whileHover={{ opacity: 1 }}
+          whileHover={{ opacity: 0.75 }}
           transition={{ duration: 0.3 }}
+        />
+        
+        {/* Inner shimmer effect */}
+        <motion.div
+          className="absolute inset-0 rounded-md opacity-0"
+          style={{
+            background: "linear-gradient(90deg, transparent 0%, rgba(0, 245, 255, 0.4) 50%, transparent 100%)",
+            backgroundSize: "200% 100%",
+          }}
+          whileHover={{ 
+            opacity: 1,
+            backgroundPosition: ["0% 0%", "200% 0%"],
+          }}
+          transition={{ 
+            opacity: { duration: 0.2 },
+            backgroundPosition: { duration: 1.5, repeat: Infinity, ease: "linear" }
+          }}
         />
         
         <Button 
           ref={ref} 
-          className={`relative ${className}`} 
+          className={`relative ${className} transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/50`} 
           variant={variant}
           {...props}
         >

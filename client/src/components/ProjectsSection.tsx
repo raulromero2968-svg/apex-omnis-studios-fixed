@@ -33,14 +33,14 @@ export function ProjectsSection() {
         title: "Museum Tracker System",
         description: "Automated event tracking system for NYC museums that consolidates event data from multiple sources into a unified Notion workspace with filtered dashboards and automated reporting.",
         category: "Automation",
-        screenshot: "/project-museum-tracker.png",
+        screenshot: "/project-museum-tracker-new.png",
         techStack: ["Zapier", "Notion", "API Integration"]
       },
       {
         title: "AI Content Pipeline",
         description: "Intelligent content generation and distribution system using GPT-4 for automated content creation, with approval workflows and multi-channel publishing.",
         category: "AI/ML",
-        screenshot: "/project-ai-pipeline.png",
+        screenshot: "/project-ai-pipeline-new.png",
         techStack: ["GPT-4", "Make", "Notion"]
       }
     ];
