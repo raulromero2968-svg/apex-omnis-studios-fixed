@@ -1,15 +1,16 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { AnimatedButton } from "@/components/AnimatedButton";
-import { ExternalLink } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
+import { Link } from "wouter";
 
 interface Project {
   title: string;
   description: string;
   category: string;
   screenshot: string;
-  liveUrl?: string;
+  projectUrl: string;
   techStack: string[];
 }
 
@@ -26,7 +27,7 @@ export function ProjectsSection() {
         description: "Real-time business intelligence dashboard with automated data collection, transformation, and visualization for executive decision-making.",
         category: "Data Analysis",
         screenshot: "/project-dashboard.png",
-        liveUrl: "https://www.apexomnis.io/demo/data-dashboard",
+        projectUrl: "/projects/data-dashboard",
         techStack: ["Python", "Airtable", "Notion API"]
       },
       {
@@ -34,6 +35,7 @@ export function ProjectsSection() {
         description: "Automated event tracking system for NYC museums that consolidates event data from multiple sources into a unified Notion workspace with filtered dashboards and automated reporting.",
         category: "Automation",
         screenshot: "/project-museum-tracker-v3.png",
+        projectUrl: "/projects/museum-tracker",
         techStack: ["Zapier", "Notion", "API Integration"]
       },
       {
@@ -41,6 +43,7 @@ export function ProjectsSection() {
         description: "Intelligent content generation and distribution system using GPT-4 for automated content creation, with approval workflows and multi-channel publishing.",
         category: "AI/ML",
         screenshot: "/project-ai-pipeline-new.png",
+        projectUrl: "/projects/ai-pipeline",
         techStack: ["GPT-4", "Make", "Notion"]
       }
     ];
@@ -121,20 +124,20 @@ export function ProjectsSection() {
                   ))}
                 </div>
 
-                {/* View Demo Button */}
-                {project.liveUrl && (
-                  <AnimatedButton
-                    variant="outline"
-                    size="sm"
-                    className="w-full border-cyan-500/50 hover:bg-cyan-500/10"
-                    asChild
-                  >
-                    <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
-                      View Demo
-                      <ExternalLink className="ml-2 h-3 w-3" />
+                {/* View Case Study Button */}
+                <AnimatedButton
+                  variant="outline"
+                  size="sm"
+                  className="w-full border-cyan-500/50 hover:bg-cyan-500/10"
+                  asChild
+                >
+                  <Link href={project.projectUrl}>
+                    <a>
+                      View Case Study
+                      <ArrowRight className="ml-2 h-3 w-3" />
                     </a>
-                  </AnimatedButton>
-                )}
+                  </Link>
+                </AnimatedButton>
               </CardContent>
             </Card>
           </motion.div>

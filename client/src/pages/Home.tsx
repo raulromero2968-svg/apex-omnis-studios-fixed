@@ -296,7 +296,7 @@ export default function Home() {
 
               <Card className="group hover:shadow-xl hover:shadow-purple-500/10 transition-all duration-300 bg-card/50 backdrop-blur border-border/50">
                 <CardHeader>
-                  <AnimatedIconBox Icon={Briefcase} color="magenta" />
+                  <AnimatedIconBox Icon={Briefcase} color="purple" />
                   <CardTitle className="text-lg">Startups & Businesses</CardTitle>
                 </CardHeader>
                 <CardContent>
@@ -308,7 +308,7 @@ export default function Home() {
 
               <Card className="group hover:shadow-xl hover:shadow-blue-500/10 transition-all duration-300 bg-card/50 backdrop-blur border-border/50">
                 <CardHeader>
-                  <AnimatedIconBox Icon={TrendingUp} color="blue" />
+                  <AnimatedIconBox Icon={TrendingUp} color="cyan" />
                   <CardTitle className="text-lg">Collectors & Creators</CardTitle>
                 </CardHeader>
                 <CardContent>
@@ -332,7 +332,7 @@ export default function Home() {
 
               <Card className="group hover:shadow-xl hover:shadow-purple-500/10 transition-all duration-300 bg-card/50 backdrop-blur border-border/50">
                 <CardHeader>
-                  <AnimatedIconBox Icon={Sparkles} color="magenta" />
+                  <AnimatedIconBox Icon={Sparkles} color="purple" />
                   <CardTitle className="text-lg">Entrepreneurs</CardTitle>
                 </CardHeader>
                 <CardContent>
@@ -344,7 +344,7 @@ export default function Home() {
 
               <Card className="group hover:shadow-xl hover:shadow-blue-500/10 transition-all duration-300 bg-card/50 backdrop-blur border-border/50">
                 <CardHeader>
-                  <AnimatedIconBox Icon={Lightbulb} color="blue" />
+                  <AnimatedIconBox Icon={Lightbulb} color="cyan" />
                   <CardTitle className="text-lg">Niche Communities</CardTitle>
                 </CardHeader>
                 <CardContent>
@@ -376,7 +376,7 @@ export default function Home() {
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             <Card className="group hover:shadow-xl hover:shadow-cyan-500/10 transition-all duration-300 bg-card/50 backdrop-blur border-border/50">
               <CardHeader>
-                <img src="/apex-commons-card.png" alt="Apex Commons" className="w-full h-20 object-cover rounded-lg mb-4" />
+                <img src="/apex-commons-card.png" alt="Apex Commons" className="w-full h-10 object-cover rounded-lg mb-4" />
                 <CardTitle className="text-xl text-cyan-400">{PROJECTS.commons.name}</CardTitle>
                 <CardDescription className="text-sm text-muted-foreground">
                   {PROJECTS.commons.tagline}
@@ -397,7 +397,7 @@ export default function Home() {
 
             <Card className="group hover:shadow-xl hover:shadow-purple-500/10 transition-all duration-300 bg-card/50 backdrop-blur border-border/50">
               <CardHeader>
-                <img src="/apex-intelligence-society-card.png" alt="Apex Intelligence Society" className="w-full h-20 object-cover rounded-lg mb-4" />
+                <img src="/apex-intelligence-society-card.png" alt="Apex Intelligence Society" className="w-full h-10 object-cover rounded-lg mb-4" />
                 <CardTitle className="text-xl text-purple-400">{PROJECTS.society.name}</CardTitle>
                 <CardDescription className="text-sm text-muted-foreground">
                   {PROJECTS.society.tagline}
@@ -418,7 +418,7 @@ export default function Home() {
 
             <Card className="group hover:shadow-xl hover:shadow-blue-500/10 transition-all duration-300 bg-card/50 backdrop-blur border-border/50">
               <CardHeader>
-                <img src="/apex-intelligence-io-card-v3.png" alt="ApexIntelligence.io" className="w-full h-20 object-cover rounded-lg mb-4" />
+                <img src="/apex-intelligence-io-card-v3.png" alt="ApexIntelligence.io" className="w-full h-10 object-cover rounded-lg mb-4" />
                 <CardTitle className="text-xl text-blue-400">{PROJECTS.intelligence.name}</CardTitle>
                 <CardDescription className="text-sm text-muted-foreground">
                   {PROJECTS.intelligence.tagline}

@@ -5,11 +5,17 @@ import { Route, Switch } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import Home from "./pages/Home";
+import DataDashboard from "./pages/projects/DataDashboard";
+import MuseumTracker from "./pages/projects/MuseumTracker";
+import AIPipeline from "./pages/projects/AIPipeline";
 
 function Router() {
   return (
     <Switch>
       <Route path={"/"} component={Home} />
+      <Route path={"/projects/data-dashboard"} component={DataDashboard} />
+      <Route path={"/projects/museum-tracker"} component={MuseumTracker} />
+      <Route path={"/projects/ai-pipeline"} component={AIPipeline} />
       <Route path={"/404"} component={NotFound} />
       {/* Final fallback route */}
       <Route component={NotFound} />
