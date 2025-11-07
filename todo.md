@@ -178,4 +178,15 @@
 - [x] Update AI Pipeline gallery with actual workflow screenshots
 - [x] Ensure all gallery images match their captions
 - [x] Test all project pages to verify images display correctly
-- [ ] Save checkpoint with fixed project page images
+- [x] Save checkpoint with fixed project page images
+
+## Notion Database Integration for Project Images
+
+- [x] Copy new reference images to public folder
+- [x] Query Notion Portfolio Projects database structure
+- [x] Get database ID for Portfolio Projects (296d5b7b-f2b0-8074-a3fecabb6a9dbf51)
+- [x] Fetch project entries from Notion (Museum Tracker, AI Pipeline, Data Dashboard)
+- [x] Extract screenshot URLs from Notion database (AWS S3 URLs with expiration)
+- [x] Update project pages with reference images matching Notion database content
+- [x] Test dynamic image loading from Notion
+- [ ] Save checkpoint with updated project page images

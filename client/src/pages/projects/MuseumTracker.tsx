@@ -25,14 +25,14 @@ export default function MuseumTracker() {
       ]}
       gallery={[
         {
-          src: "/museum-tracker-interface.png",
-          alt: "Event Dashboard",
-          caption: "Unified Notion workspace with event stats and calendar",
+          src: "/museum-tracker-diagram.png",
+          alt: "Automation Architecture",
+          caption: "Zapier workflow architecture connecting museum websites to Notion database",
         },
         {
-          src: "/museum-tracker-interface.png",
-          alt: "Automation Workflow",
-          caption: "Zapier workflow for automated event data collection",
+          src: "/museum-tracker-ui.png",
+          alt: "Event Dashboard",
+          caption: "Museum event tracking dashboard with filtered views and automation status",
         },
       ]}
     />

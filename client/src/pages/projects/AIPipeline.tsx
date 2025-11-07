@@ -25,14 +25,9 @@ export default function AIPipeline() {
       ]}
       gallery={[
         {
-          src: "/ai-pipeline-workflow.png",
-          alt: "Content Workflow",
-          caption: "Automated content creation and approval interface",
-        },
-        {
-          src: "/ai-pipeline-workflow.png",
-          alt: "Publishing System",
-          caption: "Multi-channel distribution with human review",
+          src: "/ai-pipeline-diagram.png",
+          alt: "AI Content Automation Pipeline",
+          caption: "End-to-end content automation pipeline with GPT-4, approval system, and multi-channel publishing",
         },
       ]}
     />

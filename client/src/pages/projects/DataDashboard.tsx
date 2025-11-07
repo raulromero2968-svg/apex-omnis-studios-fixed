@@ -25,14 +25,14 @@ export default function DataDashboard() {
       ]}
       gallery={[
         {
-          src: "/portfolio-data-dashboard.png",
-          alt: "Dashboard Overview",
-          caption: "Main analytics dashboard with key metrics",
+          src: "/data-dashboard-architecture.png",
+          alt: "Technical Architecture",
+          caption: "Data analytics platform architecture with frontend, backend, and database layers",
         },
         {
-          src: "/portfolio-data-dashboard.png",
-          alt: "Trend Analysis",
-          caption: "Market trend visualization and forecasting",
+          src: "/data-dashboard-ui.png",
+          alt: "Business Intelligence Dashboard",
+          caption: "Real-time BI dashboard with revenue, cost, visitors, and growth metrics",
         },
       ]}
     />
