@@ -123,4 +123,17 @@
 - [x] Update all shadows/glows to use new color values
 - [x] Test color consistency across entire website
 - [x] Document color palette system for future theme swapping
-- [ ] Save final checkpoint with consistent colors
+- [x] Save final checkpoint with consistent colors
+
+## Button Color Fixes & About Section Rewrite
+
+- [x] Audit current button colors in AnimatedButton component
+- [x] Fix button background colors to use Apex cyan (#00D9FF)
+- [x] Fix button hover states to maintain color consistency
+- [x] Test all buttons across the website
+- [x] Restore original About section (was good as-is)
+- [x] Add International Studies background to existing About section
+- [x] Include diplomacy, geography, and geospatial analysis mention
+- [x] Keep original flow and storytelling intact
+- [x] Test updated About section for readability and flow
+- [ ] Save final checkpoint with fixes

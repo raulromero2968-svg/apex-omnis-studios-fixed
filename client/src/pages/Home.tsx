@@ -143,7 +143,7 @@ export default function Home() {
               <div className="flex flex-col sm:flex-row gap-4 pt-4">
                 <AnimatedButton 
                   size="lg" 
-                  className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white shadow-lg shadow-cyan-500/50 group"
+                  className="bg-[#00D9FF] hover:bg-[#00B8D9] text-black font-semibold shadow-lg shadow-cyan-500/50 group"
                   asChild
                 >
                   <a href="mailto:contact@apexomnis.io?subject=Strategy Call Request">
@@ -190,7 +190,7 @@ export default function Home() {
             
             <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
               <p>
-                Apex Omnis Studios was born at the crossroads of passion, curiosity, and purpose. I started as a business teacher in a California high school, where I helped students explore careers, technology, and creativity. Before that, I worked in public service—supporting families through health and food assistance programs.
+                Apex Omnis Studios was born at the crossroads of passion, curiosity, and purpose. With a background in International Studies—including diplomacy, geography, and geospatial analysis—I started as a business teacher in a California high school, where I helped students explore careers, technology, and creativity. Before that, I worked in public service—supporting families through health and food assistance programs.
               </p>
               
               <p>
@@ -453,7 +453,7 @@ export default function Home() {
               <div className="flex justify-center">
                 <AnimatedButton 
                   size="lg" 
-                  className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white shadow-lg shadow-cyan-500/50 group"
+                  className="bg-[#00D9FF] hover:bg-[#00B8D9] text-black font-semibold shadow-lg shadow-cyan-500/50 group"
                   asChild
                 >
                   <a href="mailto:contact@apexomnis.io?subject=Strategy Call Request">
