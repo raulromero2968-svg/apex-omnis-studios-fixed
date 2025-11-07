@@ -3,36 +3,36 @@ import { ProjectPage } from "@/components/ProjectPage";
 export default function MuseumTracker() {
   return (
     <ProjectPage
-      title="Museum Tracker"
-      subtitle="Comprehensive collection management system for educators and cultural institutions"
-      heroImage="/project-museum-tracker.png"
-      problem="Museums, educators, and collectors face challenges organizing, cataloging, and sharing their collections. Traditional methods involve spreadsheets, physical records, and disconnected systems that make it difficult to track provenance, manage loans, and create educational materials."
-      solution="We developed a specialized tracking system that centralizes collection management. The platform handles cataloging, provenance tracking, condition reports, and educational content creation. It includes geospatial mapping for exhibition planning and automated documentation for compliance and insurance purposes."
+      title="Museum Tracker System"
+      subtitle="Automated event tracking system for NYC museums with unified Notion workspace"
+      heroImage="/museum-tracker-interface.png"
+      problem="NYC museums needed a centralized way to track events across multiple venues. Manual data entry was time-consuming, prone to errors, and made it difficult to identify trends or coordinate programming across institutions."
+      solution="We built an automated event tracking system that consolidates event data from multiple sources into a unified Notion workspace. The system features filtered dashboards, automated reporting, and real-time event statistics with calendar visualization."
       techStack={[
-        "React",
-        "Database Design",
-        "Geospatial Analysis",
-        "Document Generation",
-        "Search & Filtering",
-        "Export Tools",
+        "Zapier",
+        "Notion API",
+        "API Integration",
+        "Automated Workflows",
+        "Data Consolidation",
+        "Dashboard Design",
       ]}
       outcomes={[
-        "Digitized 5,000+ collection items with full metadata",
-        "Reduced cataloging time by 60%",
-        "Enabled geographic visualization of collection origins",
-        "Automated compliance documentation",
-        "Improved accessibility for researchers and educators",
+        "Consolidated 82+ events from multiple museums",
+        "Automated event data collection and updates",
+        "Real-time event statistics and trend visualization",
+        "Filterable dashboards by venue and date",
+        "Reduced manual data entry by 90%",
       ]}
       gallery={[
         {
-          src: "/project-museum-tracker.png",
-          alt: "Collection Overview",
-          caption: "Searchable collection database with filtering",
+          src: "/museum-tracker-interface.png",
+          alt: "Event Dashboard",
+          caption: "Unified Notion workspace with event stats and calendar",
         },
         {
-          src: "/project-museum-tracker.png",
-          alt: "Geographic Mapping",
-          caption: "Geospatial visualization of collection provenance",
+          src: "/museum-tracker-interface.png",
+          alt: "Automation Workflow",
+          caption: "Zapier workflow for automated event data collection",
         },
       ]}
     />

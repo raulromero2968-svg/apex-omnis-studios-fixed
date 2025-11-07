@@ -5,16 +5,16 @@ export default function AIPipeline() {
     <ProjectPage
       title="AI Content Pipeline"
       subtitle="Intelligent automation system for content creation and curation"
-      heroImage="/project-ai-pipeline.png"
-      problem="Content creators and educators spend countless hours on repetitive tasks: researching topics, organizing information, formatting materials, and maintaining consistency across platforms. This manual work takes time away from creative strategy and meaningful engagement with audiences."
-      solution="We engineered an AI-powered content pipeline that automates research, curation, and formatting while maintaining human oversight. The system processes raw information, generates structured content drafts, and adapts output for different platforms—all while preserving the creator's voice and strategic control."
+      heroImage="/ai-pipeline-workflow.png"
+      problem="Content creators need to maintain consistent publishing schedules across multiple platforms while ensuring quality and brand consistency. Manual content creation, approval workflows, and multi-channel distribution consume significant time and resources."
+      solution="We built an intelligent content generation and distribution system using GPT-4 for automated content creation, with approval workflows and multi-channel publishing. The system includes a content calendar, human-in-the-loop review, and automated distribution to websites, LinkedIn, Twitter, and custom channels."
       techStack={[
-        "AI Integration",
-        "Natural Language Processing",
-        "Workflow Automation",
-        "Content Management",
-        "API Orchestration",
-        "Quality Control Systems",
+        "GPT-4 API",
+        "Make.com",
+        "Notion",
+        "Multi-channel Publishing",
+        "Approval Workflows",
+        "Content Calendar",
       ]}
       outcomes={[
         "Reduced content production time by 70%",
@@ -25,14 +25,14 @@ export default function AIPipeline() {
       ]}
       gallery={[
         {
-          src: "/project-ai-pipeline.png",
-          alt: "Pipeline Dashboard",
-          caption: "Content workflow automation interface",
+          src: "/ai-pipeline-workflow.png",
+          alt: "Content Workflow",
+          caption: "Automated content creation and approval interface",
         },
         {
-          src: "/project-ai-pipeline.png",
-          alt: "Quality Control",
-          caption: "Human-in-the-loop review and approval system",
+          src: "/ai-pipeline-workflow.png",
+          alt: "Publishing System",
+          caption: "Multi-channel distribution with human review",
         },
       ]}
     />

@@ -168,3 +168,14 @@
 - [x] Test all button animations across the site
 - [x] Fix duplicate arrow issue in buttons
 - [x] Save checkpoint with animated buttons and UI improvements
+
+## Project Page Image Fixes
+
+- [x] Copy uploaded museum tracker screenshot to public folder
+- [x] Copy uploaded AI pipeline screenshots to public folder
+- [x] Update Data Dashboard gallery with working images
+- [x] Update Museum Tracker gallery with actual interface screenshot
+- [x] Update AI Pipeline gallery with actual workflow screenshots
+- [x] Ensure all gallery images match their captions
+- [x] Test all project pages to verify images display correctly
+- [ ] Save checkpoint with fixed project page images
