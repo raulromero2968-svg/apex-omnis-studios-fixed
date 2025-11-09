@@ -1,5 +1,6 @@
 import { AnimatedButton } from "@/components/AnimatedButton";
 import { ProjectsSection } from "@/components/ProjectsSection";
+import ContactForm from "@/components/ContactForm";
 import InteractiveWolfLogo from "@/components/InteractiveWolfLogo";
 import StickyNav from "@/components/StickyNav";
 import { AnimatedIconBox } from "@/components/AnimatedIconBox";
@@ -222,6 +223,14 @@ export default function Home() {
               <p className="text-foreground font-medium">
                 Apex Omnis Studios is the result—a mission-driven studio focused on helping collectors and entrepreneurs build intelligent systems, creative tools, and platforms that turn passion into profit.
               </p>
+
+              {/* Anti-Scalper Ethics Statement */}
+              <div className="mt-8 p-6 rounded-xl bg-gradient-to-r from-cyan-500/10 to-purple-500/10 border border-cyan-500/20">
+                <h3 className="text-xl font-bold text-cyan-400 mb-3">Our Commitment to the Community</h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  We build tools for <span className="text-foreground font-medium">collectors who love the hobby</span>—not for scalpers who exploit it. Our mission is to help you enjoy, analyze, and grow your collection with data-driven insights and automation that respects the community. We stand against market manipulation, artificial scarcity, and predatory practices. <span className="text-cyan-400 font-medium">Fair access for all. Passion over profit.</span>
+                </p>
+              </div>
             </div>
           </motion.div>
         </section>
@@ -514,18 +523,7 @@ export default function Home() {
               <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
                 Whether you're a collector, entrepreneur, or creative, we're here to help you design systems that turn your passion into a sustainable business.
               </p>
-              <div className="flex justify-center">
-                <AnimatedButton 
-                  size="lg" 
-                  className="bg-[#00D9FF] hover:bg-[#00B8D9] text-black font-semibold shadow-lg shadow-cyan-500/50 group"
-                  asChild
-                >
-                  <a href="mailto:contact@apexomnis.io?subject=Strategy Call Request">
-                    Schedule a Strategy Call
-                    <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                  </a>
-                </AnimatedButton>
-              </div>
+              <ContactForm />
             </div>
           </div>
         </section>

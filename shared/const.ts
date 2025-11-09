@@ -12,7 +12,7 @@ export const PROJECTS = {
   society: {
     name: "Apex Intelligence Society",
     tagline: "Research, Curation & Gamified Intelligence",
-    url: "https://x.com/apexintelligence"
+    url: "https://x.com/TCGAISociety"
   },
   intelligence: {
     name: "ApexIntelligence.io",

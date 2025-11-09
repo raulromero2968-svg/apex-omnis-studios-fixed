@@ -3,38 +3,39 @@ import { ProjectPage } from "@/components/ProjectPage";
 export default function DataDashboard() {
   return (
     <ProjectPage
-      title="Data Analysis Dashboard"
-      subtitle="Real-time analytics platform for collection management and market intelligence"
-      heroImage="/data-dashboard-hero-v4.png"
-      problem="Collectors and small business owners struggle to make data-driven decisions without expensive enterprise tools. They need insights into inventory trends, market values, and performance metrics—but most solutions are either too complex or too expensive."
-      solution="We built a custom analytics dashboard that transforms raw data into actionable insights. The platform integrates with existing databases, provides real-time visualizations, and generates automated reports. Users can track collection values, identify trends, and make informed decisions without technical expertise."
+      title="TCG Portfolio Dashboard"
+      subtitle="Personal collection analytics for tracking card values, market trends, and portfolio performance"
+      heroImage="/tcg-portfolio-hero-v1.png"
+      problem="TCG collectors invest thousands of dollars in cards but lack tools to track their portfolio's true value. Market prices fluctuate constantly, and without real-time data, collectors can't make informed decisions about when to buy, sell, or hold. Spreadsheets are tedious and quickly become outdated. Collectors need a simple way to monitor their collection's performance and identify which cards are gaining or losing value."
+      solution="We built a personal TCG portfolio dashboard that transforms your collection data into actionable market insights. The platform integrates with TCGPlayer, eBay, and other market data sources to provide real-time card valuations. Track your portfolio's total value, see which cards are trending up or down, and get alerts when cards hit your target prices. Visualize your collection by set, rarity, condition, and game type. Make smarter collecting decisions with data-driven insights."
       techStack={[
         "React",
         "TypeScript",
+        "TCGPlayer API",
         "Data Visualization",
-        "Real-time Analytics",
-        "API Integration",
-        "Automated Reporting",
+        "Real-time Market Data",
+        "Portfolio Analytics",
       ]}
       outcomes={[
-        "Reduced data analysis time from hours to minutes",
-        "Enabled real-time market trend monitoring",
-        "Automated weekly performance reports",
-        "Improved decision-making accuracy by 40%",
-        "Scalable architecture supporting 10,000+ items",
+        "Track portfolio value across 500+ cards in real-time",
+        "Monitor market trends and price fluctuations daily",
+        "Identify top-performing cards and hidden gems",
+        "Set price alerts for buy/sell opportunities",
+        "Visualize collection growth and ROI over time",
       ]}
       gallery={[
         {
-          src: "/collectibles-gallery-1-v2.png",
+          src: "/tcg-portfolio-gallery-1-v1.png",
           alt: "Technical Architecture",
-          caption: "Data analytics platform architecture with frontend, backend, and database layers",
+          caption: "TCG portfolio platform architecture with market data integration and analytics engine",
         },
         {
-          src: "/collectibles-gallery-2-v2.png",
-          alt: "Business Intelligence Dashboard",
-          caption: "Real-time BI dashboard with revenue, cost, visitors, and growth metrics",
+          src: "/tcg-portfolio-gallery-2-v1.png",
+          alt: "Portfolio Analytics Dashboard",
+          caption: "Real-time portfolio dashboard showing card values, market trends, and performance metrics",
         },
       ]}
+      ethicsNote="This tool is designed for personal portfolio management by collectors who want to understand their collection's value. It is not intended for bulk inventory tracking by resellers, market manipulation, or scalping operations. We believe in transparent pricing and fair access to market data for all collectors."
     />
   );
 }

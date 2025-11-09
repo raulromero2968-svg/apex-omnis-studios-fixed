@@ -13,6 +13,7 @@ interface ProjectPageProps {
   outcomes: string[];
   gallery: { src: string; alt: string; caption?: string }[];
   liveDemo?: string;
+  ethicsNote?: string;
 }
 
 export function ProjectPage({
@@ -25,6 +26,7 @@ export function ProjectPage({
   outcomes,
   gallery,
   liveDemo,
+  ethicsNote,
 }: ProjectPageProps) {
   // Scroll to top when component mounts
   useEffect(() => {
@@ -151,6 +153,20 @@ export function ProjectPage({
                   )}
                 </div>
               ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* Ethics Note */}
+      {ethicsNote && (
+        <section className="container mx-auto px-4 py-12">
+          <div className="max-w-4xl mx-auto">
+            <div className="p-6 rounded-xl bg-gradient-to-r from-cyan-500/10 to-purple-500/10 border border-cyan-500/20">
+              <h3 className="text-xl font-bold text-cyan-400 mb-3">Community Ethics</h3>
+              <p className="text-muted-foreground leading-relaxed">
+                {ethicsNote}
+              </p>
             </div>
           </div>
         </section>

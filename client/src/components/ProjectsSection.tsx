@@ -23,24 +23,24 @@ export function ProjectsSection() {
     // In production, this would fetch from an API endpoint
     const staticProjects: Project[] = [
       {
-        title: "Data Analysis Dashboard",
-        description: "Real-time business intelligence dashboard with automated data collection, transformation, and visualization for executive decision-making.",
+        title: "TCG Portfolio Dashboard",
+        description: "Personal collection analytics for tracking card values, market trends, and portfolio performance with real-time market data integration.",
         category: "Data Analysis",
-        screenshot: "/data-dashboard-hero-v4.png",
+        screenshot: "/tcg-portfolio-hero-v1.png",
         projectUrl: "/projects/data-dashboard",
-        techStack: ["Python", "Airtable", "Notion API"]
+        techStack: ["React", "TCGPlayer API", "Data Viz"]
       },
       {
-        title: "Museum Tracker System",
-        description: "Automated event tracking system for NYC museums that consolidates event data from multiple sources into a unified Notion workspace with filtered dashboards and automated reporting.",
+        title: "Event Tracker Pro",
+        description: "Personal event tracking system for TCG conventions, local tournaments, and card shop events with automated discovery and calendar integration.",
         category: "Automation",
-        screenshot: "/museum-tracker-hero-v2.png",
+        screenshot: "/event-tracker-hero-v1.png",
         projectUrl: "/projects/museum-tracker",
-        techStack: ["Zapier", "Notion", "API Integration"]
+        techStack: ["Zapier", "Notion", "Web Scraping"]
       },
       {
         title: "AI Content Pipeline",
-        description: "Intelligent content generation and distribution system using GPT-4 for automated content creation, with approval workflows and multi-channel publishing.",
+        description: "Intelligent content automation for TCG community creators with GPT-4 powered research, drafting, and multi-channel publishing.",
         category: "AI/ML",
         screenshot: "/ai-pipeline-hero-flat.png",
         projectUrl: "/projects/ai-pipeline",

@@ -337,3 +337,66 @@
 - [ ] Test all animations on mobile
 - [ ] Verify performance (no jank or lag)
 - [ ] Save checkpoint with animations
+
+## Contact Form Implementation
+
+### Setup
+- [x] Install @emailjs/browser package
+- [x] Create ContactForm component with validation
+- [x] Add form fields: name, email, company (optional), message
+- [x] Implement EmailJS integration for sending emails
+
+### Integration
+- [x] Replace "Get in Touch" placeholder in CTA section with ContactForm
+- [x] Add success/error toast notifications
+- [x] Style form to match brand (cyan/purple theme)
+
+### Configuration
+- [ ] Request EmailJS credentials from user (Service ID, Template ID, Public Key)
+- [ ] Test form submission
+- [ ] Save checkpoint with working contact form
+
+## Twitter Link Fix
+- [x] Update Apex Intelligence Society card Twitter link to @TCGAISociety (currently shows wrong account)
+
+## Portfolio Redesign - TCG/Collector Focus
+
+### Content Calendar Template
+- [x] Create mobile-friendly content calendar template
+- [x] Create desktop version with detailed scheduling
+- [x] Add to website or create downloadable version (markdown file created)
+- [ ] Create Notion database template for content calendar
+
+### Anti-Scalper Ethics Statement
+- [x] Write strong anti-scalper ethics statement for About section
+- [x] Add "Our Commitment to the Community" section
+- [x] Emphasize tools are for collectors, not exploiters
+- [x] Make ethics positioning prominent throughout site
+
+### Project 1: Event Tracker Pro (formerly Museum Tracker)
+- [x] Rename to "Event Tracker Pro"
+- [x] Rewrite description to cover conventions + local card shop events
+- [x] Add anti-abuse messaging (personal use only, no bulk tracking)
+- [x] Update features list to show TCG event tracking capabilities
+- [x] Regenerate hero image - convention/card shop event dashboard
+- [x] Regenerate gallery images - event automation workflow + calendar
+
+### Project 2: TCG Portfolio Dashboard (formerly Data Dashboard)
+- [x] Rename to "TCG Portfolio Dashboard"
+- [x] Rewrite description for card market analytics focus
+- [x] Add anti-scalper messaging (personal portfolio, not inventory flipping)
+- [x] Update features to show market insights, value tracking
+- [x] Regenerate hero image - TCG market analytics dashboard
+- [x] Regenerate gallery images - architecture + market data visualizations
+
+### Project 3: AI Content Automation System (keep name)
+- [x] Update description to focus on TCG community content
+- [x] Add anti-spam messaging (community building, not manipulation)
+- [x] Keep existing images (already show content pipeline + social media)
+- [x] Emphasize educational content and authentic engagement
+
+### Testing & Deployment
+- [x] Test all three project pages
+- [x] Verify ethics statement displays prominently
+- [x] Check all images load correctly
+- [ ] Save checkpoint with TCG-focused portfolio
