@@ -115,7 +115,7 @@ export default function Home() {
                 <h2 className="text-xl md:text-2xl font-bold bg-gradient-to-r from-cyan-400 to-purple-600 bg-clip-text text-transparent">
                   Apex Omnis Studios
                 </h2>
-                <p className="text-sm text-muted-foreground">Collectors, Educators, and Entrepreneurs</p>
+                <p className="text-sm text-muted-foreground">Automation for Gamers, Teachers, and Creatives</p>
               </div>
             </div>
             
@@ -217,18 +217,18 @@ export default function Home() {
               </p>
               
               <p>
-                But my real fascination has always been with systems: how games work, how people learn, how data flows, and how technology can serve communities. Inspired by students and driven by hobbies like trading cards and game design, I dove deep into AI, data, and automation.
+                But my real fascination has always been with systems: how games work, how people learn, how data flows, and how technology can serve communities. Inspired by students and driven by hobbies like trading cards, competitive gaming, and game design, I dove deep into AI, data, and automation.
               </p>
               
               <p className="text-foreground font-medium">
-                Apex Omnis Studios is the result—a mission-driven studio focused on helping collectors and entrepreneurs build intelligent systems, creative tools, and platforms that turn passion into profit.
+                Apex Omnis Studios is the result—a mission-driven studio focused on helping gaming businesses, collectors, and tournament organizers build intelligent systems, creative tools, and platforms that turn passion into profit. Whether you're managing TCG events, running esports tournaments, tracking collectible inventories, or building a gaming community, we create custom solutions that scale with your vision.
               </p>
 
               {/* Anti-Scalper Ethics Statement */}
               <div className="mt-8 p-6 rounded-xl bg-gradient-to-r from-cyan-500/10 to-purple-500/10 border border-cyan-500/20">
                 <h3 className="text-xl font-bold text-cyan-400 mb-3">Our Commitment to the Community</h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  We build tools for <span className="text-foreground font-medium">collectors who love the hobby</span>—not for scalpers who exploit it. Our mission is to help you enjoy, analyze, and grow your collection with data-driven insights and automation that respects the community. We stand against market manipulation, artificial scarcity, and predatory practices. <span className="text-cyan-400 font-medium">Fair access for all. Passion over profit.</span>
+                  We build tools for <span className="text-foreground font-medium">gamers, collectors, and community builders who love the hobby</span>—not for scalpers, manipulators, or exploiters. Our mission is to help you enjoy, analyze, and grow your passion with data-driven insights and automation that respects the community. We stand against market manipulation, artificial scarcity, and predatory practices. Whether you're a TCG collector, tournament organizer, gaming cafe owner, or esports enthusiast, our tools empower you to succeed ethically. <span className="text-cyan-400 font-medium">Fair access for all. Passion over profit.</span>
                 </p>
               </div>
             </div>

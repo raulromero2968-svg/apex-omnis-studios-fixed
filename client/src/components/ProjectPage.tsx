@@ -14,6 +14,10 @@ interface ProjectPageProps {
   gallery: { src: string; alt: string; caption?: string }[];
   liveDemo?: string;
   ethicsNote?: string;
+  scaleMetrics?: { label: string; value: string }[];
+  beforeAfter?: { before: string; after: string };
+  testimonial?: { quote: string; author: string; role: string };
+  systemComplexity?: { title: string; description: string }[];
 }
 
 export function ProjectPage({
@@ -27,6 +31,10 @@ export function ProjectPage({
   gallery,
   liveDemo,
   ethicsNote,
+  scaleMetrics,
+  beforeAfter,
+  testimonial,
+  systemComplexity,
 }: ProjectPageProps) {
   // Scroll to top when component mounts
   useEffect(() => {
@@ -99,6 +107,42 @@ export function ProjectPage({
         </div>
       </section>
 
+      {/* Scale Metrics */}
+      {scaleMetrics && scaleMetrics.length > 0 && (
+        <section className="container mx-auto px-4 py-12">
+          <div className="max-w-4xl mx-auto space-y-6">
+            <h2 className="text-3xl font-bold text-cyan-400">Scale & Complexity</h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {scaleMetrics.map((metric, index) => (
+                <div key={index} className="p-6 rounded-xl bg-gradient-to-br from-cyan-500/10 to-purple-500/10 border border-cyan-500/30">
+                  <div className="text-4xl font-bold text-cyan-400 mb-2">{metric.value}</div>
+                  <div className="text-sm text-muted-foreground">{metric.label}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* Before/After Comparison */}
+      {beforeAfter && (
+        <section className="container mx-auto px-4 py-12">
+          <div className="max-w-4xl mx-auto space-y-6">
+            <h2 className="text-3xl font-bold text-cyan-400">Before & After</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="p-6 rounded-xl bg-red-500/10 border border-red-500/30">
+                <h3 className="text-xl font-bold text-red-400 mb-3">Before</h3>
+                <p className="text-muted-foreground leading-relaxed">{beforeAfter.before}</p>
+              </div>
+              <div className="p-6 rounded-xl bg-green-500/10 border border-green-500/30">
+                <h3 className="text-xl font-bold text-green-400 mb-3">After</h3>
+                <p className="text-muted-foreground leading-relaxed">{beforeAfter.after}</p>
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* Tech Stack */}
       <section className="container mx-auto px-4 py-12">
         <div className="max-w-4xl mx-auto space-y-6">
@@ -116,6 +160,24 @@ export function ProjectPage({
         </div>
       </section>
 
+      {/* System Complexity */}
+      {systemComplexity && systemComplexity.length > 0 && (
+        <section className="container mx-auto px-4 py-12">
+          <div className="max-w-4xl mx-auto space-y-6">
+            <h2 className="text-3xl font-bold text-cyan-400">System Architecture</h2>
+            <p className="text-muted-foreground mb-6">This system integrates multiple tools and services to deliver seamless automation:</p>
+            <div className="space-y-4">
+              {systemComplexity.map((item, index) => (
+                <div key={index} className="p-4 rounded-lg bg-muted/30 border border-border">
+                  <h3 className="text-lg font-bold text-foreground mb-2">{item.title}</h3>
+                  <p className="text-muted-foreground">{item.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* Outcomes */}
       <section className="container mx-auto px-4 py-12">
         <div className="max-w-4xl mx-auto space-y-6">
@@ -130,6 +192,24 @@ export function ProjectPage({
           </ul>
         </div>
       </section>
+
+      {/* Testimonial */}
+      {testimonial && (
+        <section className="container mx-auto px-4 py-12">
+          <div className="max-w-4xl mx-auto">
+            <div className="p-8 rounded-xl bg-gradient-to-br from-purple-500/10 to-cyan-500/10 border border-purple-500/30">
+              <div className="text-6xl text-purple-400 mb-4">"</div>
+              <p className="text-xl text-foreground italic mb-6">{testimonial.quote}</p>
+              <div className="flex items-center gap-4">
+                <div>
+                  <div className="font-bold text-foreground">{testimonial.author}</div>
+                  <div className="text-sm text-muted-foreground">{testimonial.role}</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* Gallery */}
       {gallery.length > 0 && (
