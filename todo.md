@@ -93,3 +93,14 @@
 - [x] Add route for /services
 - [x] Update navigation to include Services link
 - [x] Test and save checkpoint (TypeScript: 0 errors)
+
+## Client Application Form (Current Session)
+
+- [x] Update Services page to position early clients as opportunity
+- [x] Remove case study/testimonial language
+- [x] Create multi-step ClientApplicationForm component
+- [x] Add form steps: Business Info, Challenges & Goals, Community & Ethics, Budget & Timeline
+- [x] Add form validation and progress indicator
+- [x] Integrate form into Services page
+- [x] Connect form to Make.com webhook for submissions (uses VITE_MAKE_WEBHOOK_URL)
+- [x] Test and save checkpoint (TypeScript: 0 errors)

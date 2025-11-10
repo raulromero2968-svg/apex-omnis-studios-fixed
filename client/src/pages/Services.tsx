@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { Shield, Users, Zap, CheckCircle, XCircle, AlertTriangle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
+import ClientApplicationForm from "@/components/ClientApplicationForm";
 
 export default function Services() {
   const offerings = [
@@ -158,11 +159,36 @@ export default function Services() {
               </motion.div>
             </div>
 
-            {/* How It Works */}
+            {/* Early Adopter Opportunity */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.5 }}
+              className="mb-16"
+            >
+              <div className="max-w-4xl mx-auto p-8 rounded-lg border border-cyan-500/50 bg-gradient-to-r from-cyan-500/10 to-purple-500/10 backdrop-blur">
+                <div className="text-center">
+                  <h3 className="text-2xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-purple-600 bg-clip-text text-transparent">
+                    Early Builder Partnership — Limited Spots
+                  </h3>
+                  <p className="text-muted-foreground mb-4">
+                    We're currently working with our founding clients (Danielle and David) to build proven case studies. This means <strong className="text-foreground">you get premium attention</strong> and direct access to our founders as we establish our portfolio.
+                  </p>
+                  <p className="text-muted-foreground mb-4">
+                    Early partners benefit from deeper collaboration, more flexible timelines, and the opportunity to shape how we work. The best partnerships may lead to ongoing roles as we scale.
+                  </p>
+                  <p className="text-sm text-muted-foreground italic">
+                    Note: We're building a community of ethical automation users. Strong early partners may be invited to join our team as community managers or advisors in future phases.
+                  </p>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* How It Works */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.6 }}
               className="mb-24"
             >
               <h2 className="text-3xl font-bold text-center mb-12">How We Work Together</h2>
@@ -229,7 +255,7 @@ export default function Services() {
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.6 }}
+              transition={{ duration: 0.5, delay: 0.7 }}
               className="mb-16"
             >
               <div className="max-w-4xl mx-auto p-8 rounded-lg border border-border/50 bg-card/30 backdrop-blur">
@@ -251,27 +277,23 @@ export default function Services() {
               </div>
             </motion.div>
 
-            {/* CTA */}
+            {/* Application Form */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.7 }}
-              className="text-center"
+              transition={{ duration: 0.5, delay: 0.8 }}
+              className="mb-16"
             >
-              <div className="max-w-3xl mx-auto p-12 rounded-lg border border-border/50 bg-gradient-to-r from-cyan-500/10 to-purple-500/10 backdrop-blur">
-                <h2 className="text-3xl font-bold mb-4">Ready to Build Something Real?</h2>
-                <p className="text-xl text-muted-foreground mb-8">
-                  If you're serious about serving your community with intelligent automation, let's talk.
+              <div className="text-center mb-12">
+                <h2 className="text-3xl font-bold mb-4">Apply for Early Builder Partnership</h2>
+                <p className="text-xl text-muted-foreground max-w-2xl mx-auto mb-4">
+                  Limited spots available. Work directly with our founders to build custom automation that serves your community.
                 </p>
-                <Link href="/#contact">
-                  <Button className="bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white font-semibold px-8 py-6 text-lg shadow-lg shadow-cyan-500/50">
-                    Start the Conversation
-                  </Button>
-                </Link>
-                <p className="text-sm text-muted-foreground mt-6">
-                  We review every application personally. Expect a response within 48 hours.
+                <p className="text-muted-foreground max-w-2xl mx-auto">
+                  We review every application personally and respond within 48 hours.
                 </p>
               </div>
+              <ClientApplicationForm />
             </motion.div>
           </div>
         </section>
