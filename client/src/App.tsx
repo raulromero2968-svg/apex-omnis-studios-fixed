@@ -5,6 +5,7 @@ import { Route, Switch } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import Home from "./pages/Home";
+import Services from "./pages/Services";
 import DataDashboard from "./pages/projects/DataDashboard";
 import MuseumTracker from "./pages/projects/MuseumTracker";
 import AIPipeline from "./pages/projects/AIPipeline";
@@ -27,7 +28,8 @@ function Router() {
       <Route path={"/projects/project-idea-organizer"} component={ProjectIdeaOrganizer} />
       <Route path={"/projects/quick-launch-website"} component={QuickLaunchWebsite} />
       <Route path={"/ethics"} component={Ethics} />
-      <Route path={"/faq"} component={FAQ} />
+       <Route path={"/"} component={Home} />
+      <Route path={"/services"} component={Services} />
       <Route path={"/404"} component={NotFound} />
       {/* Final fallback route */}
       <Route component={NotFound} />

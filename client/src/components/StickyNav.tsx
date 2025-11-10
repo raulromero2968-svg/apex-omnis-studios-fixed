@@ -1,6 +1,7 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
-import { Home, Info, Briefcase, Users, Network, Mail, Menu, X } from "lucide-react";
+import { Home, Info, Briefcase, Users, Network, Mail, Menu, X, Wrench } from "lucide-react";
+import { Link } from "wouter";
 import { AnimatedButton } from "./AnimatedButton";
 
 interface NavItem {
@@ -14,7 +15,7 @@ const navItems: NavItem[] = [
   { id: "home", label: "Home", icon: <Home className="w-4 h-4" />, section: "#" },
   { id: "about", label: "About", icon: <Info className="w-4 h-4" />, section: "#about" },
   { id: "projects", label: "Projects", icon: <Briefcase className="w-4 h-4" />, section: "#projects" },
-  { id: "services", label: "Services", icon: <Briefcase className="w-4 h-4" />, section: "#services" },
+  { id: "services", label: "Services", icon: <Wrench className="w-4 h-4" />, section: "/services" },
   { id: "clients", label: "Clients", icon: <Users className="w-4 h-4" />, section: "#clients" },
   { id: "ecosystem", label: "Ecosystem", icon: <Network className="w-4 h-4" />, section: "#ecosystem" },
   { id: "contact", label: "Contact", icon: <Mail className="w-4 h-4" />, section: "#cta" },
@@ -51,6 +52,9 @@ export default function StickyNav() {
   const handleClick = (section: string) => {
     if (section === '#') {
       window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else if (section.startsWith('/')) {
+      // Full page navigation
+      window.location.href = section;
     } else {
       const element = document.querySelector(section);
       if (element) {
