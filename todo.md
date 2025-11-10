@@ -111,3 +111,12 @@
 - [x] Explain review process and timeline
 - [x] Set expectations for applicants
 - [x] Test and save checkpoint (TypeScript: 0 errors)
+
+## File Upload Feature (Current Session)
+
+- [x] Add file upload field to Step 1 of ClientApplicationForm
+- [x] Implement file validation (type, size limits)
+- [x] Convert uploaded files to base64 for webhook transmission
+- [x] Update form submission to include file data
+- [x] Add file upload UI with drag-and-drop support
+- [x] Test and save checkpoint (TypeScript: 0 errors)
