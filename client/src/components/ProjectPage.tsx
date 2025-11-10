@@ -1,7 +1,6 @@
 import { ArrowLeft, ExternalLink } from "lucide-react";
 import { Link } from "wouter";
 import { AnimatedButton } from "./AnimatedButton";
-import { ConstellationBackground } from "./ConstellationBackground";
 import { useEffect } from "react";
 import {
   Accordion,
@@ -47,12 +46,7 @@ export function ProjectPage({
   }, []);
 
   return (
-    <div className="min-h-screen bg-background text-foreground relative overflow-hidden">
-      {/* Constellation Background */}
-      <ConstellationBackground />
-      
-      {/* Content */}
-      <div className="relative" style={{ zIndex: 1 }}>
+    <div className="min-h-screen bg-background text-foreground">
       {/* Back button */}
       <div className="container mx-auto px-4 py-8">
         <Link href="/">
@@ -117,15 +111,15 @@ export function ProjectPage({
         </div>
       </section>
 
-      {/* Scale Metrics - Compact */}
+      {/* Scale Metrics */}
       {scaleMetrics && scaleMetrics.length > 0 && (
-        <section className="container mx-auto px-4 py-8">
-          <div className="max-w-4xl mx-auto">
-            <h3 className="text-xl font-bold text-cyan-400 mb-4">Scale & Complexity</h3>
-            <div className="flex flex-wrap gap-4">
+        <section className="container mx-auto px-4 py-12">
+          <div className="max-w-4xl mx-auto space-y-6">
+            <h2 className="text-3xl font-bold text-cyan-400">Scale & Complexity</h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {scaleMetrics.map((metric, index) => (
-                <div key={index} className="flex items-center gap-3 px-4 py-3 rounded-lg bg-cyan-500/5 border border-cyan-500/20">
-                  <div className="text-2xl font-bold text-cyan-400">{metric.value}</div>
+                <div key={index} className="p-6 rounded-xl bg-gradient-to-br from-cyan-500/10 to-purple-500/10 border border-cyan-500/30">
+                  <div className="text-4xl font-bold text-cyan-400 mb-2">{metric.value}</div>
                   <div className="text-sm text-muted-foreground">{metric.label}</div>
                 </div>
               ))}
@@ -134,29 +128,29 @@ export function ProjectPage({
         </section>
       )}
 
-      {/* Before & After - Compact */}
+           {/* Before & After */}
       {beforeAfter && (
-        <section className="container mx-auto px-4 py-8">
-          <div className="max-w-4xl mx-auto">
-            <h3 className="text-xl font-bold text-cyan-400 mb-4">Transformation</h3>
-            <div className="grid md:grid-cols-2 gap-4">
-              <div className="p-4 rounded-lg bg-muted/30 border border-border">
-                <div className="flex items-center gap-2 mb-2">
-                  <svg className="w-4 h-4 text-muted-foreground" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <section className="container mx-auto px-4 py-12">
+          <div className="max-w-4xl mx-auto space-y-6">
+            <h2 className="text-3xl font-bold text-cyan-400 text-center">Transformation</h2>
+            <div className="grid md:grid-cols-2 gap-6">
+              <div className="p-6 rounded-xl bg-muted/30 border border-border">
+                <div className="flex items-center gap-2 mb-3">
+                  <svg className="w-5 h-5 text-muted-foreground" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                   </svg>
-                  <h4 className="text-base font-bold text-foreground">Before</h4>
+                  <h3 className="text-xl font-bold text-foreground">Before</h3>
                 </div>
-                <p className="text-sm text-muted-foreground leading-relaxed">{beforeAfter.before}</p>
+                <p className="text-muted-foreground leading-relaxed">{beforeAfter.before}</p>
               </div>
-              <div className="p-4 rounded-lg bg-cyan-500/5 border border-cyan-500/20">
-                <div className="flex items-center gap-2 mb-2">
-                  <svg className="w-4 h-4 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div className="p-6 rounded-xl bg-cyan-500/5 border border-cyan-500/20">
+                <div className="flex items-center gap-2 mb-3">
+                  <svg className="w-5 h-5 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
-                  <h4 className="text-base font-bold text-cyan-400">After</h4>
+                  <h3 className="text-xl font-bold text-cyan-400">After</h3>
                 </div>
-                <p className="text-sm text-muted-foreground leading-relaxed">{beforeAfter.after}</p>
+                <p className="text-muted-foreground leading-relaxed">{beforeAfter.after}</p>
               </div>
             </div>
           </div>
@@ -202,15 +196,15 @@ export function ProjectPage({
         </section>
       )}
 
-      {/* Outcomes - Compact */}
-      <section className="container mx-auto px-4 py-8">
-        <div className="max-w-4xl mx-auto">
-          <h3 className="text-xl font-bold text-cyan-400 mb-4">Results</h3>
-          <ul className="space-y-2">
+      {/* Outcomes */}
+      <section className="container mx-auto px-4 py-12">
+        <div className="max-w-4xl mx-auto space-y-6">
+          <h2 className="text-3xl font-bold text-cyan-400">Results</h2>
+          <ul className="space-y-4">
             {outcomes.map((outcome, index) => (
-              <li key={index} className="flex items-start gap-2">
-                <span className="text-cyan-400 text-lg mt-0.5">✓</span>
-                <span className="text-sm text-muted-foreground">{outcome}</span>
+              <li key={index} className="flex items-start gap-3">
+                <span className="text-cyan-400 text-2xl">✓</span>
+                <span className="text-lg text-muted-foreground">{outcome}</span>
               </li>
             ))}
           </ul>
@@ -278,7 +272,6 @@ export function ProjectPage({
           </AnimatedButton>
         </div>
       </section>
-      </div>
     </div>
   );
 }

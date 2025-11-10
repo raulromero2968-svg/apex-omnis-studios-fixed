@@ -1,8 +1,5 @@
 import { AnimatedButton } from "@/components/AnimatedButton";
 import { ProjectsSection } from "@/components/ProjectsSection";
-import { AIStackSection } from "@/components/AIStackSection";
-import { HowWeWorkSection } from "@/components/HowWeWorkSection";
-import { FAQSection } from "@/components/FAQSection";
 import ContactForm from "@/components/ContactForm";
 import InteractiveWolfLogo from "@/components/InteractiveWolfLogo";
 import StickyNav from "@/components/StickyNav";
@@ -234,12 +231,6 @@ export default function Home() {
         <div id="projects">
           <ProjectsSection />
         </div>
-
-        {/* AI Stack Section */}
-        <AIStackSection />
-
-        {/* How We Work Section */}
-        <HowWeWorkSection />
 
         {/* What We Build */}
         <section id="services" className="container mx-auto px-4 py-16 md:py-24">
@@ -512,9 +503,6 @@ export default function Home() {
             </Card>
           </motion.div>
         </section>
-
-        {/* FAQ Section */}
-        <FAQSection />
 
         {/* CTA Section */}
         <section id="contact" className="container mx-auto px-4 py-16 md:py-24">
