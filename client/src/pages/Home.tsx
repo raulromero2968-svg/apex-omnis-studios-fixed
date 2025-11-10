@@ -4,6 +4,9 @@ import ContactForm from "@/components/ContactForm";
 import InteractiveWolfLogo from "@/components/InteractiveWolfLogo";
 import StickyNav from "@/components/StickyNav";
 import { AnimatedIconBox } from "@/components/AnimatedIconBox";
+import { HowWeWorkSection } from "@/components/HowWeWorkSection";
+import { AIStackSection } from "@/components/AIStackSection";
+import { FAQSection } from "@/components/FAQSection";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { APP_TITLE, PROJECTS } from "../../../shared/const";
 import { ArrowRight, BookOpen, Briefcase, Cpu, ExternalLink, Lightbulb, PieChart, TrendingUp, Sparkles, Target } from "lucide-react";
@@ -511,6 +514,15 @@ export default function Home() {
             </Card>
           </motion.div>
         </section>
+
+        {/* How We Work Section */}
+        <HowWeWorkSection />
+
+        {/* AI Stack Section */}
+        <AIStackSection />
+
+        {/* FAQ Section */}
+        <FAQSection />
 
         {/* CTA Section */}
         <section id="contact" className="container mx-auto px-4 py-16 md:py-24">

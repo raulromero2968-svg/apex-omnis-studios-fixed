@@ -53,3 +53,23 @@
 ### Apex Commons Progress Reports (separate task)
 - [ ] Create November 2025 progress report
 - [ ] Add progress reports section to apexcommons.org
+
+## Recreate Missing Components (CRITICAL - Current Session)
+
+### Component Files Lost During Environment Exhaustion
+- [ ] Recreate ConstellationBackground.tsx
+- [ ] Recreate HowWeWorkSection.tsx
+- [ ] Recreate AIStackSection.tsx
+- [ ] Recreate FAQSection.tsx
+- [ ] Recreate Ethics.tsx page
+- [ ] Recreate FAQ.tsx page
+
+### Integration
+- [ ] Integrate new sections into Home.tsx
+- [ ] Add routes for Ethics and FAQ pages in App.tsx
+- [ ] Test all components render correctly
+
+### Documentation
+- [ ] Mark tasks complete in todo.md
+- [ ] Update next-steps.md with progress
+- [ ] Prepare handoff for next development phase
