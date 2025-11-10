@@ -295,6 +295,52 @@ export default function Services() {
               </div>
               <ClientApplicationForm />
             </motion.div>
+
+            {/* What Happens Next */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.9 }}
+              className="mb-16"
+            >
+              <div className="max-w-4xl mx-auto p-8 rounded-lg border border-border/50 bg-card/30 backdrop-blur">
+                <h3 className="text-2xl font-bold mb-6 text-center">What Happens Next?</h3>
+                <div className="grid md:grid-cols-3 gap-6">
+                  <div className="text-center">
+                    <div className="w-12 h-12 rounded-full bg-gradient-to-br from-cyan-500 to-purple-600 flex items-center justify-center mx-auto mb-4 font-bold text-white">
+                      1
+                    </div>
+                    <h4 className="font-bold mb-2">We Review (24-48 hours)</h4>
+                    <p className="text-sm text-muted-foreground">
+                      Our founders personally review every application. We look for alignment with our values, clarity of goals, and community fit.
+                    </p>
+                  </div>
+                  <div className="text-center">
+                    <div className="w-12 h-12 rounded-full bg-gradient-to-br from-cyan-500 to-purple-600 flex items-center justify-center mx-auto mb-4 font-bold text-white">
+                      2
+                    </div>
+                    <h4 className="font-bold mb-2">Discovery Call (If Selected)</h4>
+                    <p className="text-sm text-muted-foreground">
+                      If we see a strong fit, we'll schedule a 30-minute call to dive deeper into your challenges, goals, and how we can help.
+                    </p>
+                  </div>
+                  <div className="text-center">
+                    <div className="w-12 h-12 rounded-full bg-gradient-to-br from-cyan-500 to-purple-600 flex items-center justify-center mx-auto mb-4 font-bold text-white">
+                      3
+                    </div>
+                    <h4 className="font-bold mb-2">Proposal & Partnership</h4>
+                    <p className="text-sm text-muted-foreground">
+                      We'll create a custom proposal outlining scope, timeline, and investment. If aligned, we kick off your project.
+                    </p>
+                  </div>
+                </div>
+                <div className="mt-8 p-4 rounded-lg bg-cyan-500/10 border border-cyan-500/30">
+                  <p className="text-sm text-muted-foreground text-center">
+                    <strong className="text-foreground">Note:</strong> Even if we're not the right fit for your project right now, we'll provide honest feedback and may suggest alternative approaches or resources.
+                  </p>
+                </div>
+              </div>
+            </motion.div>
           </div>
         </section>
       </div>

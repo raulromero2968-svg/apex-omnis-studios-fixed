@@ -104,3 +104,10 @@
 - [x] Integrate form into Services page
 - [x] Connect form to Make.com webhook for submissions (uses VITE_MAKE_WEBHOOK_URL)
 - [x] Test and save checkpoint (TypeScript: 0 errors)
+
+## What Happens Next Section (Current Session)
+
+- [x] Add "What Happens Next" section below application form
+- [x] Explain review process and timeline
+- [x] Set expectations for applicants
+- [x] Test and save checkpoint (TypeScript: 0 errors)
