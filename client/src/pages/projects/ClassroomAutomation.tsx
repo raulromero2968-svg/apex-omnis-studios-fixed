@@ -5,7 +5,7 @@ export default function ClassroomAutomation() {
     <ProjectPage
       title="Classroom Automation Hub"
       subtitle="Intelligent automation system for grading, attendance, and parent communication"
-      heroImage="/classroom-automation-hero-v1.png"
+      heroImage="/classroom-automation-hero-mockup-v1.png"
       problem="Teachers spend 10-15 hours per week on administrative tasks that take time away from actual teaching. Grading assignments, tracking attendance, responding to parent emails, updating gradebooks, and generating progress reports consume evenings and weekends. The manual workload leads to burnout, inconsistent communication, and delayed feedback to students. Teachers need their time back to focus on what matters: teaching."
       solution="We built an intelligent classroom automation system that handles the busywork so teachers can focus on students. The platform integrates with Google Classroom, Canvas, and Schoology to automatically grade assignments, track attendance patterns, generate parent communication templates, and create real-time progress reports. AI-powered grading handles multiple-choice, short answer, and even essay questions with customizable rubrics. Attendance tracking identifies patterns and triggers automated parent notifications. The system saves teachers 10+ hours per week while improving communication consistency."
       scaleMetrics={[
@@ -50,11 +50,6 @@ export default function ClassroomAutomation() {
         "Track attendance patterns and trigger early interventions",
         "Reclaim evenings and weekends for lesson planning and rest",
       ]}
-      testimonial={{
-        quote: "This system gave me my life back. I used to spend every evening grading and every weekend catching up on emails. Now I spend 30 minutes reviewing AI-graded work and the rest is handled automatically. I'm a better teacher because I'm not exhausted.",
-        author: "Sarah T.",
-        role: "High School English Teacher, 150 students",
-      }}
       gallery={[
         {
           src: "/classroom-automation-gallery-1-v1.png",

@@ -50,11 +50,6 @@ export default function AIPipeline() {
         "Automated publishing to 4+ social media platforms",
         "Grow audience without creator burnout",
       ]}
-      testimonial={{
-        quote: "I was spending 15 hours a week just researching and writing posts about TCG markets. This system handles the research and drafting, I review and approve, and it publishes everywhere automatically. I've 10x'd my content output while actually spending less time on it. My audience has grown 300% in 3 months.",
-        author: "Jordan K.",
-        role: "TCG Market Analyst & Content Creator",
-      }}
       gallery={[
         {
           src: "/ai-pipeline-gallery-1-flat.png",

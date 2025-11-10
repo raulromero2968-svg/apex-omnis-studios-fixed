@@ -5,7 +5,7 @@ export default function QuickLaunchWebsite() {
     <ProjectPage
       title="Quick Launch Website Builder"
       subtitle="Turn business concepts into live, professional websites in 24 hours"
-      heroImage="/quick-launch-website-hero-v1.png"
+      heroImage="/quick-launch-website-hero-mockup-v1.png"
       problem="Entrepreneurs have brilliant business ideas but get stuck at the website stage. Your friend wants to launch a gaming equipment rental business but the website project has been stalled for months. Financial analysts need landing pages for investment newsletters. IT specialists want portfolio sites to showcase projects. Engineers need product pages for hardware prototypes. Traditional web development takes weeks or months and costs thousands of dollars. No-code builders still require design skills and hours of work. By the time the website is ready, the momentum is gone and the opportunity has passed."
       solution="We built a rapid website deployment system that turns business concepts into live, professional websites in 24 hours. You provide the business idea, target audience, and key features. Our system generates a complete website including copywriting, design, responsive layout, contact forms, and SEO optimization. The process includes AI-powered copywriting based on your business model, custom design matching your brand, mobile-responsive layouts, integrated contact forms with email notifications, and one-click deployment to custom domains. Perfect for entrepreneurs who need to validate ideas quickly, launch rental businesses, showcase portfolios, or test market demand without months of development."
       scaleMetrics={[
@@ -50,11 +50,6 @@ export default function QuickLaunchWebsite() {
         "Mobile-responsive design tested across all devices",
         "Validate business ideas before competitors finish planning",
       ]}
-      testimonial={{
-        quote: "I've been trying to launch my gaming equipment rental business for a year. The website was always the blocker - too expensive to hire someone, too time-consuming to build myself. This system gave me a professional site in one day. I'm now taking bookings and making money instead of still planning the website.",
-        author: "Mike T.",
-        role: "Gaming Equipment Rental Business Owner",
-      }}
       gallery={[
         {
           src: "/quick-launch-website-gallery-1-v1.png",

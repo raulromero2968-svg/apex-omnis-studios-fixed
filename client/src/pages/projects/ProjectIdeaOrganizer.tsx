@@ -5,7 +5,7 @@ export default function ProjectIdeaOrganizer() {
     <ProjectPage
       title="Project Idea Organizer"
       subtitle="AI assistant that transforms scattered ideas into actionable project plans"
-      heroImage="/project-idea-organizer-hero-v1.png"
+      heroImage="/project-idea-organizer-hero-mockup-v1.png"
       problem="Creatives, engineers, and entrepreneurs have brilliant ideas scattered across notebooks, voice memos, random text files, and late-night Discord messages. Financial analysts track investment ideas in spreadsheets. IT specialists have side project concepts buried in Slack threads. Engineers sketch product designs on napkins. But scattered ideas never become reality. Without a system to capture, organize, validate, and prioritize ideas, most die in the chaos. You need a second brain that turns creative chaos into structured action plans."
       solution="We built an AI-powered idea organizer that captures scattered thoughts from any source and transforms them into structured project plans with clear next steps. The system integrates with voice memos, text files, emails, and messaging apps to automatically extract ideas, categorize them by theme, validate feasibility, and generate action plans. AI analysis identifies patterns across your ideas, suggests connections you might have missed, and prioritizes projects based on your goals. Whether you're a financial analyst tracking investment theses, an IT specialist managing side projects, or an engineer developing product concepts, the system gives your ideas structure and momentum."
       scaleMetrics={[
@@ -50,11 +50,6 @@ export default function ProjectIdeaOrganizer() {
         "AI pattern recognition identifies connections between ideas",
         "Turn creative chaos into focused execution",
       ]}
-      testimonial={{
-        quote: "I used to have ideas everywhere - voice memos, random notes, Slack messages to myself. Most of them died because I couldn't remember them or didn't know where to start. Now everything gets captured automatically and I get action plans with actual next steps. I've shipped 3 side projects this year that would have stayed ideas forever.",
-        author: "David R.",
-        role: "IT Specialist & Side Project Builder",
-      }}
       gallery={[
         {
           src: "/project-idea-organizer-gallery-1-v1.png",

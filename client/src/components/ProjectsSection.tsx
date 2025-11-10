@@ -4,98 +4,89 @@ import { ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { Link } from "wouter";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
+import Autoplay from "embla-carousel-autoplay";
 
 interface Project {
   title: string;
   description: string;
   category: string;
+  audienceTag: string;
   screenshot: string;
   projectUrl: string;
   techStack: string[];
 }
 
-interface ProjectCategory {
-  name: string;
-  description: string;
-  projects: Project[];
-}
-
 export function ProjectsSection() {
-  const [categories, setCategories] = useState<ProjectCategory[]>([]);
+  const [projects, setProjects] = useState<Project[]>([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Organized by audience: Gamers, Teachers, Creatives
-    const projectCategories: ProjectCategory[] = [
+    // All 6 projects in one carousel
+    const allProjects: Project[] = [
       {
-        name: "Gaming Tools",
-        description: "Automation systems for gaming communities, collectors, and tournament organizers",
-        projects: [
-          {
-            title: "Event Tracker Pro",
-            description: "Personal event tracking system for gaming conventions, tournaments, and local events with automated discovery across 20+ sources.",
-            category: "Automation",
-            screenshot: "/event-tracker-hero-v1.png",
-            projectUrl: "/projects/museum-tracker",
-            techStack: ["Zapier (47 steps)", "Notion", "Web Scraping"]
-          },
-          {
-            title: "TCG Portfolio Dashboard",
-            description: "Personal collection analytics for tracking card values, market trends, and portfolio performance with real-time market data integration.",
-            category: "Data Analysis",
-            screenshot: "/tcg-portfolio-hero-v1.png",
-            projectUrl: "/projects/data-dashboard",
-            techStack: ["React", "TCGPlayer API", "Data Viz"]
-          }
-        ]
+        title: "Event Tracker Pro",
+        description: "Personal event tracking system for gaming conventions, tournaments, and local events with automated discovery across 20+ sources.",
+        category: "Automation",
+        audienceTag: "Gaming Tools",
+        screenshot: "/event-tracker-hero-mockup-v1.png",
+        projectUrl: "/projects/museum-tracker",
+        techStack: ["Zapier (47 steps)", "Notion", "Web Scraping"]
       },
       {
-        name: "Education Tools",
-        description: "Intelligent automation for teachers to reclaim time and improve student outcomes",
-        projects: [
-          {
-            title: "Classroom Automation Hub",
-            description: "Intelligent automation system for grading, attendance, and parent communication. Saves 10-15 hours per week with AI-powered grading and automated workflows.",
-            category: "AI/ML",
-            screenshot: "/classroom-automation-hero-v1.png",
-            projectUrl: "/projects/classroom-automation",
-            techStack: ["GPT-4", "Canvas LMS", "Aeries"]
-          },
-          {
-            title: "AI Lesson Plan Generator",
-            description: "Standards-aligned curriculum planning with AI-powered differentiation. Generate complete lesson plans in 10-15 minutes instead of 5-8 hours.",
-            category: "AI/ML",
-            screenshot: "/lesson-plan-generator-hero-v1.png",
-            projectUrl: "/projects/lesson-plan-generator",
-            techStack: ["GPT-4", "50 State Standards", "Notion"]
-          }
-        ]
+        title: "TCG Portfolio Dashboard",
+        description: "Personal collection analytics for tracking card values, market trends, and portfolio performance with real-time market data integration.",
+        category: "Data Analysis",
+        audienceTag: "Gaming Tools",
+        screenshot: "/tcg-portfolio-hero-mockup-v1.png",
+        projectUrl: "/projects/data-dashboard",
+        techStack: ["React", "TCGPlayer API", "Data Viz"]
       },
       {
-        name: "Creative Tools",
-        description: "Systems that transform scattered ideas into structured execution for creators and entrepreneurs",
-        projects: [
-          {
-            title: "Project Idea Organizer",
-            description: "AI assistant that captures scattered ideas from 15+ sources and transforms them into actionable project plans with clear next steps.",
-            category: "AI/ML",
-            screenshot: "/project-idea-organizer-hero-v1.png",
-            projectUrl: "/projects/project-idea-organizer",
-            techStack: ["GPT-4", "Whisper AI", "Notion"]
-          },
-          {
-            title: "Quick Launch Website Builder",
-            description: "Turn business concepts into live, professional websites in 24 hours. AI-powered copywriting, custom design, and one-click deployment.",
-            category: "Web Development",
-            screenshot: "/quick-launch-website-hero-v1.png",
-            projectUrl: "/projects/quick-launch-website",
-            techStack: ["GPT-4", "React", "Vercel"]
-          }
-        ]
+        title: "Classroom Automation Hub",
+        description: "Intelligent automation system for grading, attendance, and parent communication. Saves 10-15 hours per week with AI-powered grading and automated workflows.",
+        category: "AI/ML",
+        audienceTag: "Education Tools",
+        screenshot: "/classroom-automation-hero-mockup-v1.png",
+        projectUrl: "/projects/classroom-automation",
+        techStack: ["GPT-4", "Canvas LMS", "Aeries"]
+      },
+      {
+        title: "AI Lesson Plan Generator",
+        description: "Standards-aligned curriculum planning with AI-powered differentiation. Generate complete lesson plans in 10-15 minutes instead of 5-8 hours.",
+        category: "AI/ML",
+        audienceTag: "Education Tools",
+        screenshot: "/lesson-plan-generator-hero-mockup-v1.png",
+        projectUrl: "/projects/lesson-plan-generator",
+        techStack: ["GPT-4", "50 State Standards", "Notion"]
+      },
+      {
+        title: "Project Idea Organizer",
+        description: "AI assistant that captures scattered ideas from 15+ sources and transforms them into actionable project plans with clear next steps.",
+        category: "AI/ML",
+        audienceTag: "Creative Tools",
+        screenshot: "/project-idea-organizer-hero-mockup-v1.png",
+        projectUrl: "/projects/project-idea-organizer",
+        techStack: ["GPT-4", "Whisper AI", "Notion"]
+      },
+      {
+        title: "Quick Launch Website Builder",
+        description: "Turn business concepts into live, professional websites in 24 hours. AI-powered copywriting, custom design, and one-click deployment.",
+        category: "Web Development",
+        audienceTag: "Creative Tools",
+        screenshot: "/quick-launch-website-hero-mockup-v1.png",
+        projectUrl: "/projects/quick-launch-website",
+        techStack: ["GPT-4", "React", "Vercel"]
       }
     ];
 
-    setCategories(projectCategories);
+    setProjects(allProjects);
     setLoading(false);
   }, []);
 
@@ -120,35 +111,30 @@ export function ProjectsSection() {
         </p>
       </div>
 
-      {/* Category Sections */}
-      <div className="space-y-20">
-        {categories.map((category, categoryIndex) => (
-          <div key={category.name} className="space-y-8">
-            {/* Category Header */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-              viewport={{ once: true }}
-              className="text-center space-y-2"
-            >
-              <h3 className="text-2xl md:text-3xl font-bold text-foreground">
-                {category.name}
-              </h3>
-              <p className="text-muted-foreground max-w-2xl mx-auto">
-                {category.description}
-              </p>
-            </motion.div>
-
-            {/* Projects Grid */}
-            <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-              {category.projects.map((project, projectIndex) => (
+      {/* Carousel */}
+      <div className="max-w-6xl mx-auto">
+        <Carousel
+          opts={{
+            align: "start",
+            loop: true,
+          }}
+          plugins={[
+            Autoplay({
+              delay: 4000,
+              stopOnInteraction: true,
+            }),
+          ]}
+          className="w-full"
+        >
+          <CarouselContent className="-ml-4">
+            {projects.map((project, index) => (
+              <CarouselItem key={project.title} className="pl-4 md:basis-1/2 lg:basis-1/3">
                 <motion.div
-                  key={project.title}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: projectIndex * 0.1 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
                   viewport={{ once: true }}
+                  className="h-full"
                 >
                   <Card className="group hover:shadow-xl hover:shadow-cyan-500/10 transition-all duration-300 bg-card/50 backdrop-blur border-border/50 overflow-hidden h-full flex flex-col">
                     {/* Project Screenshot */}
@@ -168,7 +154,10 @@ export function ProjectsSection() {
                     </div>
 
                     <CardHeader className="flex-grow">
-                      <div className="flex items-center justify-between mb-2">
+                      <div className="flex items-center justify-between mb-2 gap-2">
+                        <span className="text-xs font-medium px-2 py-1 rounded-full bg-purple-500/10 text-purple-400 border border-purple-500/20">
+                          {project.audienceTag}
+                        </span>
                         <span className="text-xs font-medium px-2 py-1 rounded-full bg-cyan-500/10 text-cyan-400 border border-cyan-500/20">
                           {project.category}
                         </span>
@@ -206,10 +195,12 @@ export function ProjectsSection() {
                     </CardContent>
                   </Card>
                 </motion.div>
-              ))}
-            </div>
-          </div>
-        ))}
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+          <CarouselPrevious className="hidden md:flex" />
+          <CarouselNext className="hidden md:flex" />
+        </Carousel>
       </div>
     </section>
   );
