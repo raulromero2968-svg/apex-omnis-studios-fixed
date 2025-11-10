@@ -106,6 +106,75 @@ export default function Ethics() {
                 <p className="font-semibold text-foreground">
                   If you're here to build something that helps people, we're here to help you. If you're here to exploit communities, this isn't the place for you.
                 </p>
+
+                <h2 className="text-2xl font-bold text-foreground mt-8">Technical Safeguards</h2>
+
+                <p>
+                  We implement specific technical measures to prevent misuse of our automation tools:
+                </p>
+
+                <ul className="list-disc list-inside space-y-2 ml-4">
+                  <li><strong>Rate Limiting:</strong> Event trackers are limited to reasonable tracking volumes that serve personal use, not bulk scraping operations</li>
+                  <li><strong>Human Review Checkpoints:</strong> Content automation systems require human approval before publishing, preventing spam and maintaining quality</li>
+                  <li><strong>Usage Monitoring:</strong> We actively monitor for patterns that indicate scalping or exploitation and reserve the right to terminate service</li>
+                  <li><strong>API Restrictions:</strong> Our integrations respect platform terms of service and implement delays that prevent aggressive automation</li>
+                  <li><strong>Collection Size Limits:</strong> Portfolio tools focus on personal collections (hundreds of items) not commercial inventory (thousands)</li>
+                </ul>
+
+                <h2 className="text-2xl font-bold text-foreground mt-8">Community Case Studies</h2>
+
+                <div className="space-y-4">
+                  <div className="pl-4 border-l-4 border-cyan-500">
+                    <h3 className="font-bold text-foreground mb-2">TCG Collectors: Anti-Scalper Positioning</h3>
+                    <p>
+                      When designing our Event Tracker Pro, we deliberately limited the scope to prevent scalpers from using it to monitor every tournament and prerelease for resale opportunities. The tool tracks events you genuinely plan to attend, not every listing in a 500-mile radius. This protects local game stores and ensures cards go to players, not flippers.
+                    </p>
+                  </div>
+
+                  <div className="pl-4 border-l-4 border-purple-500">
+                    <h3 className="font-bold text-foreground mb-2">Teachers: Preserving Human Connection</h3>
+                    <p>
+                      Our Classroom Automation Hub saves teachers time on administrative tasks—grading, attendance, email templates—but it never replaces the human element of teaching. We don't offer AI-generated lesson delivery or automated student feedback. The time saved goes back to what matters: face-to-face interaction with students.
+                    </p>
+                  </div>
+
+                  <div className="pl-4 border-l-4 border-pink-500">
+                    <h3 className="font-bold text-foreground mb-2">Creatives: Quality Over Quantity</h3>
+                    <p>
+                      Our Project Idea Organizer helps creatives turn scattered thoughts into actionable plans, but we don't build tools for mass content generation or social media spam. Every piece of content should have intention and value. We help you organize better, not spam faster.
+                    </p>
+                  </div>
+                </div>
+
+                <h2 className="text-2xl font-bold text-foreground mt-8">Transparency & Accountability</h2>
+
+                <p>
+                  We believe in transparent business practices:
+                </p>
+
+                <ul className="list-disc list-inside space-y-2 ml-4">
+                  <li><strong>Open Pricing:</strong> No hidden fees, no bait-and-switch tactics. You know exactly what you're paying for.</li>
+                  <li><strong>Clear Terms:</strong> Our acceptable use policy explicitly prohibits scalping, spam, and community exploitation.</li>
+                  <li><strong>Right to Refuse Service:</strong> We reserve the right to terminate service for users who violate our community principles.</li>
+                  <li><strong>No Dark Patterns:</strong> Our tools are designed to help you work smarter, not trick you into subscriptions or upsells.</li>
+                  <li><strong>Data Privacy:</strong> Your collection data, lesson plans, and creative projects are yours. We don't sell your data or use it for training AI models.</li>
+                </ul>
+
+                <h2 className="text-2xl font-bold text-foreground mt-8">Join the Movement</h2>
+
+                <p>
+                  We're building a community of ethical automation users who believe technology should serve people, not exploit them. If you share these values:
+                </p>
+
+                <ul className="list-disc list-inside space-y-2 ml-4">
+                  <li>You're a collector who wants to enjoy your hobby without competing against bots</li>
+                  <li>You're a teacher who wants more time for students, not more administrative burden</li>
+                  <li>You're a creative who wants to build something meaningful, not spam the internet</li>
+                </ul>
+
+                <p className="font-semibold text-foreground mt-4">
+                  Then you're in the right place. Let's build something better together.
+                </p>
               </div>
             </motion.div>
           </div>

@@ -3,7 +3,6 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { toast } from "sonner";
-import emailjs from "@emailjs/browser";
 import { Loader2, Send } from "lucide-react";
 
 export default function ContactForm() {
@@ -34,23 +33,31 @@ export default function ContactForm() {
     setIsSubmitting(true);
 
     try {
-      // EmailJS configuration - these will be set via environment variables
-      const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID || "YOUR_SERVICE_ID";
-      const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID || "YOUR_TEMPLATE_ID";
-      const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY || "YOUR_PUBLIC_KEY";
+      // Make.com webhook URL - set via environment variable
+      const webhookUrl = import.meta.env.VITE_MAKE_WEBHOOK_URL;
 
-      await emailjs.send(
-        serviceId,
-        templateId,
-        {
-          from_name: formData.name,
-          from_email: formData.email,
+      if (!webhookUrl) {
+        throw new Error("Contact form webhook not configured. Please email us directly at contact@apexomnis.io");
+      }
+
+      const response = await fetch(webhookUrl, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
           company: formData.company || "Not provided",
           message: formData.message,
-          to_name: "Apex Omnis Studios"
-        },
-        publicKey
-      );
+          timestamp: new Date().toISOString(),
+          source: "Apex Omnis Studios Website"
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error("Failed to send message");
+      }
 
       toast.success("Message sent successfully! We'll get back to you soon.");
       
@@ -62,7 +69,7 @@ export default function ContactForm() {
         message: ""
       });
     } catch (error) {
-      console.error("EmailJS Error:", error);
+      console.error("Contact Form Error:", error);
       toast.error("Failed to send message. Please try again or email us directly at contact@apexomnis.io");
     } finally {
       setIsSubmitting(false);

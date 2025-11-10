@@ -239,3 +239,73 @@ The three pillars of Apex Omnis Studios.
 ---
 
 **This document is living - update it as context evolves.**
+
+---
+
+## Existing Toolbox & Infrastructure
+
+**⚠️ CRITICAL: Do not recommend tools already in the toolbox. Toolbox has limits.**
+
+### Automation & Integration Tools
+- **Zapier** - For simple, linear workflows
+  - Quick "if this, then that" automations
+  - Simple API integrations
+  - Fast setup for basic tasks
+- **Make.com** - For complex, conditional workflows (PAID CORE MEMBERSHIP)
+  - Contact form webhooks with routing logic
+  - Multi-step automation workflows (47-step workflows mentioned in portfolio)
+  - Complex branching (if/else, multiple paths)
+  - Data transformation and filtering
+  - AI agent capabilities
+  - Museum Tracker automation (as shown in project pages)
+- **Notion** - Database and content management
+  - Project tracking
+  - Content calendar
+  - Knowledge base
+  - Event tracking system
+
+### AI Tools (Already Documented Above)
+- Manus
+- Claude (Anthropic)
+- ChatGPT (OpenAI)
+- Google Gemini
+- Devin AI
+- Microsoft Copilot
+
+### Development & Deployment
+- **Manus Platform** - Web development and hosting
+- **Git/GitHub** - Version control
+
+### Communication & Marketing
+- **Twitter/X** - Primary social media (@TCGAISociety)
+- **Email** - contact@apexomnis.io
+
+### Use Case Guidelines
+**When to use Zapier:**
+- Simple, linear workflows
+- Quick automations that don't need complex logic
+- Basic integrations
+
+**When to use Make.com:**
+- Complex workflows with branching logic
+- Data transformation and filtering
+- Multi-condition scenarios
+- AI agent workflows
+- Visual workflow design
+
+### What NOT to Recommend
+- ❌ EmailJS (using Make.com webhooks instead)
+- ❌ Additional project management tools (already using Notion)
+- ❌ Additional automation platforms (Zapier + Make.com cover all needs)
+- ❌ Separate AI agent tools (Make.com has this built-in)
+
+### Future Toolbox Considerations
+When recommending new tools, always:
+1. Check if existing tools can handle the use case
+2. Justify why a new tool is necessary
+3. Consider toolbox limits and consolidation opportunities
+4. Document the addition in this section
+
+---
+
+**Last Updated:** November 9, 2025 (Added toolbox documentation)

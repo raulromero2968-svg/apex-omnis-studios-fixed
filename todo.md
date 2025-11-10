@@ -73,3 +73,12 @@
 - [ ] Mark tasks complete in todo.md
 - [ ] Update next-steps.md with progress
 - [ ] Prepare handoff for next development phase
+
+## Follow-up Tasks (Current Session)
+
+- [x] Update contact form to use Make.com webhook (better for complex routing)
+- [ ] Get Make.com webhook URL from user and add to secrets
+- [x] Generate 30 theme showcase images (5 themes × 6 projects)
+- [x] Expand Ethics page with detailed community principles and anti-scalper safeguards
+- [x] Test all changes and verify functionality (TypeScript: 0 errors)
+- [ ] Save final checkpoint with all follow-up tasks complete
