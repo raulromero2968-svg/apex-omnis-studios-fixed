@@ -12,7 +12,6 @@ import ClassroomAutomation from "./pages/projects/ClassroomAutomation";
 import LessonPlanGenerator from "./pages/projects/LessonPlanGenerator";
 import ProjectIdeaOrganizer from "./pages/projects/ProjectIdeaOrganizer";
 import QuickLaunchWebsite from "./pages/projects/QuickLaunchWebsite";
-import Ethics from "./pages/Ethics";
 
 function Router() {
   return (
@@ -25,7 +24,6 @@ function Router() {
       <Route path={"/projects/lesson-plan-generator"} component={LessonPlanGenerator} />
       <Route path={"/projects/project-idea-organizer"} component={ProjectIdeaOrganizer} />
       <Route path={"/projects/quick-launch-website"} component={QuickLaunchWebsite} />
-      <Route path={"/ethics"} component={Ethics} />
       <Route path={"/404"} component={NotFound} />
       {/* Final fallback route */}
       <Route component={NotFound} />

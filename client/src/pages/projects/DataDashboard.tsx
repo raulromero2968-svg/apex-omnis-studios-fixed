@@ -5,7 +5,7 @@ export default function DataDashboard() {
     <ProjectPage
       title="TCG Portfolio Dashboard"
       subtitle="Personal collection analytics for tracking card values, market trends, and portfolio performance"
-      heroImage="/tcg-portfolio-hero-mockup-v1.png"
+      heroImage="/tcg-portfolio-hero-v1.png"
       problem="TCG collectors invest thousands of dollars in cards but lack tools to track their portfolio's true value. Market prices fluctuate constantly across multiple games (Magic: The Gathering, Pokémon, Yu-Gi-Oh!, Flesh and Blood), and without real-time data, collectors can't make informed decisions about when to buy, sell, or hold. Spreadsheets are tedious, error-prone, and quickly become outdated. Manual price checking across TCGPlayer, eBay, and CardMarket takes hours every week. Collectors need a unified dashboard that shows their collection's performance at a glance and identifies which cards are gaining or losing value before market opportunities disappear."
       solution="We built a personal TCG portfolio dashboard that transforms your collection data into actionable market insights with real-time valuations across multiple games and marketplaces. The platform integrates with TCGPlayer, eBay, CardMarket, and other market data sources to provide up-to-the-minute card valuations. Track your portfolio's total value, see which cards are trending up or down, and get alerts when cards hit your target prices. Visualize your collection by set, rarity, condition, and game type. Identify undervalued cards in your collection before the market catches up. Make smarter collecting decisions with data-driven insights instead of gut feelings."
       scaleMetrics={[
@@ -50,6 +50,11 @@ export default function DataDashboard() {
         "Automated price alerts for buy/sell opportunities",
         "Save 3+ hours weekly on manual price checking",
       ]}
+      testimonial={{
+        quote: "I have a $15K Magic collection and used to spend hours every week checking prices on TCGPlayer. This dashboard shows me everything in real-time. I caught a price spike on a card I owned and sold it for 40% more than I would have if I'd waited another week. The system paid for itself in one transaction.",
+        author: "Chris P.",
+        role: "Magic: The Gathering Collector, 500+ card portfolio",
+      }}
       gallery={[
         {
           src: "/tcg-portfolio-gallery-1-v1.png",

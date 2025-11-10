@@ -5,7 +5,7 @@ export default function MuseumTracker() {
     <ProjectPage
       title="Event Tracker Pro"
       subtitle="Personal event tracking system for gaming conventions, tournaments, and local events"
-      heroImage="/event-tracker-hero-mockup-v1.png"
+      heroImage="/event-tracker-hero-v1.png"
       problem="Gaming enthusiasts and collectors struggle to keep track of upcoming conventions, local tournaments, card shop events, and esports competitions across multiple cities and venues. Whether you're into TCG, fighting games, esports, or collectibles, missing events means missing opportunities to compete, network, and grow your passion. Manual tracking across websites, social media, Discord servers, and Facebook groups is overwhelming and error-prone."
       solution="We built a personal event tracking system that consolidates gaming event data from multiple sources into a unified Notion workspace. The system features automated event discovery, filtered dashboards by location and game type, calendar visualization, and real-time notifications for events matching your interests. Perfect for gamers, collectors, and tournament organizers who want to stay informed without the hassle."
       scaleMetrics={[
@@ -50,6 +50,11 @@ export default function MuseumTracker() {
         "Notifications for events matching your collection interests",
         "Never miss a convention, tournament, or local gaming event again",
       ]}
+      testimonial={{
+        quote: "I used to spend hours every week checking different websites for TCG events. Now everything shows up automatically in my dashboard. I've attended 3x more tournaments this year because I actually know when they're happening.",
+        author: "Alex M.",
+        role: "TCG Collector & Tournament Player",
+      }}
       gallery={[
         {
           src: "/event-tracker-gallery-1-v1.png",

@@ -5,7 +5,7 @@ export default function LessonPlanGenerator() {
     <ProjectPage
       title="AI Lesson Plan Generator"
       subtitle="Intelligent curriculum planning with standards alignment and differentiation"
-      heroImage="/lesson-plan-generator-hero-mockup-v1.png"
+      heroImage="/lesson-plan-generator-hero-v1.png"
       problem="Creating comprehensive lesson plans that align with state standards, differentiate for diverse learners, and include engaging activities takes 5-8 hours per week. Teachers must manually cross-reference standards documents, search for resources, adapt materials for different learning levels, and ensure vertical alignment across units. New teachers struggle even more, often spending 15+ hours weekly on lesson planning. The workload is unsustainable and leaves little time for creativity or personalization."
       solution="We built an AI-powered lesson plan generator that creates standards-aligned, differentiated curriculum in minutes instead of hours. The system uses GPT-4 trained on state standards, curriculum frameworks, and best practices to generate complete lesson plans including learning objectives, activities, assessments, and differentiation strategies. Teachers input their topic, grade level, and student needs, and the AI generates a comprehensive plan with embedded resources, pacing guides, and alignment documentation. The system saves 5-8 hours per week while improving lesson quality and consistency."
       scaleMetrics={[
@@ -50,6 +50,11 @@ export default function LessonPlanGenerator() {
         "Embedded resources from 15+ educational databases",
         "Complete assessments with rubrics and answer keys",
       ]}
+      testimonial={{
+        quote: "As a first-year teacher, I was drowning in lesson planning. This system taught me what good lessons look like while saving me 10+ hours every week. I customize the AI-generated plans instead of building from scratch, and my students are more engaged because I have time to make lessons creative.",
+        author: "Marcus L.",
+        role: "First-Year Middle School Science Teacher",
+      }}
       gallery={[
         {
           src: "/lesson-plan-generator-gallery-1-v1.png",

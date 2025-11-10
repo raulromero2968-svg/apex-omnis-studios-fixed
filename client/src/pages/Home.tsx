@@ -213,16 +213,24 @@ export default function Home() {
             
             <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
               <p>
-                <span className="text-foreground font-medium">Apex Omnis Studios</span> builds intelligent automation systems for <span className="text-foreground">gamers, teachers, and creatives</span>. From TCG portfolio tracking to classroom automation and idea organization tools, we transform manual workflows into seamless, data-driven experiences.
+                Apex Omnis Studios was born at the crossroads of passion, curiosity, and purpose. I started as a business teacher in a California high school, where I helped students explore careers, technology, and creativity. Before that, I worked in public service—supporting families through health and food assistance programs.
               </p>
               
               <p>
-                Founded by a former business teacher turned automation specialist, we combine deep technical expertise with real-world understanding of community needs. Our systems integrate AI, data analytics, and workflow automation to solve problems that matter—whether you're managing gaming events, grading assignments, or turning scattered ideas into structured projects.
+                But my real fascination has always been with systems: how games work, how people learn, how data flows, and how technology can serve communities. Inspired by students and driven by hobbies like trading cards, competitive gaming, and game design, I dove deep into AI, data, and automation.
               </p>
               
               <p className="text-foreground font-medium">
-                We build for <span className="text-cyan-400">passion, not exploitation</span>. Our tools empower collectors, educators, and creators to succeed ethically—never scalpers, manipulators, or those who harm communities. <a href="/ethics" className="text-cyan-400 hover:text-cyan-300 underline">Read our ethics statement →</a>
+                Apex Omnis Studios is the result—a mission-driven studio focused on helping gaming businesses, collectors, and tournament organizers build intelligent systems, creative tools, and platforms that turn passion into profit. Whether you're managing TCG events, running esports tournaments, tracking collectible inventories, or building a gaming community, we create custom solutions that scale with your vision.
               </p>
+
+              {/* Anti-Scalper Ethics Statement */}
+              <div className="mt-8 p-6 rounded-xl bg-gradient-to-r from-cyan-500/10 to-purple-500/10 border border-cyan-500/20">
+                <h3 className="text-xl font-bold text-cyan-400 mb-3">Our Commitment to the Community</h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  We build tools for <span className="text-foreground font-medium">gamers, collectors, and community builders who love the hobby</span>—not for scalpers, manipulators, or exploiters. Our mission is to help you enjoy, analyze, and grow your passion with data-driven insights and automation that respects the community. We stand against market manipulation, artificial scarcity, and predatory practices. Whether you're a TCG collector, tournament organizer, gaming cafe owner, or esports enthusiast, our tools empower you to succeed ethically. <span className="text-cyan-400 font-medium">Fair access for all. Passion over profit.</span>
+                </p>
+              </div>
             </div>
           </motion.div>
         </section>
