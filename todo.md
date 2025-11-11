@@ -158,3 +158,13 @@
 - [x] Add route for /application-status
 - [x] Add estimated review time to What Happens Next section
 - [x] Test and save checkpoint (TypeScript: 0 errors)
+
+## Applicant Workflow Completion (Current Session)
+
+- [x] Add "Clear Draft" button to application form
+- [x] Add confirmation dialog for clear draft action
+- [x] Link status page from form success message
+- [x] Create email confirmation template for Make.com
+- [x] Include confirmation code generation in template
+- [x] Add status tracking link to email template
+- [x] Test and save checkpoint (TypeScript: 0 errors)

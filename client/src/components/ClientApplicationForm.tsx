@@ -5,7 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
-import { ArrowRight, ArrowLeft, CheckCircle, Loader2, Upload, X, FileText, File, Image as ImageIcon, Eye, Trash2, Info } from "lucide-react";
+import { ArrowRight, ArrowLeft, CheckCircle, Loader2, Upload, X, FileText, File, Image as ImageIcon, Eye, Trash2, Info, Search } from "lucide-react";
 import { toast } from "sonner";
 
 interface FormData {
@@ -224,6 +224,15 @@ export default function ClientApplicationForm() {
     toast.success("All files removed");
   };
 
+  const clearDraft = () => {
+    if (confirm("Are you sure you want to clear your draft and start over? This cannot be undone.")) {
+      setFormData(initialFormData);
+      setCurrentStep(1);
+      localStorage.removeItem(FORM_STORAGE_KEY);
+      toast.success("Draft cleared. Starting fresh!");
+    }
+  };
+
   const getFileIcon = (fileType: string) => {
     if (fileType.includes('pdf')) return FileText;
     if (fileType.includes('word') || fileType.includes('document')) return File;
@@ -347,15 +356,46 @@ export default function ClientApplicationForm() {
         <p className="text-lg text-muted-foreground mb-6">
           Thank you for applying to work with Apex Omnis Studios. We review every application personally and will respond within 48 hours.
         </p>
-        <p className="text-muted-foreground">
+        <p className="text-muted-foreground mb-8">
           We'll reach out to <strong className="text-foreground">{formData.email}</strong> with next steps.
         </p>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <Button
+            onClick={() => window.location.href = '/application-status'}
+            className="bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700"
+          >
+            <Search className="w-4 h-4 mr-2" />
+            Track Your Application
+          </Button>
+          <Button
+            variant="outline"
+            onClick={() => window.location.href = '/'}
+          >
+            Return to Home
+          </Button>
+        </div>
       </motion.div>
     );
   }
 
   return (
     <div className="max-w-3xl mx-auto">
+      {/* Clear Draft Button */}
+      {formData.name && !isComplete && (
+        <div className="flex justify-end mb-4">
+          <Button
+            type="button"
+            variant="outline"
+            size="sm"
+            onClick={clearDraft}
+            className="text-muted-foreground hover:text-destructive hover:border-destructive"
+          >
+            <X className="w-4 h-4 mr-2" />
+            Clear Draft
+          </Button>
+        </div>
+      )}
+
       {/* Progress Indicator */}
       <div className="mb-8">
         <div className="flex justify-between items-center mb-2">
