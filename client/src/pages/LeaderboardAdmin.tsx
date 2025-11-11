@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { ConstellationBackground } from "@/components/ConstellationBackground";
 import { Link } from "wouter";
 import { ArrowLeft, Trophy, Check, X, Eye, Calendar, User, Mail, DollarSign, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -114,7 +115,9 @@ export default function LeaderboardAdmin() {
   // Login screen
   if (!isAuthenticated) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900/20 to-gray-900 flex items-center justify-center p-4">
+      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900/20 to-gray-900 flex items-center justify-center p-4 relative">
+        <ConstellationBackground />
+        <div className="relative z-10 w-full flex items-center justify-center">
         <Card className="w-full max-w-md bg-black/40 border-white/10">
           <CardHeader>
             <CardTitle className="text-white flex items-center gap-2">
@@ -148,6 +151,7 @@ export default function LeaderboardAdmin() {
             </form>
           </CardContent>
         </Card>
+        </div>
       </div>
     );
   }
@@ -158,7 +162,9 @@ export default function LeaderboardAdmin() {
   const rejectedSubmissions = submissions.filter(s => s.status === "rejected");
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900/20 to-gray-900">
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900/20 to-gray-900 relative">
+      <ConstellationBackground />
+      <div className="relative z-10">
       {/* Header */}
       <div className="border-b border-white/10 bg-black/30 backdrop-blur-sm">
         <div className="container mx-auto px-4 py-6">
@@ -392,6 +398,7 @@ export default function LeaderboardAdmin() {
           </div>
         </div>
       )}
+      </div>
     </div>
   );
 }

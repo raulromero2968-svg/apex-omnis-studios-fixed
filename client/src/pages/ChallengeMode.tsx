@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { ConstellationBackground } from "@/components/ConstellationBackground";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { 
@@ -170,7 +171,9 @@ export default function ChallengeMode() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-background via-background to-purple-500/5">
+    <div className="min-h-screen bg-gradient-to-br from-background via-background to-purple-500/5 relative">
+      <ConstellationBackground />
+      <div className="relative z-10">
       {/* Header */}
       <header className="border-b border-border/50 bg-background/80 backdrop-blur-sm sticky top-0 z-40">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
@@ -517,6 +520,7 @@ export default function ChallengeMode() {
           </>
         )}
       </main>
+      </div>
     </div>
   );
 }

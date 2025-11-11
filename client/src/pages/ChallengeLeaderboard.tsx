@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { ConstellationBackground } from "@/components/ConstellationBackground";
 import { Link } from "wouter";
 import { ArrowLeft, Trophy, Clock, DollarSign, Calendar, User, Filter, Upload, Image as ImageIcon, X as XIcon, Share2, Shield } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -261,7 +262,9 @@ export default function ChallengeLeaderboard() {
   const topByBudget = [...filteredLeaderboard].sort((a, b) => a.totalBudget - b.totalBudget).slice(0, 10);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900/20 to-gray-900">
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900/20 to-gray-900 relative">
+      <ConstellationBackground />
+      <div className="relative z-10">
       {/* Header */}
       <div className="border-b border-white/10 bg-black/30 backdrop-blur-sm">
         <div className="container mx-auto px-4 py-6">
@@ -678,6 +681,7 @@ export default function ChallengeLeaderboard() {
             </Link>
           </CardContent>
         </Card>
+      </div>
       </div>
     </div>
   );

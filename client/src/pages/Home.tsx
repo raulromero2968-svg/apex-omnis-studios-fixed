@@ -175,9 +175,12 @@ export default function Home() {
                   size="lg" 
                   variant="outline" 
                   className="border-purple-500/50 hover:bg-purple-500/10"
+                  asChild
                 >
-                  Explore Our Work
-                  <ExternalLink className="ml-2 h-4 w-4" />
+                  <a href="#projects">
+                    Explore Our Work
+                    <ExternalLink className="ml-2 h-4 w-4" />
+                  </a>
                 </AnimatedButton>
               </div>
             </div>
@@ -216,11 +219,15 @@ export default function Home() {
             
             <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
               <p>
-                Apex Omnis Studios was born at the crossroads of passion, curiosity, and purpose. I started as a business teacher in a California high school, where I helped students explore careers, technology, and creativity. Before that, I worked in public service—supporting families through health and food assistance programs.
+                Apex Omnis Studios was born at the crossroads of education, diplomacy, and technology. With a background in <span className="text-foreground font-medium">geography, geopolitical analysis, and international relations</span>, I bring a unique perspective to automation and systems design—understanding how complex networks interact, how incentives shape behavior, and how data reveals hidden patterns.
               </p>
               
               <p>
-                But my real fascination has always been with systems: how games work, how people learn, how data flows, and how technology can serve communities. Inspired by students and driven by hobbies like trading cards, competitive gaming, and game design, I dove deep into AI, data, and automation.
+                Before founding Apex Omnis Studios, I worked as a business teacher in California, helping students navigate careers and technology, and in public service supporting families through health and food assistance programs. My education in <span className="text-foreground font-medium">diplomacy and geography analysis</span> taught me to see the world as interconnected systems—lessons that now power how I build intelligent automation for gaming businesses, collectors, and tournament organizers.
+              </p>
+              
+              <p>
+                My real fascination has always been with systems: how games work, how people learn, how data flows, and how technology can serve communities. Inspired by students and driven by hobbies like trading cards, competitive gaming, and game design, I dove deep into AI, data, and automation.
               </p>
               
               <p className="text-foreground font-medium">

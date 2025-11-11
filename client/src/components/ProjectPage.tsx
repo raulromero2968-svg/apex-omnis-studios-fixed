@@ -1,5 +1,6 @@
 import { ArrowLeft, ExternalLink } from "lucide-react";
 import { Link } from "wouter";
+import { ConstellationBackground } from "./ConstellationBackground";
 import { AnimatedButton } from "./AnimatedButton";
 import { useEffect } from "react";
 
@@ -42,7 +43,9 @@ export function ProjectPage({
   }, []);
 
   return (
-    <div className="min-h-screen bg-background text-foreground">
+    <div className="min-h-screen bg-background text-foreground relative">
+      <ConstellationBackground />
+      <div className="relative z-10">
       {/* Back button */}
       <div className="container mx-auto px-4 py-8">
         <Link href="/">
@@ -270,6 +273,7 @@ export function ProjectPage({
           </AnimatedButton>
         </div>
       </section>
+      </div>
     </div>
   );
 }
