@@ -1,0 +1,6 @@
+{
+  "buildCommand": "cd client && pnpm install --no-strict-peer-dependencies && pnpm run build",
+  "outputDirectory": "client/dist",
+  "installCommand": "echo 'Install handled in buildCommand'",
+  "framework": null
+}
