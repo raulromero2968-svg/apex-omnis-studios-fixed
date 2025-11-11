@@ -87,6 +87,7 @@ export default function ChallengeLeaderboard() {
   // Submission form state
   const [formData, setFormData] = useState({
     username: "",
+    email: "",
     setName: "",
     completionTime: "",
     totalBudget: "",
@@ -155,8 +156,15 @@ export default function ChallengeLeaderboard() {
     e.preventDefault();
 
     // Validation
-    if (!formData.username || !formData.setName || !formData.completionTime || !formData.totalBudget) {
+    if (!formData.username || !formData.email || !formData.setName || !formData.completionTime || !formData.totalBudget) {
       toast.error("Please fill in all required fields");
+      return;
+    }
+
+    // Validate email format
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(formData.email)) {
+      toast.error("Please enter a valid email address");
       return;
     }
 
@@ -176,6 +184,7 @@ export default function ChallengeLeaderboard() {
         // Prepare webhook payload
         const payload = {
           username: formData.username,
+          email: formData.email,
           setName: formData.setName,
           completionTime: parseFloat(formData.completionTime),
           totalBudget: parseFloat(formData.totalBudget),
@@ -216,6 +225,7 @@ export default function ChallengeLeaderboard() {
         // Reset form
         setFormData({
           username: "",
+          email: "",
           setName: "",
           completionTime: "",
           totalBudget: "",
@@ -347,6 +357,20 @@ export default function ChallengeLeaderboard() {
                       className="bg-black/60 border-white/20 text-white"
                       required
                     />
+                  </div>
+
+                  <div>
+                    <Label htmlFor="email" className="text-gray-300">Email *</Label>
+                    <Input
+                      id="email"
+                      type="email"
+                      placeholder="your@email.com"
+                      value={formData.email}
+                      onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                      className="bg-black/60 border-white/20 text-white"
+                      required
+                    />
+                    <p className="text-xs text-gray-500 mt-1">We'll notify you when your submission is approved</p>
                   </div>
 
                   <div>

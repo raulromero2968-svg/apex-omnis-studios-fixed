@@ -280,3 +280,17 @@
 - [x] Create Make.com integration guide for leaderboard submissions
 - [x] Document Notion database schema for leaderboard
 - [x] Test all features and save checkpoint (TypeScript: 0 errors)
+
+## Admin Dashboard for Leaderboard (Current Session)
+
+- [ ] Add email field to leaderboard submission form
+- [ ] Update form validation to require email
+- [ ] Include email in webhook payload
+- [ ] Create LeaderboardAdmin.tsx page component
+- [ ] Add password protection to admin dashboard
+- [ ] Display pending submissions with screenshots
+- [ ] Add approve/reject buttons for each submission
+- [ ] Add bulk actions (approve all, reject all)
+- [ ] Add route for /leaderboard-admin
+- [ ] Update webhook integration guide with email notifications
+- [ ] Test all features and save checkpoint (TypeScript: 0 errors)

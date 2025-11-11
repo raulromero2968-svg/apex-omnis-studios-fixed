@@ -25,6 +25,7 @@ When a user submits a challenge completion, the webhook receives:
 ```json
 {
   "username": "CardMaster2024",
+  "email": "collector@example.com",
   "setName": "Base Set (102 cards)",
   "completionTime": 36.5,
   "totalBudget": 450,
@@ -74,6 +75,7 @@ Create a new database in Notion called **"Challenge Leaderboard"** with these pr
 | Property Name | Type | Description |
 |--------------|------|-------------|
 | Username | Title | Display name |
+| Email | Email | User email for notifications |
 | Set Name | Text | TCG set completed |
 | Completion Time | Number | Hours taken |
 | Total Budget | Number | Dollars spent |
@@ -95,6 +97,7 @@ Create a new database in Notion called **"Challenge Leaderboard"** with these pr
 3. **Database:** Select "Challenge Leaderboard"
 4. **Map fields:**
    - Username → `{{username}}`
+   - Email → `{{email}}`
    - Set Name → `{{setName}}`
    - Completion Time → `{{completionTime}}`
    - Total Budget → `{{totalBudget}}`
@@ -109,7 +112,7 @@ Create a new database in Notion called **"Challenge Leaderboard"** with these pr
 ## Step 4: Send Confirmation Email (3 minutes)
 
 1. Click **"+"** → Search **"Gmail"** → **"Send an Email"**
-2. **To:** (You'll need to collect email in future - for now, send to yourself)
+2. **To:** `{{email}}`
 3. **Subject:** `Challenge Submission Received - {{username}}`
 4. **Content:**
 
