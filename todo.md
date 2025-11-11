@@ -268,3 +268,15 @@
 - [x] Link leaderboard from Challenge Mode page
 - [x] Link Challenge Mode from TCG Portfolio Tracker
 - [x] Test and save checkpoint (TypeScript: 0 errors)
+
+## Leaderboard Enhancements (Current Session)
+
+- [x] Add screenshot upload to challenge submission form
+- [x] Add file validation for screenshot (image types only)
+- [x] Convert screenshot to base64 for webhook transmission
+- [x] Connect leaderboard submission to Make.com webhook (VITE_LEADERBOARD_WEBHOOK_URL)
+- [x] Add social sharing buttons (Twitter/X) to leaderboard entries
+- [x] Generate shareable text for social posts
+- [x] Create Make.com integration guide for leaderboard submissions
+- [x] Document Notion database schema for leaderboard
+- [x] Test all features and save checkpoint (TypeScript: 0 errors)
