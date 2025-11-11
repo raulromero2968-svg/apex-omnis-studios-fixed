@@ -5,7 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
-import { ArrowRight, ArrowLeft, CheckCircle, Loader2, Upload, X } from "lucide-react";
+import { ArrowRight, ArrowLeft, CheckCircle, Loader2, Upload, X, FileText, File, Image as ImageIcon } from "lucide-react";
 import { toast } from "sonner";
 
 interface FormData {
@@ -14,8 +14,7 @@ interface FormData {
   email: string;
   businessName: string;
   businessDescription: string;
-  attachmentFile: File | null;
-  attachmentFileName: string;
+  attachmentFiles: File[];
   
   // Step 2: Challenges & Goals
   currentChallenges: string;
@@ -38,8 +37,7 @@ const initialFormData: FormData = {
   email: "",
   businessName: "",
   businessDescription: "",
-  attachmentFile: null,
-  attachmentFileName: "",
+  attachmentFiles: [],
   currentChallenges: "",
   automationGoals: "",
   successMetrics: "",
@@ -67,6 +65,12 @@ export default function ClientApplicationForm() {
     const file = e.target.files?.[0];
     if (!file) return;
 
+    // Check if already at max files
+    if (formData.attachmentFiles.length >= 3) {
+      toast.error("Maximum 3 files allowed");
+      return;
+    }
+
     // Validate file size (10MB limit)
     const maxSize = 10 * 1024 * 1024; // 10MB in bytes
     if (file.size > maxSize) {
@@ -93,18 +97,27 @@ export default function ClientApplicationForm() {
 
     setFormData(prev => ({
       ...prev,
-      attachmentFile: file,
-      attachmentFileName: file.name
+      attachmentFiles: [...prev.attachmentFiles, file]
     }));
     toast.success(`File "${file.name}" uploaded successfully`);
+    
+    // Reset input to allow uploading same file again
+    e.target.value = '';
   };
 
-  const removeFile = () => {
+  const removeFile = (index: number) => {
     setFormData(prev => ({
       ...prev,
-      attachmentFile: null,
-      attachmentFileName: ""
+      attachmentFiles: prev.attachmentFiles.filter((_, i) => i !== index)
     }));
+  };
+
+  const getFileIcon = (fileType: string) => {
+    if (fileType.includes('pdf')) return FileText;
+    if (fileType.includes('word') || fileType.includes('document')) return File;
+    if (fileType.includes('presentation') || fileType.includes('powerpoint')) return FileText;
+    if (fileType.includes('image')) return ImageIcon;
+    return File;
   };
 
   const fileToBase64 = (file: File): Promise<string> => {
@@ -164,20 +177,24 @@ export default function ClientApplicationForm() {
         return;
       }
 
-      // Convert file to base64 if present
-      let attachmentData = null;
-      if (formData.attachmentFile) {
-        const base64 = await fileToBase64(formData.attachmentFile);
-        attachmentData = {
-          fileName: formData.attachmentFileName,
-          fileType: formData.attachmentFile.type,
-          fileSize: formData.attachmentFile.size,
-          fileData: base64
-        };
+      // Convert files to base64 if present
+      let attachmentsData = null;
+      if (formData.attachmentFiles.length > 0) {
+        attachmentsData = await Promise.all(
+          formData.attachmentFiles.map(async (file) => {
+            const base64 = await fileToBase64(file);
+            return {
+              fileName: file.name,
+              fileType: file.type,
+              fileSize: file.size,
+              fileData: base64
+            };
+          })
+        );
       }
 
-      // Create submission payload without File object
-      const { attachmentFile, attachmentFileName, ...restFormData } = formData;
+      // Create submission payload without File objects
+      const { attachmentFiles, ...restFormData } = formData;
       
       const response = await fetch(webhookUrl, {
         method: "POST",
@@ -188,7 +205,7 @@ export default function ClientApplicationForm() {
           type: "client_application",
           timestamp: new Date().toISOString(),
           ...restFormData,
-          attachment: attachmentData
+          attachments: attachmentsData
         }),
       });
 
@@ -311,10 +328,42 @@ export default function ClientApplicationForm() {
               <div>
                 <Label htmlFor="attachment">Supporting Documents (Optional)</Label>
                 <p className="text-sm text-muted-foreground mb-3">
-                  Upload your business plan, pitch deck, or portfolio (PDF, PPTX, DOCX, or images up to 10MB)
+                  Upload up to 3 files: business plan, pitch deck, or portfolio (PDF, PPTX, DOCX, or images up to 10MB each)
                 </p>
                 
-                {!formData.attachmentFile ? (
+                {/* Uploaded Files List */}
+                {formData.attachmentFiles.length > 0 && (
+                  <div className="space-y-2 mb-3">
+                    {formData.attachmentFiles.map((file, index) => {
+                      const FileIcon = getFileIcon(file.type);
+                      return (
+                        <div key={index} className="flex items-center justify-between p-3 border border-border/50 rounded-lg bg-card/30">
+                          <div className="flex items-center gap-3">
+                            <FileIcon className="w-5 h-5 text-cyan-500" />
+                            <div>
+                              <p className="text-sm font-medium">{file.name}</p>
+                              <p className="text-xs text-muted-foreground">
+                                {(file.size / 1024 / 1024).toFixed(2)} MB
+                              </p>
+                            </div>
+                          </div>
+                          <Button
+                            type="button"
+                            variant="ghost"
+                            size="sm"
+                            onClick={() => removeFile(index)}
+                            className="text-muted-foreground hover:text-foreground"
+                          >
+                            <X className="w-4 h-4" />
+                          </Button>
+                        </div>
+                      );
+                    })}
+                  </div>
+                )}
+
+                {/* Upload Button */}
+                {formData.attachmentFiles.length < 3 && (
                   <label
                     htmlFor="attachment"
                     className="flex flex-col items-center justify-center w-full h-32 border-2 border-dashed border-border/50 rounded-lg cursor-pointer hover:border-cyan-500/50 hover:bg-cyan-500/5 transition-colors"
@@ -325,7 +374,7 @@ export default function ClientApplicationForm() {
                         <span className="font-semibold">Click to upload</span> or drag and drop
                       </p>
                       <p className="text-xs text-muted-foreground mt-1">
-                        PDF, PPTX, DOCX, or images (max 10MB)
+                        PDF, PPTX, DOCX, or images (max 10MB) • {formData.attachmentFiles.length}/3 files
                       </p>
                     </div>
                     <input
@@ -336,27 +385,6 @@ export default function ClientApplicationForm() {
                       onChange={handleFileUpload}
                     />
                   </label>
-                ) : (
-                  <div className="flex items-center justify-between p-4 border border-border/50 rounded-lg bg-card/30">
-                    <div className="flex items-center gap-3">
-                      <CheckCircle className="w-5 h-5 text-cyan-500" />
-                      <div>
-                        <p className="text-sm font-medium">{formData.attachmentFileName}</p>
-                        <p className="text-xs text-muted-foreground">
-                          {formData.attachmentFile && (formData.attachmentFile.size / 1024 / 1024).toFixed(2)} MB
-                        </p>
-                      </div>
-                    </div>
-                    <Button
-                      type="button"
-                      variant="ghost"
-                      size="sm"
-                      onClick={removeFile}
-                      className="text-muted-foreground hover:text-foreground"
-                    >
-                      <X className="w-4 h-4" />
-                    </Button>
-                  </div>
                 )}
               </div>
             </div>
