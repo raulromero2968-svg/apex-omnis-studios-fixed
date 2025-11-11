@@ -147,3 +147,14 @@
 - [x] Add compression hints below upload zone
 - [x] Add links to free compression tools (TinyPNG, iLovePDF, WeCompress)
 - [x] Test and save checkpoint (TypeScript: 0 errors)
+
+## Applicant Experience Enhancements (Current Session)
+
+- [x] Implement form auto-save with localStorage (30-second intervals)
+- [x] Add form restore on page load
+- [x] Add "Draft restored" notification
+- [x] Create ApplicationStatus.tsx page
+- [x] Add email + confirmation code lookup
+- [x] Add route for /application-status
+- [x] Add estimated review time to What Happens Next section
+- [x] Test and save checkpoint (TypeScript: 0 errors)

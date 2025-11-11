@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -49,14 +49,52 @@ const initialFormData: FormData = {
   whyNow: ""
 };
 
+const FORM_STORAGE_KEY = 'apex_application_draft';
+
 export default function ClientApplicationForm() {
   const [currentStep, setCurrentStep] = useState(1);
-  const [formData, setFormData] = useState<FormData>(initialFormData);
+  const [formData, setFormData] = useState<FormData>(() => {
+    // Restore from localStorage on mount
+    if (typeof window !== 'undefined') {
+      const saved = localStorage.getItem(FORM_STORAGE_KEY);
+      if (saved) {
+        try {
+          const parsed = JSON.parse(saved);
+          // Show restoration toast
+          setTimeout(() => {
+            toast.info("Draft restored from previous session", { duration: 3000 });
+          }, 500);
+          return parsed;
+        } catch (e) {
+          console.error('Failed to parse saved form data:', e);
+        }
+      }
+    }
+    return initialFormData;
+  });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isComplete, setIsComplete] = useState(false);
   const [isDragging, setIsDragging] = useState(false);
   const [previewFile, setPreviewFile] = useState<File | null>(null);
   const [uploadProgress, setUploadProgress] = useState<{ [key: string]: number }>({});
+
+  // Auto-save to localStorage every 30 seconds
+  useEffect(() => {
+    const interval = setInterval(() => {
+      if (!isComplete && formData.name) { // Only save if form has been started
+        localStorage.setItem(FORM_STORAGE_KEY, JSON.stringify(formData));
+      }
+    }, 30000); // 30 seconds
+
+    return () => clearInterval(interval);
+  }, [formData, isComplete]);
+
+  // Clear localStorage on successful submission
+  useEffect(() => {
+    if (isComplete) {
+      localStorage.removeItem(FORM_STORAGE_KEY);
+    }
+  }, [isComplete]);
 
   const totalSteps = 4;
 

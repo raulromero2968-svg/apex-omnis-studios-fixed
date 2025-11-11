@@ -1,6 +1,6 @@
 import { ConstellationBackground } from "@/components/ConstellationBackground";
 import { motion } from "framer-motion";
-import { Shield, Users, Zap, CheckCircle, XCircle, AlertTriangle } from "lucide-react";
+import { Shield, Users, Zap, CheckCircle, XCircle, AlertTriangle, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 import ClientApplicationForm from "@/components/ClientApplicationForm";
@@ -311,9 +311,13 @@ export default function Services() {
                       1
                     </div>
                     <h4 className="font-bold mb-2">We Review (24-48 hours)</h4>
-                    <p className="text-sm text-muted-foreground">
+                    <p className="text-sm text-muted-foreground mb-3">
                       Our founders personally review every application. We look for alignment with our values, clarity of goals, and community fit.
                     </p>
+                    <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-xs text-cyan-500">
+                      <Clock className="w-3 h-3" />
+                      Most reviewed within 3-5 business days
+                    </div>
                   </div>
                   <div className="text-center">
                     <div className="w-12 h-12 rounded-full bg-gradient-to-br from-cyan-500 to-purple-600 flex items-center justify-center mx-auto mb-4 font-bold text-white">

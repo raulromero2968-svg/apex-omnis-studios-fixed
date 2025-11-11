@@ -15,6 +15,7 @@ import ProjectIdeaOrganizer from "./pages/projects/ProjectIdeaOrganizer";
 import QuickLaunchWebsite from "./pages/projects/QuickLaunchWebsite";
 import Ethics from "./pages/Ethics";
 import FAQ from "./pages/FAQ";
+import ApplicationStatus from "./pages/ApplicationStatus";
 
 function Router() {
   return (
@@ -28,8 +29,8 @@ function Router() {
       <Route path={"/projects/project-idea-organizer"} component={ProjectIdeaOrganizer} />
       <Route path={"/projects/quick-launch-website"} component={QuickLaunchWebsite} />
       <Route path={"/ethics"} component={Ethics} />
-       <Route path={"/"} component={Home} />
-      <Route path={"/services"} component={Services} />
+      <Route path={"/faq"} component={FAQ} />
+      <Route path={"/application-status"} component={ApplicationStatus} />
       <Route path={"/404"} component={NotFound} />
       {/* Final fallback route */}
       <Route component={NotFound} />
