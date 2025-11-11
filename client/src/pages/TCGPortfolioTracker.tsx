@@ -106,7 +106,11 @@ export default function TCGPortfolioTracker() {
             </Button>
           </Link>
           <h1 className="text-xl font-bold">TCG Portfolio Tracker</h1>
-          <div className="w-24"></div>
+          <Link href="/challenge-mode">
+            <Button variant="outline" className="border-purple-500/50 text-purple-400 hover:bg-purple-500/10">
+              🏆 Challenge Mode
+            </Button>
+          </Link>
         </div>
       </header>
 

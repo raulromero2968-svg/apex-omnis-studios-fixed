@@ -180,7 +180,12 @@ export default function ChallengeMode() {
             </Button>
           </Link>
           <h1 className="text-xl font-bold">🏆 Challenge Mode</h1>
-          <div className="w-24"></div>
+          <Link href="/challenge-leaderboard">
+            <Button variant="outline" className="border-cyan-500/50 text-cyan-400 hover:bg-cyan-500/10">
+              <Trophy className="w-4 h-4 mr-2" />
+              Leaderboard
+            </Button>
+          </Link>
         </div>
       </header>
 

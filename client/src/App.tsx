@@ -8,6 +8,7 @@ import Home from "./pages/Home";
 import TCGPortfolioTracker from "./pages/TCGPortfolioTracker";
 import EventTrackerPro from "./pages/EventTrackerPro";
 import ChallengeMode from "./pages/ChallengeMode";
+import ChallengeLeaderboard from "./pages/ChallengeLeaderboard";
 import Services from "./pages/Services";
 import DataDashboard from "./pages/projects/DataDashboard";
 import MuseumTracker from "./pages/projects/MuseumTracker";
@@ -28,6 +29,7 @@ function Router() {
       <Route path={"/tcg-portfolio"} component={TCGPortfolioTracker} />
       <Route path="/event-tracker" component={EventTrackerPro} />
       <Route path="/challenge-mode" component={ChallengeMode} />
+      <Route path="/challenge-leaderboard" component={ChallengeLeaderboard} />
       <Route path={"/projects/data-dashboard"} component={DataDashboard} />
       <Route path={"/projects/museum-tracker"} component={MuseumTracker} />
       <Route path={"/projects/ai-pipeline"} component={AIPipeline} />

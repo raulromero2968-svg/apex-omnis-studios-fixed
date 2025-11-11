@@ -254,3 +254,17 @@
 - [ ] Create simplified webhook setup instructions
 - [ ] Test webhook integration
 - [ ] Document troubleshooting steps
+
+## Public Leaderboard Feature (Current Session)
+
+- [x] Design leaderboard data structure (user, set, time, budget, date)
+- [x] Create ChallengeLeaderboard.tsx page component
+- [x] Add top 10 fastest completions section
+- [x] Add top 10 best budgets section
+- [x] Add recent completions feed
+- [x] Add submission form for users to add results
+- [x] Add filters by set/challenge type
+- [x] Add route for /challenge-leaderboard
+- [x] Link leaderboard from Challenge Mode page
+- [x] Link Challenge Mode from TCG Portfolio Tracker
+- [x] Test and save checkpoint (TypeScript: 0 errors)
