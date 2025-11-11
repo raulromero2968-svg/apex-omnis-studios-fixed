@@ -5,6 +5,7 @@ import { Route, Switch } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import Home from "./pages/Home";
+import VideoTranscriptExtractor from "./pages/VideoTranscriptExtractor";
 import TCGPortfolioTracker from "./pages/TCGPortfolioTracker";
 import EventTrackerPro from "./pages/EventTrackerPro";
 import ChallengeMode from "./pages/ChallengeMode";
@@ -27,7 +28,9 @@ function Router() {
   return (
     <Switch>
       <Route path={"/"} component={Home} />
-      <Route path={"/tcg-portfolio"} component={TCGPortfolioTracker} />
+      <Route path={"/video-transcript-extractor"} component={VideoTranscriptExtractor} />
+      <Route path={"/404"} component={NotFound} />
+      <Route path="/tcg-portfolio" component={TCGPortfolioTracker} />
       <Route path="/event-tracker" component={EventTrackerPro} />
       <Route path="/challenge-mode" component={ChallengeMode} />
       <Route path="/challenge-leaderboard" component={ChallengeLeaderboard} />

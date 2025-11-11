@@ -305,3 +305,18 @@
 - [x] Ensure consistent spacing and layout across all pages
 - [x] Test all navigation and buttons work correctly
 - [x] Save checkpoint with all fixes (TypeScript: 0 errors)
+
+## Video Transcript Extractor Tool (Current Session)
+
+- [ ] Download Ty Wilson's Twitter video about TCG hobby concerns
+- [ ] Transcribe video using manus-speech-to-text utility
+- [ ] Save transcript to file for analysis
+- [ ] Create VideoTranscriptExtractor.tsx page component
+- [ ] Add URL input field for Twitter/YouTube/TikTok videos
+- [ ] Add video download functionality
+- [ ] Add transcription processing with progress indicator
+- [ ] Add transcript display with formatting
+- [ ] Add export options (TXT, JSON, Copy to clipboard)
+- [ ] Add route for /video-transcript-extractor
+- [ ] Test tool with multiple video platforms
+- [ ] Save checkpoint (TypeScript: 0 errors)

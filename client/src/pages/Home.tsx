@@ -219,26 +219,22 @@ export default function Home() {
             
             <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
               <p>
-                Apex Omnis Studios was born at the crossroads of education, diplomacy, and technology. With a background in <span className="text-foreground font-medium">geography, geopolitical analysis, and international relations</span>, I bring a unique perspective to automation and systems design—understanding how complex networks interact, how incentives shape behavior, and how data reveals hidden patterns.
+                Apex Omnis Studios emerged from an unusual convergence: education, <span className="text-foreground font-medium">International Studies</span>, and systems thinking. The founder's background in geography, geopolitical analysis, and diplomacy provided a framework for understanding how complex networks interact—how incentives shape behavior, how data reveals hidden patterns, how systems succeed or fail.
               </p>
               
               <p>
-                Before founding Apex Omnis Studios, I worked as a business teacher in California, helping students navigate careers and technology, and in public service supporting families through health and food assistance programs. My education in <span className="text-foreground font-medium">diplomacy and geography analysis</span> taught me to see the world as interconnected systems—lessons that now power how I build intelligent automation for gaming businesses, collectors, and tournament organizers.
-              </p>
-              
-              <p>
-                My real fascination has always been with systems: how games work, how people learn, how data flows, and how technology can serve communities. Inspired by students and driven by hobbies like trading cards, competitive gaming, and game design, I dove deep into AI, data, and automation.
+                Before this, there was teaching business in California public schools, helping students navigate careers and technology. Before that, public service work supporting families through health and food assistance programs. The through-line wasn't obvious at first: systems. How games work. How people learn. How data flows. How technology can serve communities without extracting from them.
               </p>
               
               <p className="text-foreground font-medium">
-                Apex Omnis Studios is the result—a mission-driven studio focused on helping gaming businesses, collectors, and tournament organizers build intelligent systems, creative tools, and platforms that turn passion into profit. Whether you're managing TCG events, running esports tournaments, tracking collectible inventories, or building a gaming community, we create custom solutions that scale with your vision.
+                Apex Omnis Studios builds intelligent automation for gaming businesses, collectors, and tournament organizers. Custom solutions that scale with vision, not venture capital. Tools that preserve passion, not just profit.
               </p>
 
-              {/* Anti-Scalper Ethics Statement */}
+              {/* Anti-Extraction Ethics Statement */}
               <div className="mt-8 p-6 rounded-xl bg-gradient-to-r from-cyan-500/10 to-purple-500/10 border border-cyan-500/20">
-                <h3 className="text-xl font-bold text-cyan-400 mb-3">Our Commitment to the Community</h3>
+                <h3 className="text-xl font-bold text-cyan-400 mb-3">Preserving the Heart of the Hobby</h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  We build tools for <span className="text-foreground font-medium">gamers, collectors, and community builders who love the hobby</span>—not for scalpers, manipulators, or exploiters. Our mission is to help you enjoy, analyze, and grow your passion with data-driven insights and automation that respects the community. We stand against market manipulation, artificial scarcity, and predatory practices. Whether you're a TCG collector, tournament organizer, gaming cafe owner, or esports enthusiast, our tools empower you to succeed ethically. <span className="text-cyan-400 font-medium">Fair access for all. Passion over profit.</span>
+                  We build tools for <span className="text-foreground font-medium">gamers, collectors, and community builders who love the hobby</span>—not for corporate extraction or market manipulation. When profits outweigh passion and connections get too tight at the top, the heart of the hobby is lost. Our tools empower individuals, not corporations. <a href="/mission" className="text-cyan-400 hover:text-cyan-300 underline font-medium">Read our full mission →</a>
                 </p>
               </div>
             </div>
