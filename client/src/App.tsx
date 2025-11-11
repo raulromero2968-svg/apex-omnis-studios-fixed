@@ -16,6 +16,7 @@ import QuickLaunchWebsite from "./pages/projects/QuickLaunchWebsite";
 import Ethics from "./pages/Ethics";
 import FAQ from "./pages/FAQ";
 import ApplicationStatus from "./pages/ApplicationStatus";
+import ApplicationAnalytics from "./pages/ApplicationAnalytics";
 
 function Router() {
   return (
@@ -31,6 +32,7 @@ function Router() {
       <Route path={"/ethics"} component={Ethics} />
       <Route path={"/faq"} component={FAQ} />
       <Route path={"/application-status"} component={ApplicationStatus} />
+      <Route path={"/analytics"} component={ApplicationAnalytics} />
       <Route path={"/404"} component={NotFound} />
       {/* Final fallback route */}
       <Route component={NotFound} />
