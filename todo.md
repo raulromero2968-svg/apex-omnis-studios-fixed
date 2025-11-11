@@ -129,3 +129,13 @@
 - [x] Update form submission to handle multiple files
 - [x] Create Make.com file handling documentation
 - [x] Test and save checkpoint (TypeScript: 0 errors)
+
+## File Upload UX Enhancements (Current Session)
+
+- [x] Add drag-and-drop handlers (onDrop, onDragOver, onDragLeave)
+- [x] Add visual feedback for drag state
+- [x] Create file preview modal component
+- [x] Add PDF preview support
+- [x] Add image preview support
+- [x] Add upload progress indicators for large files
+- [x] Test and save checkpoint (TypeScript: 0 errors)

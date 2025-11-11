@@ -5,7 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
-import { ArrowRight, ArrowLeft, CheckCircle, Loader2, Upload, X, FileText, File, Image as ImageIcon } from "lucide-react";
+import { ArrowRight, ArrowLeft, CheckCircle, Loader2, Upload, X, FileText, File, Image as ImageIcon, Eye } from "lucide-react";
 import { toast } from "sonner";
 
 interface FormData {
@@ -54,6 +54,9 @@ export default function ClientApplicationForm() {
   const [formData, setFormData] = useState<FormData>(initialFormData);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isComplete, setIsComplete] = useState(false);
+  const [isDragging, setIsDragging] = useState(false);
+  const [previewFile, setPreviewFile] = useState<File | null>(null);
+  const [uploadProgress, setUploadProgress] = useState<{ [key: string]: number }>({});
 
   const totalSteps = 4;
 
@@ -61,9 +64,7 @@ export default function ClientApplicationForm() {
     setFormData(prev => ({ ...prev, [field]: value }));
   };
 
-  const handleFileUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const file = e.target.files?.[0];
-    if (!file) return;
+  const processFile = (file: File) => {
 
     // Check if already at max files
     if (formData.attachmentFiles.length >= 3) {
@@ -95,14 +96,69 @@ export default function ClientApplicationForm() {
       return;
     }
 
+    // Simulate upload progress for large files
+    if (file.size > 1024 * 1024) { // Files larger than 1MB
+      const fileId = `${file.name}-${Date.now()}`;
+      setUploadProgress(prev => ({ ...prev, [fileId]: 0 }));
+      
+      // Simulate progress
+      const interval = setInterval(() => {
+        setUploadProgress(prev => {
+          const currentProgress = prev[fileId] || 0;
+          if (currentProgress >= 100) {
+            clearInterval(interval);
+            // Remove progress after completion
+            setTimeout(() => {
+              setUploadProgress(prev => {
+                const { [fileId]: _, ...rest } = prev;
+                return rest;
+              });
+            }, 500);
+            return prev;
+          }
+          return { ...prev, [fileId]: Math.min(currentProgress + 10, 100) };
+        });
+      }, 100);
+    }
+
     setFormData(prev => ({
       ...prev,
       attachmentFiles: [...prev.attachmentFiles, file]
     }));
     toast.success(`File "${file.name}" uploaded successfully`);
+  };
+
+  const handleFileUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (!file) return;
+    
+    processFile(file);
     
     // Reset input to allow uploading same file again
     e.target.value = '';
+  };
+
+  const handleDragOver = (e: React.DragEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    setIsDragging(true);
+  };
+
+  const handleDragLeave = (e: React.DragEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    setIsDragging(false);
+  };
+
+  const handleDrop = (e: React.DragEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    setIsDragging(false);
+
+    const file = e.dataTransfer.files?.[0];
+    if (!file) return;
+
+    processFile(file);
   };
 
   const removeFile = (index: number) => {
@@ -347,15 +403,51 @@ export default function ClientApplicationForm() {
                               </p>
                             </div>
                           </div>
-                          <Button
-                            type="button"
-                            variant="ghost"
-                            size="sm"
-                            onClick={() => removeFile(index)}
-                            className="text-muted-foreground hover:text-foreground"
-                          >
-                            <X className="w-4 h-4" />
-                          </Button>
+                          <div className="flex items-center gap-2">
+                            {(file.type.includes('image') || file.type.includes('pdf')) && (
+                              <Button
+                                type="button"
+                                variant="ghost"
+                                size="sm"
+                                onClick={() => setPreviewFile(file)}
+                                className="text-muted-foreground hover:text-cyan-500"
+                              >
+                                <Eye className="w-4 h-4" />
+                              </Button>
+                            )}
+                            <Button
+                              type="button"
+                              variant="ghost"
+                              size="sm"
+                              onClick={() => removeFile(index)}
+                              className="text-muted-foreground hover:text-foreground"
+                            >
+                              <X className="w-4 h-4" />
+                            </Button>
+                          </div>
+                        </div>
+                      );
+                    })}
+                  </div>
+                )}
+
+                {/* Upload Progress Indicators */}
+                {Object.keys(uploadProgress).length > 0 && (
+                  <div className="space-y-2 mb-3">
+                    {Object.entries(uploadProgress).map(([fileId, progress]) => {
+                      const fileName = fileId.split('-')[0];
+                      return (
+                        <div key={fileId} className="p-3 border border-border/50 rounded-lg bg-card/30">
+                          <div className="flex items-center justify-between mb-2">
+                            <p className="text-sm font-medium">{fileName}</p>
+                            <p className="text-xs text-muted-foreground">{progress}%</p>
+                          </div>
+                          <div className="w-full h-2 bg-border/30 rounded-full overflow-hidden">
+                            <div 
+                              className="h-full bg-gradient-to-r from-cyan-500 to-purple-600 transition-all duration-300"
+                              style={{ width: `${progress}%` }}
+                            />
+                          </div>
                         </div>
                       );
                     })}
@@ -366,12 +458,21 @@ export default function ClientApplicationForm() {
                 {formData.attachmentFiles.length < 3 && (
                   <label
                     htmlFor="attachment"
-                    className="flex flex-col items-center justify-center w-full h-32 border-2 border-dashed border-border/50 rounded-lg cursor-pointer hover:border-cyan-500/50 hover:bg-cyan-500/5 transition-colors"
+                    onDragOver={handleDragOver}
+                    onDragLeave={handleDragLeave}
+                    onDrop={handleDrop}
+                    className={`flex flex-col items-center justify-center w-full h-32 border-2 border-dashed rounded-lg cursor-pointer transition-all ${
+                      isDragging
+                        ? 'border-cyan-500 bg-cyan-500/10 scale-[1.02]'
+                        : 'border-border/50 hover:border-cyan-500/50 hover:bg-cyan-500/5'
+                    }`}
                   >
-                    <div className="flex flex-col items-center justify-center pt-5 pb-6">
-                      <Upload className="w-8 h-8 mb-2 text-muted-foreground" />
+                    <div className="flex flex-col items-center justify-center pt-5 pb-6 pointer-events-none">
+                      <Upload className={`w-8 h-8 mb-2 transition-colors ${
+                        isDragging ? 'text-cyan-500' : 'text-muted-foreground'
+                      }`} />
                       <p className="text-sm text-muted-foreground">
-                        <span className="font-semibold">Click to upload</span> or drag and drop
+                        <span className="font-semibold">{isDragging ? 'Drop file here' : 'Click to upload'}</span> {!isDragging && 'or drag and drop'}
                       </p>
                       <p className="text-xs text-muted-foreground mt-1">
                         PDF, PPTX, DOCX, or images (max 10MB) • {formData.attachmentFiles.length}/3 files
@@ -610,6 +711,60 @@ export default function ClientApplicationForm() {
           </div>
         </motion.div>
       </AnimatePresence>
+
+      {/* File Preview Modal */}
+      {previewFile && (
+        <div 
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm"
+          onClick={() => setPreviewFile(null)}
+        >
+          <div 
+            className="relative max-w-4xl max-h-[90vh] w-full mx-4 bg-card border border-border rounded-lg overflow-hidden"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* Modal Header */}
+            <div className="flex items-center justify-between p-4 border-b border-border">
+              <div>
+                <h3 className="text-lg font-semibold">{previewFile.name}</h3>
+                <p className="text-sm text-muted-foreground">
+                  {(previewFile.size / 1024 / 1024).toFixed(2)} MB
+                </p>
+              </div>
+              <Button
+                variant="ghost"
+                size="sm"
+                onClick={() => setPreviewFile(null)}
+                className="text-muted-foreground hover:text-foreground"
+              >
+                <X className="w-5 h-5" />
+              </Button>
+            </div>
+
+            {/* Modal Content */}
+            <div className="p-4 overflow-auto max-h-[calc(90vh-80px)]">
+              {previewFile.type.includes('image') ? (
+                <img
+                  src={URL.createObjectURL(previewFile)}
+                  alt={previewFile.name}
+                  className="w-full h-auto rounded-lg"
+                  onLoad={(e) => URL.revokeObjectURL((e.target as HTMLImageElement).src)}
+                />
+              ) : previewFile.type.includes('pdf') ? (
+                <iframe
+                  src={URL.createObjectURL(previewFile)}
+                  className="w-full h-[70vh] rounded-lg"
+                  title={previewFile.name}
+                />
+              ) : (
+                <div className="flex flex-col items-center justify-center py-12 text-muted-foreground">
+                  <File className="w-16 h-16 mb-4" />
+                  <p>Preview not available for this file type</p>
+                </div>
+              )}
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
