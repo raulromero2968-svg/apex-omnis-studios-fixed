@@ -139,3 +139,11 @@
 - [x] Add image preview support
 - [x] Add upload progress indicators for large files
 - [x] Test and save checkpoint (TypeScript: 0 errors)
+
+## File Upload Polish Features (Current Session)
+
+- [x] Add file size warnings for files 8-10MB
+- [x] Add "Remove All" bulk delete button (when 2+ files)
+- [x] Add compression hints below upload zone
+- [x] Add links to free compression tools (TinyPNG, iLovePDF, WeCompress)
+- [x] Test and save checkpoint (TypeScript: 0 errors)

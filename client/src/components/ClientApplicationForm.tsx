@@ -5,7 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
-import { ArrowRight, ArrowLeft, CheckCircle, Loader2, Upload, X, FileText, File, Image as ImageIcon, Eye } from "lucide-react";
+import { ArrowRight, ArrowLeft, CheckCircle, Loader2, Upload, X, FileText, File, Image as ImageIcon, Eye, Trash2, Info } from "lucide-react";
 import { toast } from "sonner";
 
 interface FormData {
@@ -74,9 +74,19 @@ export default function ClientApplicationForm() {
 
     // Validate file size (10MB limit)
     const maxSize = 10 * 1024 * 1024; // 10MB in bytes
+    const warningSize = 8 * 1024 * 1024; // 8MB warning threshold
+    
     if (file.size > maxSize) {
       toast.error("File size must be under 10MB");
       return;
+    }
+    
+    // Warn for large files (8-10MB)
+    if (file.size > warningSize) {
+      toast.warning(
+        `Large file detected (${(file.size / 1024 / 1024).toFixed(1)}MB). Consider compressing to improve upload speed.`,
+        { duration: 5000 }
+      );
     }
 
     // Validate file type
@@ -166,6 +176,14 @@ export default function ClientApplicationForm() {
       ...prev,
       attachmentFiles: prev.attachmentFiles.filter((_, i) => i !== index)
     }));
+  };
+
+  const removeAllFiles = () => {
+    setFormData(prev => ({
+      ...prev,
+      attachmentFiles: []
+    }));
+    toast.success("All files removed");
   };
 
   const getFileIcon = (fileType: string) => {
@@ -389,7 +407,23 @@ export default function ClientApplicationForm() {
                 
                 {/* Uploaded Files List */}
                 {formData.attachmentFiles.length > 0 && (
-                  <div className="space-y-2 mb-3">
+                  <>
+                    {/* Bulk Delete Button */}
+                    {formData.attachmentFiles.length >= 2 && (
+                      <div className="flex justify-end mb-2">
+                        <Button
+                          type="button"
+                          variant="outline"
+                          size="sm"
+                          onClick={removeAllFiles}
+                          className="text-muted-foreground hover:text-destructive hover:border-destructive"
+                        >
+                          <Trash2 className="w-4 h-4 mr-2" />
+                          Remove All
+                        </Button>
+                      </div>
+                    )}
+                    <div className="space-y-2 mb-3">
                     {formData.attachmentFiles.map((file, index) => {
                       const FileIcon = getFileIcon(file.type);
                       return (
@@ -428,7 +462,8 @@ export default function ClientApplicationForm() {
                         </div>
                       );
                     })}
-                  </div>
+                    </div>
+                  </>
                 )}
 
                 {/* Upload Progress Indicators */}
@@ -487,6 +522,43 @@ export default function ClientApplicationForm() {
                     />
                   </label>
                 )}
+
+                {/* Compression Hints */}
+                <div className="mt-3 p-3 rounded-lg bg-muted/30 border border-border/30">
+                  <div className="flex items-start gap-2">
+                    <Info className="w-4 h-4 text-cyan-500 mt-0.5 flex-shrink-0" />
+                    <div className="text-xs text-muted-foreground">
+                      <p className="font-medium text-foreground mb-1">File too large?</p>
+                      <p className="mb-2">Compress your files for faster uploads:</p>
+                      <div className="flex flex-wrap gap-2">
+                        <a
+                          href="https://tinypng.com"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center px-2 py-1 rounded bg-background border border-border hover:border-cyan-500 hover:text-cyan-500 transition-colors"
+                        >
+                          TinyPNG (Images)
+                        </a>
+                        <a
+                          href="https://www.ilovepdf.com/compress_pdf"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center px-2 py-1 rounded bg-background border border-border hover:border-cyan-500 hover:text-cyan-500 transition-colors"
+                        >
+                          iLovePDF (PDFs)
+                        </a>
+                        <a
+                          href="https://www.wecompress.com"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center px-2 py-1 rounded bg-background border border-border hover:border-cyan-500 hover:text-cyan-500 transition-colors"
+                        >
+                          WeCompress (All)
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           )}
