@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "wouter";
-import { ArrowLeft, Trophy, Clock, DollarSign, Calendar, User, Filter, Upload, Image as ImageIcon, X as XIcon, Share2 } from "lucide-react";
+import { ArrowLeft, Trophy, Clock, DollarSign, Calendar, User, Filter, Upload, Image as ImageIcon, X as XIcon, Share2, Shield } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -278,7 +278,19 @@ export default function ChallengeLeaderboard() {
                 Compete with collectors worldwide. Complete sets in 48 hours or less!
               </p>
             </div>
-            <Trophy className="h-16 w-16 text-yellow-500" />
+            <div className="flex items-center gap-4">
+              <Link href="/leaderboard-admin">
+                <Button
+                  variant="ghost"
+                  size="sm"
+                  className="text-gray-400 hover:text-cyan-400"
+                  title="Admin Dashboard"
+                >
+                  <Shield className="h-4 w-4" />
+                </Button>
+              </Link>
+              <Trophy className="h-16 w-16 text-yellow-500" />
+            </div>
           </div>
         </div>
       </div>
