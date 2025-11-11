@@ -142,16 +142,16 @@ export default function Services() {
                 initial={{ opacity: 0, x: 30 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, delay: 0.4 }}
-                className="p-8 rounded-lg border border-red-500/50 bg-card/30 backdrop-blur"
+                className="p-8 rounded-lg border border-orange-500/50 bg-card/30 backdrop-blur"
               >
                 <div className="flex items-center gap-3 mb-6">
-                  <XCircle className="w-8 h-8 text-red-500" />
+                  <XCircle className="w-8 h-8 text-orange-500" />
                   <h3 className="text-2xl font-bold">This Isn't For You If...</h3>
                 </div>
                 <ul className="space-y-3">
                   {redFlags.map((item, idx) => (
                     <li key={idx} className="flex items-start gap-3">
-                      <XCircle className="w-5 h-5 text-red-500 mt-0.5 flex-shrink-0" />
+                      <XCircle className="w-5 h-5 text-orange-500 mt-0.5 flex-shrink-0" />
                       <span className="text-muted-foreground">{item}</span>
                     </li>
                   ))}

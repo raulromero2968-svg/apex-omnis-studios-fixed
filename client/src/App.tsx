@@ -42,6 +42,7 @@ function Router() {
       <Route path={"/projects/lesson-plan-generator"} component={LessonPlanGenerator} />
       <Route path={"/projects/project-idea-organizer"} component={ProjectIdeaOrganizer} />
       <Route path={"/projects/quick-launch-website"} component={QuickLaunchWebsite} />
+      <Route path={"/services"} component={Services} />
       <Route path={"/ethics"} component={Ethics} />
       <Route path={"/faq"} component={FAQ} />
       <Route path={"/application-status"} component={ApplicationStatus} />

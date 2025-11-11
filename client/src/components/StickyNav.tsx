@@ -1,7 +1,7 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
 import { Home, Info, Briefcase, Users, Network, Mail, Menu, X, Wrench } from "lucide-react";
-import { Link } from "wouter";
+import { Link, useLocation } from "wouter";
 import { AnimatedButton } from "./AnimatedButton";
 
 interface NavItem {
@@ -25,6 +25,7 @@ export default function StickyNav() {
   const [activeSection, setActiveSection] = useState("home");
   const [isVisible, setIsVisible] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [, setLocation] = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -53,8 +54,8 @@ export default function StickyNav() {
     if (section === '#') {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     } else if (section.startsWith('/')) {
-      // Full page navigation
-      window.location.href = section;
+      // Client-side navigation for internal routes
+      setLocation(section);
     } else {
       const element = document.querySelector(section);
       if (element) {

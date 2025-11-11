@@ -161,27 +161,25 @@ export default function Home() {
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 pt-4">
-                <AnimatedButton 
-                  size="lg" 
-                  className="bg-[#00D9FF] hover:bg-[#00B8D9] text-black font-semibold shadow-lg shadow-cyan-500/50 group"
-                  asChild
-                >
-                  <a href="mailto:contact@apexomnis.io?subject=Strategy Call Request">
+                <a href="mailto:contact@apexomnis.io?subject=Strategy Call Request">
+                  <AnimatedButton 
+                    size="lg" 
+                    className="bg-[#00D9FF] hover:bg-[#00B8D9] text-black font-semibold shadow-lg shadow-cyan-500/50 group w-full"
+                  >
                     Schedule a Call
                     <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                  </a>
-                </AnimatedButton>
-                <AnimatedButton 
-                  size="lg" 
-                  variant="outline" 
-                  className="border-purple-500/50 hover:bg-purple-500/10"
-                  asChild
-                >
-                  <a href="#projects">
+                  </AnimatedButton>
+                </a>
+                <a href="#projects">
+                  <AnimatedButton 
+                    size="lg" 
+                    variant="outline" 
+                    className="border-purple-500/50 hover:bg-purple-500/10 w-full"
+                  >
                     Explore Our Work
                     <ExternalLink className="ml-2 h-4 w-4" />
-                  </a>
-                </AnimatedButton>
+                  </AnimatedButton>
+                </a>
               </div>
             </div>
 
@@ -219,22 +217,22 @@ export default function Home() {
             
             <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
               <p>
-                Apex Omnis Studios emerged from an unusual convergence: education, <span className="text-foreground font-medium">International Studies</span>, and systems thinking. The founder's background in geography, geopolitical analysis, and diplomacy provided a framework for understanding how complex networks interact—how incentives shape behavior, how data reveals hidden patterns, how systems succeed or fail.
+                Apex Omnis Studios started from an unusual mix: teaching, <span className="text-foreground font-medium">International Studies</span>, and a knack for seeing how systems work. My background in geography and geopolitical analysis taught me how to spot patterns—how incentives drive behavior, how data tells hidden stories, and why some systems thrive while others collapse.
               </p>
               
               <p>
-                Before this, there was teaching business in California public schools, helping students navigate careers and technology. Before that, public service work supporting families through health and food assistance programs. The through-line wasn't obvious at first: systems. How games work. How people learn. How data flows. How technology can serve communities without extracting from them.
+                Before building automation tools, I taught business classes in California public schools, helping students figure out careers and technology. Before that, I worked in public service supporting families with health and food assistance. The common thread? <span className="text-foreground font-medium">Systems</span>. Understanding how games work, how people learn, how data flows, and how technology can help communities without taking advantage of them.
               </p>
               
               <p className="text-foreground font-medium">
-                Apex Omnis Studios builds intelligent automation for gaming businesses, collectors, and tournament organizers. Custom solutions that scale with vision, not venture capital. Tools that preserve passion, not just profit.
+                Now, Apex Omnis Studios builds intelligent automation for gamers, collectors, and tournament organizers. Custom solutions that grow with your vision, not venture capital. Tools that protect what you love about the hobby.
               </p>
 
               {/* Anti-Extraction Ethics Statement */}
               <div className="mt-8 p-6 rounded-xl bg-gradient-to-r from-cyan-500/10 to-purple-500/10 border border-cyan-500/20">
                 <h3 className="text-xl font-bold text-cyan-400 mb-3">Preserving the Heart of the Hobby</h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  We build tools for <span className="text-foreground font-medium">gamers, collectors, and community builders who love the hobby</span>—not for corporate extraction or market manipulation. When profits outweigh passion and connections get too tight at the top, the heart of the hobby is lost. Our tools empower individuals, not corporations. <a href="/mission" className="text-cyan-400 hover:text-cyan-300 underline font-medium">Read our full mission →</a>
+                  I build tools for <span className="text-foreground font-medium">gamers, collectors, and community builders who genuinely love the hobby</span>—not for corporate extraction or market manipulation. When profit becomes more important than passion, and when the same few people control everything at the top, the heart of the hobby dies. These tools empower individuals, not corporations. <a href="/ethics" className="text-cyan-400 hover:text-cyan-300 underline font-medium">Read the full mission →</a>
                 </p>
               </div>
             </div>
@@ -465,12 +463,12 @@ export default function Home() {
                 <p className="text-muted-foreground">
                   Apex Commons is where we give back. Focused on civic tech, educational access, and creative empowerment, this branch supports schools, educators, and community orgs with free tools, curriculum resources, and workshops.
                 </p>
-                <AnimatedButton variant="outline" size="sm" className="w-full" asChild>
-                  <a href={PROJECTS.commons.url} target="_blank" rel="noopener noreferrer">
+                <a href={PROJECTS.commons.url} target="_blank" rel="noopener noreferrer" className="block">
+                  <AnimatedButton variant="outline" size="sm" className="w-full">
                     Visit Site
                     <ExternalLink className="ml-2 h-3 w-3" />
-                  </a>
-                </AnimatedButton>
+                  </AnimatedButton>
+                </a>
               </CardContent>
             </Card>
 
@@ -486,12 +484,12 @@ export default function Home() {
                 <p className="text-muted-foreground">
                   Inspired by trading cards, strategy games, and real-world data, Apex Intelligence Society is a unique platform that blends research, curation, and gamified intelligence.
                 </p>
-                <AnimatedButton variant="outline" size="sm" className="w-full" asChild>
-                  <a href={PROJECTS.society.url} target="_blank" rel="noopener noreferrer">
+                <a href={PROJECTS.society.url} target="_blank" rel="noopener noreferrer" className="block">
+                  <AnimatedButton variant="outline" size="sm" className="w-full">
                     Follow on X
                     <ExternalLink className="ml-2 h-3 w-3" />
-                  </a>
-                </AnimatedButton>
+                  </AnimatedButton>
+                </a>
               </CardContent>
             </Card>
 
@@ -507,12 +505,12 @@ export default function Home() {
                 <p className="text-muted-foreground">
                   ApexIntelligence.io is our publishing layer—the digital library of Apex Omnis Studios. It's where we share original research, insights, tools, and thoughts on AI, data, society, and creativity.
                 </p>
-                <AnimatedButton variant="outline" size="sm" className="w-full" asChild>
-                  <a href={PROJECTS.intelligence.url} target="_blank" rel="noopener noreferrer">
+                <a href={PROJECTS.intelligence.url} target="_blank" rel="noopener noreferrer" className="block">
+                  <AnimatedButton variant="outline" size="sm" className="w-full">
                     Read More
                     <ExternalLink className="ml-2 h-3 w-3" />
-                  </a>
-                </AnimatedButton>
+                  </AnimatedButton>
+                </a>
               </CardContent>
             </Card>
           </motion.div>

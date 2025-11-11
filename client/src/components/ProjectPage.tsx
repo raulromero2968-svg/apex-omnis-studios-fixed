@@ -1,8 +1,8 @@
-import { ArrowLeft, ExternalLink } from "lucide-react";
+import { ArrowLeft, ExternalLink, ChevronDown } from "lucide-react";
 import { Link } from "wouter";
 import { ConstellationBackground } from "./ConstellationBackground";
 import { AnimatedButton } from "./AnimatedButton";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 interface ProjectPageProps {
   title: string;
@@ -37,6 +37,9 @@ export function ProjectPage({
   testimonial,
   systemComplexity,
 }: ProjectPageProps) {
+  const [isArchitectureOpen, setIsArchitectureOpen] = useState(false);
+  const [isResultsOpen, setIsResultsOpen] = useState(false);
+
   // Scroll to top when component mounts
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'instant' });
@@ -133,8 +136,8 @@ export function ProjectPage({
           <div className="max-w-4xl mx-auto space-y-6">
             <h2 className="text-3xl font-bold text-cyan-400">Before & After</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="p-6 rounded-xl bg-red-500/10 border border-red-500/30">
-                <h3 className="text-xl font-bold text-red-400 mb-3">Before</h3>
+              <div className="p-6 rounded-xl bg-orange-500/10 border border-orange-500/30">
+                <h3 className="text-xl font-bold text-orange-400 mb-3">Before</h3>
                 <p className="text-muted-foreground leading-relaxed">{beforeAfter.before}</p>
               </div>
               <div className="p-6 rounded-xl bg-green-500/10 border border-green-500/30">
@@ -167,16 +170,26 @@ export function ProjectPage({
       {systemComplexity && systemComplexity.length > 0 && (
         <section className="container mx-auto px-4 py-12">
           <div className="max-w-4xl mx-auto space-y-6">
-            <h2 className="text-3xl font-bold text-cyan-400">System Architecture</h2>
-            <p className="text-muted-foreground mb-6">This system integrates multiple tools and services to deliver seamless automation:</p>
-            <div className="space-y-4">
-              {systemComplexity.map((item, index) => (
-                <div key={index} className="p-4 rounded-lg bg-muted/30 border border-border">
-                  <h3 className="text-lg font-bold text-foreground mb-2">{item.title}</h3>
-                  <p className="text-muted-foreground">{item.description}</p>
+            <button
+              onClick={() => setIsArchitectureOpen(!isArchitectureOpen)}
+              className="w-full flex items-center justify-between p-4 rounded-lg bg-cyan-500/10 border border-cyan-500/30 hover:bg-cyan-500/20 transition-colors"
+            >
+              <h2 className="text-3xl font-bold text-cyan-400">System Architecture</h2>
+              <ChevronDown className={`w-6 h-6 text-cyan-400 transition-transform ${ isArchitectureOpen ? 'rotate-180' : ''}`} />
+            </button>
+            {isArchitectureOpen && (
+              <>
+                <p className="text-muted-foreground mb-6">This system integrates multiple tools and services to deliver seamless automation:</p>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  {systemComplexity.map((item, index) => (
+                    <div key={index} className="p-4 rounded-lg bg-muted/30 border border-border">
+                      <h3 className="text-lg font-bold text-foreground mb-2">{item.title}</h3>
+                      <p className="text-sm text-muted-foreground">{item.description}</p>
+                    </div>
+                  ))}
                 </div>
-              ))}
-            </div>
+              </>
+            )}
           </div>
         </section>
       )}
@@ -184,35 +197,27 @@ export function ProjectPage({
       {/* Outcomes */}
       <section className="container mx-auto px-4 py-12">
         <div className="max-w-4xl mx-auto space-y-6">
-          <h2 className="text-3xl font-bold text-cyan-400">Results</h2>
-          <ul className="space-y-4">
-            {outcomes.map((outcome, index) => (
-              <li key={index} className="flex items-start gap-3">
-                <span className="text-cyan-400 text-2xl">✓</span>
-                <span className="text-lg text-muted-foreground">{outcome}</span>
-              </li>
-            ))}
-          </ul>
+          <button
+            onClick={() => setIsResultsOpen(!isResultsOpen)}
+            className="w-full flex items-center justify-between p-4 rounded-lg bg-purple-500/10 border border-purple-500/30 hover:bg-purple-500/20 transition-colors"
+          >
+            <h2 className="text-3xl font-bold text-purple-400">Results</h2>
+            <ChevronDown className={`w-6 h-6 text-purple-400 transition-transform ${isResultsOpen ? 'rotate-180' : ''}`} />
+          </button>
+          {isResultsOpen && (
+            <ul className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              {outcomes.map((outcome, index) => (
+                <li key={index} className="flex items-start gap-3 p-3 rounded-lg bg-muted/20">
+                  <span className="text-cyan-400 text-xl flex-shrink-0">✓</span>
+                  <span className="text-sm text-muted-foreground">{outcome}</span>
+                </li>
+              ))}
+            </ul>
+          )}
         </div>
       </section>
 
-      {/* Testimonial */}
-      {testimonial && (
-        <section className="container mx-auto px-4 py-12">
-          <div className="max-w-4xl mx-auto">
-            <div className="p-8 rounded-xl bg-gradient-to-br from-purple-500/10 to-cyan-500/10 border border-purple-500/30">
-              <div className="text-6xl text-purple-400 mb-4">"</div>
-              <p className="text-xl text-foreground italic mb-6">{testimonial.quote}</p>
-              <div className="flex items-center gap-4">
-                <div>
-                  <div className="font-bold text-foreground">{testimonial.author}</div>
-                  <div className="text-sm text-muted-foreground">{testimonial.role}</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-      )}
+      {/* Testimonial section removed per user request */}
 
       {/* Gallery */}
       {gallery.length > 0 && (

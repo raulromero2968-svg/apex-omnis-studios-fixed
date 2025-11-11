@@ -1,23 +1,30 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { forwardRef, ComponentPropsWithoutRef, Children, cloneElement, isValidElement } from "react";
+import { forwardRef, ComponentPropsWithoutRef, Children, isValidElement } from "react";
 import { ArrowRight } from "lucide-react";
+import { Slot } from "@radix-ui/react-slot";
 
-export const AnimatedButton = forwardRef<HTMLButtonElement, ComponentPropsWithoutRef<typeof Button>>(
-  ({ children, className, variant, ...props }, ref) => {
+interface AnimatedButtonProps extends ComponentPropsWithoutRef<typeof Button> {
+  asChild?: boolean;
+}
+
+export const AnimatedButton = forwardRef<HTMLButtonElement, AnimatedButtonProps>(
+  ({ children, className, variant, asChild = false, ...props }, ref) => {
     const isOutline = variant === "outline";
     
     // Check if children already contains an arrow icon
     const hasArrow = typeof children === 'string' ? false : 
       Children.toArray(children).some(child => {
         if (!isValidElement(child)) return false;
-        const props = child.props as any;
-        return child.type === ArrowRight || props?.className?.includes('lucide-arrow-right');
+        const childProps = child.props as any;
+        return child.type === ArrowRight || childProps?.className?.includes('lucide-arrow-right');
       });
+    
+    const Comp = asChild ? Slot : Button;
     
     return (
       <motion.div
-        className="relative inline-block"
+        className="relative inline-block w-full"
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
         transition={{ type: "spring", stiffness: 400, damping: 17 }}
@@ -51,31 +58,41 @@ export const AnimatedButton = forwardRef<HTMLButtonElement, ComponentPropsWithou
           }}
         />
         
-        <Button 
-          ref={ref} 
-          className={`relative ${className} transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/50 group`} 
-          variant={variant}
-          {...props}
-        >
-          {hasArrow ? (
-            // If button already has an arrow, just render children as-is
-            children
-          ) : (
-            // Otherwise, add animated arrow on hover
-            <span className="flex items-center gap-2">
-              {children}
-              {/* Animated arrow that appears on hover */}
-              <motion.span
-                className="inline-flex"
-                initial={{ x: -4, opacity: 0 }}
-                whileHover={{ x: 0, opacity: 1 }}
-                transition={{ duration: 0.2 }}
-              >
-                <ArrowRight className="w-4 h-4" />
-              </motion.span>
-            </span>
-          )}
-        </Button>
+        {asChild ? (
+          <Comp
+            ref={ref}
+            className={`relative ${className} transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/50 group`}
+            {...props}
+          >
+            {children}
+          </Comp>
+        ) : (
+          <Button 
+            ref={ref} 
+            className={`relative ${className} transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/50 group`} 
+            variant={variant}
+            {...props}
+          >
+            {hasArrow ? (
+              // If button already has an arrow, just render children as-is
+              children
+            ) : (
+              // Otherwise, add animated arrow on hover
+              <span className="flex items-center gap-2">
+                {children}
+                {/* Animated arrow that appears on hover */}
+                <motion.span
+                  className="inline-flex"
+                  initial={{ x: -4, opacity: 0 }}
+                  whileHover={{ x: 0, opacity: 1 }}
+                  transition={{ duration: 0.2 }}
+                >
+                  <ArrowRight className="w-4 h-4" />
+                </motion.span>
+              </span>
+            )}
+          </Button>
+        )}
       </motion.div>
     );
   }

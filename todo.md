@@ -320,3 +320,40 @@
 - [ ] Add route for /video-transcript-extractor
 - [ ] Test tool with multiple video platforms
 - [ ] Save checkpoint (TypeScript: 0 errors)
+
+
+## Post-Vercel Deployment Fixes (User Feedback - Current Session)
+
+- [ ] Fix Ethics page 404 error (routing issue)
+- [ ] Fix Services button in hamburger menu navigation
+- [ ] Remove ALL red colors from website (replace with cyan/purple brand colors)
+- [ ] Redesign project detail pages:
+  - [ ] Make System Architecture section collapsible or grid format
+  - [ ] Make Results section more visually appealing (collapsible/grid)
+  - [ ] Remove testimonials from all project pages
+- [ ] Convert Recent Projects section to horizontal carousel (side-scrolling)
+- [ ] Add category filter tabs (Gaming, Education, Creative) for projects
+- [ ] Make all project categories share the same section with tab switching
+- [ ] Document old www.apexomnis.io website for Framer template sale
+- [ ] Push all fixes to GitHub and redeploy to Vercel
+
+
+## Post-Vercel Deployment Fixes (Nov 11, 2025)
+
+- [x] Fix Ethics page 404 error (route was already configured)
+- [x] Add /services route to App.tsx
+- [x] Fix Services button in hamburger menu (use client-side routing instead of window.location)
+- [x] Remove red colors from ProjectPage Before section (replaced with orange)
+- [x] Remove red colors from Services page (replaced with orange)
+- [x] Make System Architecture section collapsible with grid layout
+- [x] Make Results section collapsible with 2-column grid
+- [x] Remove testimonials from all project pages
+- [x] Convert Recent Projects to horizontal carousel
+- [x] Add category tabs (Gaming Tools, Education Tools, Creative Tools)
+- [x] Add left/right scroll arrows to carousel
+- [x] Reduce vertical space in projects section
+- [ ] Test all fixes locally
+- [ ] Push to GitHub for Vercel deployment
+- [ ] Save old apexomnis.io website as Framer template
+- [ ] Save apexcommons.org website as Framer template
+- [ ] Rewrite About section to sound more natural and less awkward
