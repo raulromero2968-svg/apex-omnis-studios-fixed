@@ -524,6 +524,94 @@ export default function Home() {
         {/* FAQ Section */}
         <FAQSection />
 
+        {/* Free Tools Section */}
+        <section className="container mx-auto px-4 py-16 md:py-24">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
+              Free Tools for Collectors
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Try our market-leading portfolio trackers with built-in bubble warnings and risk analysis.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+            {/* TCG Portfolio Tracker */}
+            <a href="/tcg-portfolio" className="group">
+              <Card className="h-full border-cyan-500/30 hover:border-cyan-500 transition-all hover:shadow-lg hover:shadow-cyan-500/20">
+                <CardHeader>
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="p-3 rounded-lg bg-cyan-500/10 group-hover:bg-cyan-500/20 transition-colors">
+                      <PieChart className="w-6 h-6 text-cyan-500" />
+                    </div>
+                    <CardTitle className="text-xl">TCG Portfolio Tracker</CardTitle>
+                  </div>
+                  <CardDescription className="text-base">
+                    Track your Pokémon, Magic, and Yu-Gi-Oh! card values with real-time market bubble warnings and diversification analysis.
+                  </CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <div className="space-y-3">
+                    <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                      <TrendingUp className="w-4 h-4 text-green-500" />
+                      <span>Real-time portfolio valuation</span>
+                    </div>
+                    <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                      <Target className="w-4 h-4 text-yellow-500" />
+                      <span>Market bubble risk assessment</span>
+                    </div>
+                    <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                      <PieChart className="w-4 h-4 text-purple-500" />
+                      <span>Diversification recommendations</span>
+                    </div>
+                  </div>
+                  <div className="mt-6 flex items-center gap-2 text-cyan-500 font-medium group-hover:gap-3 transition-all">
+                    <span>Try Free Tool</span>
+                    <ArrowRight className="w-4 h-4" />
+                  </div>
+                </CardContent>
+              </Card>
+            </a>
+
+            {/* Event Tracker */}
+            <a href="/event-tracker" className="group">
+              <Card className="h-full border-purple-500/30 hover:border-purple-500 transition-all hover:shadow-lg hover:shadow-purple-500/20">
+                <CardHeader>
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="p-3 rounded-lg bg-purple-500/10">
+                      <Sparkles className="w-6 h-6 text-purple-500" />
+                    </div>
+                    <CardTitle className="text-xl">Event Tracker Pro</CardTitle>
+                  </div>
+                  <CardDescription className="text-base">
+                    Track sports card shows, gaming tournaments, and collector events with market volatility alerts.
+                  </CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <div className="space-y-3">
+                    <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                      <TrendingUp className="w-4 h-4 text-green-500" />
+                      <span>Multi-event portfolio tracking</span>
+                    </div>
+                    <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                      <Target className="w-4 h-4 text-yellow-500" />
+                      <span>Sports card market warnings</span>
+                    </div>
+                    <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                      <Sparkles className="w-4 h-4 text-purple-500" />
+                      <span>Event ROI analysis</span>
+                    </div>
+                  </div>
+                  <div className="mt-6 flex items-center gap-2 text-purple-500 font-medium group-hover:gap-3 transition-all">
+                    <span>Try Free Tool</span>
+                    <ArrowRight className="w-4 h-4" />
+                  </div>
+                </CardContent>
+              </Card>
+            </a>
+          </div>
+        </section>
+
         {/* CTA Section */}
         <section id="contact" className="container mx-auto px-4 py-16 md:py-24">
           <div className="max-w-4xl mx-auto text-center space-y-8 relative">

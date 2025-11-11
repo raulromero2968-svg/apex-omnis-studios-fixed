@@ -191,3 +191,41 @@
 - [x] Add risk score calculation for holdings
 - [x] Document Make.com setup instructions
 - [x] Test and save checkpoint (TypeScript: 0 errors)
+
+## Homepage & Market Warnings Expansion (Current Session)
+
+- [x] Add TCG Portfolio Tracker link/button to homepage
+- [x] Create Event Tracker page with market bubble warnings
+- [x] Add sports card market volatility alerts
+- [x] Create Make.com quick-start guide
+- [x] Draft influencer partnership email (for 6-12 months from now)
+- [x] Test and save checkpoint (TypeScript: 0 errors)
+
+## Ty Wilson Insights Implementation (Current Session)
+
+- [x] Add sealed product speculation warning to TCG Portfolio Tracker
+- [x] Add consistency score to Event Tracker Pro
+- [x] Add offer negotiation tracking to Event Tracker Pro
+- [ ] Add shipping method performance tracking
+- [x] Research CHASING CARDBOARD YouTube channel (Ty Wilson)
+- [x] Research Leonhart X profile (@LeonhartYT)
+- [x] Research DeepPocketMonster X profile (@DeepPocketMnstr / Pat Flynn)
+- [x] Save comprehensive TCG influencer network analysis
+- [x] Create Make.com quick-start guide
+- [x] Draft influencer partnership email (for 6-12 months from now)
+- [x] Test and save checkpoint (TypeScript: 0 errors)
+
+## Leonhart & Deep Pocket Monster Insights (Current Session)
+
+### Leonhart Insights to Implement:
+- [x] Add competitive play tracking to Event Tracker (tournaments, team performance)
+- [x] Add content creation ROI calculator (video views vs card value)
+- [x] Add charitable event tracking (Make-A-Wish style)
+- [x] Add community building metrics (Discord, YouTube memberships)
+
+### Deep Pocket Monster Insights to Implement:
+- [x] Add challenge completion tracker ("Complete set in 48 hours")
+- [x] Add "Open vs Keep" decision tracker with historical results
+- [x] Add pack opening ROI calculator (packs vs singles cost comparison)
+- [x] Add grading pipeline management (PSA/BGS/CGC submissions)
+- [ ] Add YouTube revenue tracking (ad revenue + memberships) - Future feature

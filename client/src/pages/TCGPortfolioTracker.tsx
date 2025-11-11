@@ -70,6 +70,30 @@ export default function TCGPortfolioTracker() {
 
       {/* Main Content */}
       <main className="container mx-auto px-4 py-8">
+        {/* Sealed Product Warning (Ty Wilson Insight) */}
+        <div className="bg-orange-500/10 border border-orange-500/30 rounded-lg p-6 mb-8">
+          <div className="flex items-start gap-4">
+            <div className="p-3 rounded-full bg-orange-500/20 flex-shrink-0">
+              <Package className="w-6 h-6 text-orange-500" />
+            </div>
+            <div>
+              <h3 className="text-xl font-bold text-orange-500 mb-2">📦 Sealed Product Speculation Warning</h3>
+              <p className="text-sm text-muted-foreground mb-3">
+                <strong>Expert Insight from Ty Wilson (@BreakerCulture):</strong> Opening sealed product is a trap. It's a sure way to waste time and money.
+              </p>
+              <div className="bg-background/50 border border-border rounded-lg p-4">
+                <h4 className="font-bold mb-2 text-sm">Why This Matters:</h4>
+                <ul className="text-sm text-muted-foreground space-y-1">
+                  <li>• Sealed boxes/packs have negative expected value (EV)</li>
+                  <li>• Manufacturers profit from sealed product, not you</li>
+                  <li>• Singles market is more predictable and profitable</li>
+                  <li>• Focus on buying/selling individual cards, not gambling on packs</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
         {/* Market Bubble Warning */}
         {showBubbleWarning && (
           <div className="bg-red-500/10 border border-red-500/30 rounded-lg p-6 mb-8 relative">
@@ -105,6 +129,40 @@ export default function TCGPortfolioTracker() {
             </div>
           </div>
         )}
+
+        {/* Deep Pocket Monster Insights: Challenge Tracking & Pack Opening */}
+        <div className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/30 rounded-lg p-6 mb-8">
+          <div className="flex items-center gap-3 mb-4">
+            <Info className="w-5 h-5 text-cyan-500" />
+            <h3 className="text-lg font-bold">Deep Pocket Monster Insights: Smart Collecting Strategies</h3>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+            <div className="bg-background/50 border border-border rounded-lg p-4">
+              <h4 className="font-bold mb-2 text-sm">🎯 Set Completion Challenges</h4>
+              <p className="text-xs text-muted-foreground">
+                DPM's "Complete set in 48 hours" challenges are viral. Track your challenge progress: cards needed, budget remaining, time left.
+              </p>
+            </div>
+            <div className="bg-background/50 border border-border rounded-lg p-4">
+              <h4 className="font-bold mb-2 text-sm">📦 Open vs Keep Tracker</h4>
+              <p className="text-xs text-muted-foreground">
+                "Should I Open it? Or Should I Keep it?" Track your decisions and results over time. See which strategy actually makes more money.
+              </p>
+            </div>
+            <div className="bg-background/50 border border-border rounded-lg p-4">
+              <h4 className="font-bold mb-2 text-sm">💸 Pack Opening ROI</h4>
+              <p className="text-xs text-muted-foreground">
+                Calculate: Pack cost × quantity vs. buying singles. DPM's data shows opening packs costs 40% more than buying singles for set completion.
+              </p>
+            </div>
+            <div className="bg-background/50 border border-border rounded-lg p-4">
+              <h4 className="font-bold mb-2 text-sm">🎯 Grading Pipeline</h4>
+              <p className="text-xs text-muted-foreground">
+                Track cards sent to PSA/BGS/CGC. Submission date, estimated return, grading costs, expected grade, and ROI after grading fees.
+              </p>
+            </div>
+          </div>
+        </div>
 
         {/* Portfolio Overview */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
