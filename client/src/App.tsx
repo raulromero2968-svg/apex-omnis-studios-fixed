@@ -5,6 +5,7 @@ import { Route, Switch } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import Home from "./pages/Home";
+import TCGPortfolioTracker from "./pages/TCGPortfolioTracker";
 import Services from "./pages/Services";
 import DataDashboard from "./pages/projects/DataDashboard";
 import MuseumTracker from "./pages/projects/MuseumTracker";
@@ -22,6 +23,7 @@ function Router() {
   return (
     <Switch>
       <Route path={"/"} component={Home} />
+      <Route path={"/tcg-portfolio"} component={TCGPortfolioTracker} />
       <Route path={"/projects/data-dashboard"} component={DataDashboard} />
       <Route path={"/projects/museum-tracker"} component={MuseumTracker} />
       <Route path={"/projects/ai-pipeline"} component={AIPipeline} />

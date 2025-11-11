@@ -180,3 +180,14 @@
 - [x] Document backend integration for status lookup
 - [x] Create Make.com webhook integration guide
 - [x] Test and save checkpoint (TypeScript: 0 errors)
+
+## Market Bubble Safeguards & Pending Features (Current Session)
+
+- [x] Add password protection to /analytics dashboard (password: apex2024)
+- [x] Create approval email template for accepted applications
+- [x] Add market bubble warning system to TCG Portfolio Dashboard
+- [x] Add portfolio diversification analysis (low-end vs high-end ratio)
+- [x] Add price trend alerts for sudden drops
+- [x] Add risk score calculation for holdings
+- [x] Document Make.com setup instructions
+- [x] Test and save checkpoint (TypeScript: 0 errors)

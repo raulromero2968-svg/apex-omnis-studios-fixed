@@ -1,11 +1,67 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { TrendingUp, TrendingDown, Clock, CheckCircle, XCircle, Users, Calendar } from "lucide-react";
+import { Input } from "@/components/ui/input";
+import { TrendingUp, TrendingDown, Clock, CheckCircle, XCircle, Users, Calendar, Lock } from "lucide-react";
+import { toast } from "sonner";
 import { Link } from "wouter";
 
 export default function ApplicationAnalytics() {
-  // Mock data - replace with real data from Make.com/database
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [password, setPassword] = useState("");
   const [dateRange, setDateRange] = useState("30d");
+
+  // Simple password protection - replace with proper auth
+  const ADMIN_PASSWORD = "apex2024"; // TODO: Move to environment variable
+
+  const handleLogin = () => {
+    if (password === ADMIN_PASSWORD) {
+      setIsAuthenticated(true);
+      toast.success("Access granted");
+    } else {
+      toast.error("Incorrect password");
+      setPassword("");
+    }
+  };
+
+  // Show login screen if not authenticated
+  if (!isAuthenticated) {
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-background via-background to-cyan-500/5 flex items-center justify-center">
+        <div className="bg-card border border-border rounded-lg p-8 max-w-md w-full">
+          <div className="flex items-center justify-center mb-6">
+            <div className="p-4 rounded-full bg-cyan-500/10">
+              <Lock className="w-8 h-8 text-cyan-500" />
+            </div>
+          </div>
+          <h2 className="text-2xl font-bold text-center mb-2">Analytics Dashboard</h2>
+          <p className="text-sm text-muted-foreground text-center mb-6">
+            This page is password protected. Enter the admin password to continue.
+          </p>
+          <div className="space-y-4">
+            <Input
+              type="password"
+              placeholder="Enter password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              onKeyDown={(e) => e.key === "Enter" && handleLogin()}
+              className="text-center"
+            />
+            <Button
+              onClick={handleLogin}
+              className="w-full bg-gradient-to-r from-cyan-500 to-purple-600"
+            >
+              Unlock Dashboard
+            </Button>
+          </div>
+          <p className="text-xs text-muted-foreground text-center mt-6">
+            Contact the administrator if you've forgotten the password.
+          </p>
+        </div>
+      </div>
+    );
+  }
+
+  // Mock data - replace with real data from Make.com/database
   
   const stats = {
     totalApplications: 47,
