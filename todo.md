@@ -229,3 +229,28 @@
 - [x] Add pack opening ROI calculator (packs vs singles cost comparison)
 - [x] Add grading pipeline management (PSA/BGS/CGC submissions)
 - [ ] Add YouTube revenue tracking (ad revenue + memberships) - Future feature
+
+
+## Real Data Integration & Challenge Mode (Current Session)
+
+### API Research & Integration:
+- [x] Research TCGPlayer API for Pokemon card pricing (no longer available)
+- [x] Research PokemonTCG.io API (FREE, includes TCGPlayer pricing)
+- [ ] Research eBay API for sports card pricing
+- [x] Integrate live pricing API into TCG Portfolio Tracker
+- [x] Add card search feature with live TCGPlayer pricing
+- [x] Create Pokemon TCG API service helper
+- [ ] Add API documentation for users
+
+### Challenge Mode Feature:
+- [ ] Build Challenge Mode page component
+- [ ] Add countdown timer (48-hour challenge)
+- [ ] Add progress tracking (cards collected / total cards)
+- [ ] Add budget tracker (spent / total budget)
+- [ ] Add leaderboard (future feature)
+- [ ] Add route for /challenge-mode
+
+### Make.com Setup:
+- [ ] Create simplified webhook setup instructions
+- [ ] Test webhook integration
+- [ ] Document troubleshooting steps

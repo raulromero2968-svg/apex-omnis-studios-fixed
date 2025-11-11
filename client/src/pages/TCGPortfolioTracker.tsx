@@ -3,9 +3,11 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { 
   TrendingUp, TrendingDown, AlertTriangle, Shield, DollarSign, 
-  Package, PieChart, Activity, Info, X 
+  Package, PieChart, Activity, Info, X, Search, Plus 
 } from "lucide-react";
 import { Link } from "wouter";
+import { searchByName, getMarketPrice, categorizeCardTier, formatRarity } from "@/lib/pokemonTcgApi";
+import { toast } from "sonner";
 
 interface Card {
   id: number;
@@ -21,6 +23,46 @@ interface Card {
 
 export default function TCGPortfolioTracker() {
   const [showBubbleWarning, setShowBubbleWarning] = useState(true);
+  const [searchQuery, setSearchQuery] = useState("");
+  const [searchResults, setSearchResults] = useState<any[]>([]);
+  const [isSearching, setIsSearching] = useState(false);
+  const [showSearch, setShowSearch] = useState(false);
+
+  // Handle card search
+  const handleSearch = async () => {
+    if (!searchQuery.trim()) {
+      toast.error("Please enter a card name");
+      return;
+    }
+
+    setIsSearching(true);
+    try {
+      const results = await searchByName(searchQuery);
+      setSearchResults(results);
+      if (results.length === 0) {
+        toast.info("No cards found. Try a different search.");
+      }
+    } catch (error) {
+      console.error("Search error:", error);
+      toast.error("Failed to search cards. Please try again.");
+    } finally {
+      setIsSearching(false);
+    }
+  };
+
+  // Add card to portfolio
+  const handleAddCard = (apiCard: any) => {
+    const marketPrice = getMarketPrice(apiCard);
+    if (!marketPrice) {
+      toast.error("Price data not available for this card");
+      return;
+    }
+
+    toast.success(`Added ${apiCard.name} to portfolio at $${marketPrice.toFixed(2)}`);
+    setShowSearch(false);
+    setSearchQuery("");
+    setSearchResults([]);
+  };
   
   // Mock portfolio data
   const [cards] = useState<Card[]>([
@@ -284,6 +326,89 @@ export default function TCGPortfolioTracker() {
             </div>
           )}
         </div>
+
+        {/* Add Card Button */}
+        <div className="mb-6 flex justify-end">
+          <Button 
+            onClick={() => setShowSearch(!showSearch)}
+            className="bg-cyan-500 hover:bg-cyan-600"
+          >
+            <Plus className="w-4 h-4 mr-2" />
+            Add Card with Live Pricing
+          </Button>
+        </div>
+
+        {/* Card Search */}
+        {showSearch && (
+          <div className="bg-card border border-border rounded-lg p-6 mb-6">
+            <div className="flex items-center gap-2 mb-4">
+              <Search className="w-5 h-5 text-cyan-500" />
+              <h3 className="text-xl font-bold">Search Pokemon Cards</h3>
+            </div>
+            
+            <div className="flex gap-2 mb-4">
+              <Input
+                type="text"
+                placeholder="Enter card name (e.g., Charizard, Pikachu)"
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                onKeyDown={(e) => e.key === "Enter" && handleSearch()}
+                className="flex-1"
+              />
+              <Button 
+                onClick={handleSearch}
+                disabled={isSearching}
+                className="bg-cyan-500 hover:bg-cyan-600"
+              >
+                {isSearching ? "Searching..." : "Search"}
+              </Button>
+            </div>
+
+            {/* Search Results */}
+            {searchResults.length > 0 && (
+              <div className="space-y-2 max-h-96 overflow-y-auto">
+                <p className="text-sm text-muted-foreground mb-2">
+                  Found {searchResults.length} cards (showing live TCGPlayer prices)
+                </p>
+                {searchResults.map((card) => {
+                  const marketPrice = getMarketPrice(card);
+                  return (
+                    <div 
+                      key={card.id} 
+                      className="flex items-center gap-4 p-4 bg-background border border-border rounded-lg hover:border-cyan-500/50 transition-colors"
+                    >
+                      <img 
+                        src={card.images.small} 
+                        alt={card.name}
+                        className="w-16 h-22 object-cover rounded"
+                      />
+                      <div className="flex-1">
+                        <h4 className="font-bold">{card.name}</h4>
+                        <p className="text-sm text-muted-foreground">
+                          {card.set.name} • {card.rarity}
+                        </p>
+                        {marketPrice && (
+                          <p className="text-sm font-bold text-green-500 mt-1">
+                            ${marketPrice.toFixed(2)} (TCGPlayer Market)
+                          </p>
+                        )}
+                      </div>
+                      <Button
+                        size="sm"
+                        onClick={() => handleAddCard(card)}
+                        disabled={!marketPrice}
+                        className="bg-cyan-500 hover:bg-cyan-600"
+                      >
+                        <Plus className="w-4 h-4 mr-1" />
+                        Add
+                      </Button>
+                    </div>
+                  );
+                })}
+              </div>
+            )}
+          </div>
+        )}
 
         {/* Cards Table */}
         <div className="bg-card border border-border rounded-lg p-6">

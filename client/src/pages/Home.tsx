@@ -9,7 +9,7 @@ import { AIStackSection } from "@/components/AIStackSection";
 import { FAQSection } from "@/components/FAQSection";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { APP_TITLE, PROJECTS } from "../../../shared/const";
-import { ArrowRight, BookOpen, Briefcase, Cpu, ExternalLink, Lightbulb, PieChart, TrendingUp, Sparkles, Target } from "lucide-react";
+import { ArrowRight, BookOpen, Briefcase, Cpu, ExternalLink, Lightbulb, PieChart, TrendingUp, Sparkles, Target, Trophy, Timer } from "lucide-react";
 import { useEffect, useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 
@@ -603,6 +603,43 @@ export default function Home() {
                     </div>
                   </div>
                   <div className="mt-6 flex items-center gap-2 text-purple-500 font-medium group-hover:gap-3 transition-all">
+                    <span>Try Free Tool</span>
+                    <ArrowRight className="w-4 h-4" />
+                  </div>
+                </CardContent>
+              </Card>
+            </a>
+
+            {/* Challenge Mode */}
+            <a href="/challenge-mode" className="group">
+              <Card className="h-full border-yellow-500/30 hover:border-yellow-500 transition-all hover:shadow-lg hover:shadow-yellow-500/20">
+                <CardHeader>
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="p-3 rounded-lg bg-yellow-500/10">
+                      <Trophy className="w-6 h-6 text-yellow-500" />
+                    </div>
+                    <CardTitle className="text-xl">🏆 Challenge Mode</CardTitle>
+                  </div>
+                  <CardDescription className="text-base">
+                    Complete set challenges with countdown timers. Inspired by Deep Pocket Monster's challenge content.
+                  </CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <div className="space-y-3">
+                    <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                      <Timer className="w-4 h-4 text-cyan-500" />
+                      <span>48-hour countdown challenges</span>
+                    </div>
+                    <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                      <Target className="w-4 h-4 text-purple-500" />
+                      <span>Budget & progress tracking</span>
+                    </div>
+                    <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                      <TrendingUp className="w-4 h-4 text-green-500" />
+                      <span>Live pricing integration</span>
+                    </div>
+                  </div>
+                  <div className="mt-6 flex items-center gap-2 text-yellow-500 font-medium group-hover:gap-3 transition-all">
                     <span>Try Free Tool</span>
                     <ArrowRight className="w-4 h-4" />
                   </div>
