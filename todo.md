@@ -352,8 +352,33 @@
 - [x] Add category tabs (Gaming Tools, Education Tools, Creative Tools)
 - [x] Add left/right scroll arrows to carousel
 - [x] Reduce vertical space in projects section
-- [ ] Test all fixes locally
-- [ ] Push to GitHub for Vercel deployment
+- [x] Test all fixes locally (build successful)
+- [x] Push to GitHub for Vercel deployment
 - [ ] Save old apexomnis.io website as Framer template
 - [ ] Save apexcommons.org website as Framer template
-- [ ] Rewrite About section to sound more natural and less awkward
+- [x] Rewrite About section to sound more natural and less awkward
+
+
+## Framer Template Documentation (Nov 11, 2025)
+
+- [ ] Document current apex-omnis-studios.vercel.app as Framer template
+- [ ] Document old www.apexomnis.io as Framer template
+- [ ] Document apexcommons.org as Framer template
+- [ ] Create Framer template sales page/listing
+
+## Sports Card Market Project (Nov 11, 2025)
+
+- [x] Research sports card market (baseball, basketball, football)
+- [x] Research PSA, BGS, CGC, SGC grading systems and pricing
+- [x] Create ProGrade Tracker project page
+- [x] Add ProGrade Tracker to Gaming Tools carousel
+- [x] Add /prograde-tracker route to App.tsx
+- [ ] Research PSA/BGS/CGC grading systems and pricing
+- [ ] Create Sports Card Grading Tracker project page
+- [ ] Add grading pipeline management features
+- [ ] Add market analysis for sports cards vs TCG
+- [ ] Add authentication and condition tracking
+- [ ] Add ROI calculator for graded vs raw cards
+- [ ] Add sports card project to Gaming Tools category
+- [ ] Generate hero image for Sports Card Grading Tracker
+- [ ] Test and deploy to Vercel

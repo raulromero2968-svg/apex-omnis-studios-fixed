@@ -48,6 +48,14 @@ export function ProjectsSection() {
             screenshot: "/tcg-portfolio-hero-v1.png",
             projectUrl: "/projects/data-dashboard",
             techStack: ["React", "TCGPlayer API", "Data Viz"]
+          },
+          {
+            title: "ProGrade Tracker",
+            description: "Sports card grading pipeline management and ROI optimization. Track PSA, BGS, CGC, and SGC submissions with AI condition assessment and market analysis.",
+            category: "Investment Tools",
+            screenshot: "/prograde-tracker-hero.png",
+            projectUrl: "/prograde-tracker",
+            techStack: ["AI Image Analysis", "Market Data APIs", "ROI Calculator"]
           }
         ]
       },
