@@ -6,17 +6,17 @@ export const APP_TITLE = "Apex Omnis Studios";
 export const PROJECTS = {
   commons: {
     name: "Apex Commons",
-    tagline: "Civic Tech & Educational Access",
+    tagline: "The Public Thinking Space",
     url: "https://apexcommons.org"
   },
   society: {
     name: "Apex Intelligence Society",
-    tagline: "Research, Curation & Gamified Intelligence",
+    tagline: "Frameworks & Research Architectures",
     url: "https://x.com/TCGAISociety"
   },
   intelligence: {
     name: "ApexIntelligence.io",
-    tagline: "Original Research & Insights",
+    tagline: "Essays on AI, Narrative & Power",
     url: "https://apexintelligence.io"
   }
 };

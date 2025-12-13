@@ -9,56 +9,56 @@ export default function Services() {
   const offerings = [
     {
       icon: Zap,
-      title: "Custom Automation Builds",
-      description: "Done-with-you automation systems tailored to your specific business needs and community.",
+      title: "Tool & Prototype Development",
+      description: "Functional software built with ethics as a design constraint—not just a feature list.",
       features: [
-        "Deep discovery process to understand your audience",
-        "Custom workflow design and implementation",
-        "Integration with your existing tools and platforms",
-        "Training and documentation for your team",
-        "Ongoing support and optimization"
+        "AI-assisted tools that increase user agency, not dependency",
+        "Interactive prototypes for testing ideas before full production",
+        "Integration with existing systems and workflows",
+        "Clear documentation on what the tool does and doesn't do",
+        "Iterative development based on real use, not imagined use cases"
       ]
     },
     {
       icon: Users,
-      title: "Community-First Consulting",
-      description: "Strategic guidance on building automation that serves your community without exploiting them.",
+      title: "Narrative Design & Interactive Experiences",
+      description: "Story-driven projects that respect the audience and serve integration, not fracturing.",
       features: [
-        "Ethical automation strategy sessions",
-        "Community impact assessment",
-        "Anti-spam and anti-scalper safeguards",
-        "Sustainable growth planning",
-        "Long-term relationship building"
+        "Collaborative development with artists and storytellers",
+        "Interactive media that invites participation, not manipulation",
+        "Experiences designed for understanding, not engagement metrics",
+        "Clear boundaries around mental health and psychological impact",
+        "Work that can be intense or challenging, oriented toward integration"
       ]
     },
     {
       icon: Shield,
-      title: "Quality Assurance & Ethics Review",
-      description: "We help you build systems that work AND align with your values.",
+      title: "Ethical Review & Collaboration",
+      description: "We help projects align with values that matter—self-determination, transparency, non-coercion.",
       features: [
-        "Code review and optimization",
-        "User experience testing",
-        "Ethical use case validation",
-        "Performance monitoring",
-        "Community feedback integration"
+        "Assessment of systems for hidden manipulation or dark patterns",
+        "Design review for accessibility and fairness",
+        "Explicit ethical conditions for institutional collaborations",
+        "Clear documentation of what tools are for and NOT for",
+        "Ongoing dialogue about impact and course correction"
       ]
     }
   ];
 
   const idealClient = [
-    "You have a real business serving a specific community",
-    "You care more about long-term reputation than quick profits",
-    "You're willing to invest time understanding your audience",
-    "You want to build something sustainable, not a cash grab",
-    "You're open to being told 'no' if an idea would harm your community"
+    "You want technology that increases understanding and agency",
+    "You're building for a real community you actually care about",
+    "You're willing to hear 'no' if an approach would cause harm",
+    "You understand that ethics are design constraints, not marketing",
+    "You can work iteratively and accept that some things are experiments"
   ];
 
   const redFlags = [
-    "Looking for 'passive income' with zero effort",
-    "Want to sell generic AI services to anyone with money",
-    "Unwilling to learn about your target audience",
-    "Focused solely on scaling revenue, not serving people",
-    "Resistant to ethical guidelines or community safeguards"
+    "Looking for tools that maximize engagement through manipulation",
+    "Want to build systems designed to destabilize users for profit",
+    "Resistant to explicit ethical boundaries or safeguards",
+    "Seeking technology for surveillance, psychological warfare, or coercion",
+    "Framing extraction as 'disruption' or 'innovation'"
   ];
 
   return (
@@ -76,19 +76,19 @@ export default function Services() {
               className="text-center mb-16"
             >
               <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-purple-600 bg-clip-text text-transparent">
-                Custom Automation for Serious Builders
+                What We Build
               </h1>
               <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-8">
-                We don't sell templates or "done-for-you" infrastructure. We build custom automation systems with entrepreneurs who care about their communities.
+                Apex Omnis is a creative-technical studio. We build tools, prototypes, and experiences with people who want technology to serve human life—not extract from it.
               </p>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto font-semibold">
-                Not a licensing model. Not a course. Not a get-rich-quick scheme.
+                We're an emerging studio. Some projects are experimental. We say so when they are.
               </p>
             </motion.div>
 
             {/* What We Offer */}
             <div className="mb-24">
-              <h2 className="text-3xl font-bold text-center mb-12">What We Build Together</h2>
+              <h2 className="text-3xl font-bold text-center mb-12">Our Work</h2>
               <div className="grid md:grid-cols-3 gap-8">
                 {offerings.map((offering, index) => (
                   <motion.div
@@ -126,7 +126,7 @@ export default function Services() {
               >
                 <div className="flex items-center gap-3 mb-6">
                   <CheckCircle className="w-8 h-8 text-cyan-500" />
-                  <h3 className="text-2xl font-bold">You're a Great Fit If...</h3>
+                  <h3 className="text-2xl font-bold">We Work With People Who...</h3>
                 </div>
                 <ul className="space-y-3">
                   {idealClient.map((item, idx) => (
@@ -146,7 +146,7 @@ export default function Services() {
               >
                 <div className="flex items-center gap-3 mb-6">
                   <XCircle className="w-8 h-8 text-red-500" />
-                  <h3 className="text-2xl font-bold">This Isn't For You If...</h3>
+                  <h3 className="text-2xl font-bold">We Don't Build For...</h3>
                 </div>
                 <ul className="space-y-3">
                   {redFlags.map((item, idx) => (
@@ -159,7 +159,7 @@ export default function Services() {
               </motion.div>
             </div>
 
-            {/* Early Adopter Opportunity */}
+            {/* Studio Philosophy */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -169,16 +169,16 @@ export default function Services() {
               <div className="max-w-4xl mx-auto p-8 rounded-lg border border-cyan-500/50 bg-gradient-to-r from-cyan-500/10 to-purple-500/10 backdrop-blur">
                 <div className="text-center">
                   <h3 className="text-2xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-purple-600 bg-clip-text text-transparent">
-                    Early Builder Partnership — Limited Spots
+                    An Emerging Studio
                   </h3>
                   <p className="text-muted-foreground mb-4">
-                    We're currently working with our founding clients (Danielle and David) to build proven case studies. This means <strong className="text-foreground">you get premium attention</strong> and direct access to our founders as we establish our portfolio.
+                    Apex Omnis is in its early phase—exploring what ethical production looks like in practice. We work directly with collaborators, not at scale. Some projects are functional tools; others are experiments to test whether an idea actually works.
                   </p>
                   <p className="text-muted-foreground mb-4">
-                    Early partners benefit from deeper collaboration, more flexible timelines, and the opportunity to shape how we work. The best partnerships may lead to ongoing roles as we scale.
+                    This means <strong className="text-foreground">honest conversation</strong> about what's possible, what's experimental, and what the real constraints are. We don't market prototypes as finished platforms.
                   </p>
                   <p className="text-sm text-muted-foreground italic">
-                    Note: We're building a community of ethical automation users. Strong early partners may be invited to join our team as community managers or advisors in future phases.
+                    If something we're building drifts toward harm, our obligation is to intervene—by redesigning, constraining, or shutting it down. That's not a slogan; it's a design requirement.
                   </p>
                 </div>
               </div>
@@ -191,7 +191,7 @@ export default function Services() {
               transition={{ duration: 0.5, delay: 0.6 }}
               className="mb-24"
             >
-              <h2 className="text-3xl font-bold text-center mb-12">How We Work Together</h2>
+              <h2 className="text-3xl font-bold text-center mb-12">How Collaborations Work</h2>
               <div className="max-w-4xl mx-auto space-y-6">
                 <div className="p-6 rounded-lg border border-border/50 bg-card/30 backdrop-blur">
                   <div className="flex items-start gap-4">
@@ -199,9 +199,9 @@ export default function Services() {
                       1
                     </div>
                     <div>
-                      <h4 className="text-xl font-bold mb-2">Application & Discovery</h4>
+                      <h4 className="text-xl font-bold mb-2">Conversation</h4>
                       <p className="text-muted-foreground">
-                        You apply through our contact form. We review your business, audience, and goals. If there's a fit, we schedule a deep-dive discovery call to understand your community and challenges.
+                        We start by understanding what you're trying to build and why. What's the actual problem? Who does it serve? What are the ethical considerations? This isn't a sales call—it's figuring out whether there's a real fit.
                       </p>
                     </div>
                   </div>
@@ -213,9 +213,9 @@ export default function Services() {
                       2
                     </div>
                     <div>
-                      <h4 className="text-xl font-bold mb-2">Strategy & Design</h4>
+                      <h4 className="text-xl font-bold mb-2">Design & Boundaries</h4>
                       <p className="text-muted-foreground">
-                        We map out your automation system together. What problems are we solving? What safeguards do we need? What does success look like? This is collaborative—you know your community, we know automation.
+                        We map the project together—what we're building, what it's for, what it's explicitly NOT for. Ethical boundaries get documented upfront, not added later as marketing. This is where we decide if this is a prototype, experiment, or production-ready tool.
                       </p>
                     </div>
                   </div>
@@ -227,9 +227,9 @@ export default function Services() {
                       3
                     </div>
                     <div>
-                      <h4 className="text-xl font-bold mb-2">Build & Iterate</h4>
+                      <h4 className="text-xl font-bold mb-2">Build & Test</h4>
                       <p className="text-muted-foreground">
-                        We build your custom system using our multi-AI stack (Manus, Claude, ChatGPT, Gemini, Devin, Copilot). You get regular updates, testing access, and input throughout. This isn't "done-for-you"—it's done-with-you.
+                        Development is collaborative. You're involved in testing and feedback. We use AI-assisted tools where they help, but the goal is something that works in the real world—not impressive demos that fail in practice.
                       </p>
                     </div>
                   </div>
@@ -241,9 +241,9 @@ export default function Services() {
                       4
                     </div>
                     <div>
-                      <h4 className="text-xl font-bold mb-2">Launch & Support</h4>
+                      <h4 className="text-xl font-bold mb-2">Deploy & Course-Correct</h4>
                       <p className="text-muted-foreground">
-                        We launch together, monitor performance, and optimize based on real community feedback. You get documentation, training, and ongoing support. We're invested in your long-term success.
+                        When something goes into the world, we watch how it actually gets used. If it drifts toward harm—even unintentionally—we redesign, constrain, or shut it down. This isn't failure; it's the process working.
                       </p>
                     </div>
                   </div>
@@ -251,7 +251,7 @@ export default function Services() {
               </div>
             </motion.div>
 
-            {/* Pricing Philosophy */}
+            {/* Scope & Investment */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -262,22 +262,22 @@ export default function Services() {
                 <div className="flex items-start gap-4 mb-6">
                   <AlertTriangle className="w-8 h-8 text-yellow-500 flex-shrink-0" />
                   <div>
-                    <h3 className="text-2xl font-bold mb-3">Why We Don't Publish Pricing</h3>
+                    <h3 className="text-2xl font-bold mb-3">On Scope & Investment</h3>
                     <p className="text-muted-foreground mb-4">
-                      Every project is different. A simple event tracker for a local game store costs less than a multi-platform content automation system for an education company.
+                      Every project is different. A small prototype to test an idea has different requirements than a production-ready tool for an institution. We don't publish pricing because the honest answer is: it depends on what you're actually trying to do.
                     </p>
                     <p className="text-muted-foreground mb-4">
-                      But here's what you should know: <strong className="text-foreground">Our pricing filters out low-effort operators.</strong> If you're looking for a $500 template you can resell, this isn't it. If you're building a real business and want a partner who cares about your success, let's talk.
+                      What we can say: <strong className="text-foreground">we're not optimizing for volume.</strong> We work on fewer projects with more depth. If you need something cheap and fast, there are agencies for that. If you need something built with care, let's talk.
                     </p>
                     <p className="text-muted-foreground">
-                      We charge based on complexity, scope, and the value we create for your community. Transparent, fair, and aligned with long-term relationships—not one-time transactions.
+                      Conversations about scope happen early and honestly. If a project isn't a good fit—for either of us—we'll say so.
                     </p>
                   </div>
                 </div>
               </div>
             </motion.div>
 
-            {/* Application Form */}
+            {/* Contact Form */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -285,12 +285,12 @@ export default function Services() {
               className="mb-16"
             >
               <div className="text-center mb-12">
-                <h2 className="text-3xl font-bold mb-4">Apply for Early Builder Partnership</h2>
+                <h2 className="text-3xl font-bold mb-4">Start a Conversation</h2>
                 <p className="text-xl text-muted-foreground max-w-2xl mx-auto mb-4">
-                  Limited spots available. Work directly with our founders to build custom automation that serves your community.
+                  If you're working on something that aligns with our approach, we'd like to hear about it.
                 </p>
                 <p className="text-muted-foreground max-w-2xl mx-auto">
-                  We review every application personally and respond within 48 hours.
+                  Tell us what you're trying to build and why it matters. We read everything.
                 </p>
               </div>
               <ClientApplicationForm />
@@ -304,43 +304,43 @@ export default function Services() {
               className="mb-16"
             >
               <div className="max-w-4xl mx-auto p-8 rounded-lg border border-border/50 bg-card/30 backdrop-blur">
-                <h3 className="text-2xl font-bold mb-6 text-center">What Happens Next?</h3>
+                <h3 className="text-2xl font-bold mb-6 text-center">What Happens After You Reach Out</h3>
                 <div className="grid md:grid-cols-3 gap-6">
                   <div className="text-center">
                     <div className="w-12 h-12 rounded-full bg-gradient-to-br from-cyan-500 to-purple-600 flex items-center justify-center mx-auto mb-4 font-bold text-white">
                       1
                     </div>
-                    <h4 className="font-bold mb-2">We Review (24-48 hours)</h4>
+                    <h4 className="font-bold mb-2">We Read & Consider</h4>
                     <p className="text-sm text-muted-foreground mb-3">
-                      Our founders personally review every application. We look for alignment with our values, clarity of goals, and community fit.
+                      We look for alignment with how we work—not just project fit, but ethical fit. We take this seriously.
                     </p>
                     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-xs text-cyan-500">
                       <Clock className="w-3 h-3" />
-                      Most reviewed within 3-5 business days
+                      Usually within a few days
                     </div>
                   </div>
                   <div className="text-center">
                     <div className="w-12 h-12 rounded-full bg-gradient-to-br from-cyan-500 to-purple-600 flex items-center justify-center mx-auto mb-4 font-bold text-white">
                       2
                     </div>
-                    <h4 className="font-bold mb-2">Discovery Call (If Selected)</h4>
+                    <h4 className="font-bold mb-2">Conversation (If Aligned)</h4>
                     <p className="text-sm text-muted-foreground">
-                      If we see a strong fit, we'll schedule a 30-minute call to dive deeper into your challenges, goals, and how we can help.
+                      If there's potential alignment, we'll have a real conversation about what you're trying to do and whether we can help.
                     </p>
                   </div>
                   <div className="text-center">
                     <div className="w-12 h-12 rounded-full bg-gradient-to-br from-cyan-500 to-purple-600 flex items-center justify-center mx-auto mb-4 font-bold text-white">
                       3
                     </div>
-                    <h4 className="font-bold mb-2">Proposal & Partnership</h4>
+                    <h4 className="font-bold mb-2">Honest Assessment</h4>
                     <p className="text-sm text-muted-foreground">
-                      We'll create a custom proposal outlining scope, timeline, and investment. If aligned, we kick off your project.
+                      We'll tell you what we think—whether the project makes sense, what the real constraints are, and whether we're the right people for it.
                     </p>
                   </div>
                 </div>
                 <div className="mt-8 p-4 rounded-lg bg-cyan-500/10 border border-cyan-500/30">
                   <p className="text-sm text-muted-foreground text-center">
-                    <strong className="text-foreground">Note:</strong> Even if we're not the right fit for your project right now, we'll provide honest feedback and may suggest alternative approaches or resources.
+                    <strong className="text-foreground">Note:</strong> If we're not the right fit, we'll say so honestly. We may suggest alternative approaches or point you toward other resources.
                   </p>
                 </div>
               </div>

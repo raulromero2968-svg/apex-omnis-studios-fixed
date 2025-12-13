@@ -1,35 +1,35 @@
 import { ConstellationBackground } from "@/components/ConstellationBackground";
 import { motion } from "framer-motion";
-import { Shield, Heart, Users, TrendingUp } from "lucide-react";
+import { Shield, Heart, Users, AlertTriangle, Eye, Brain } from "lucide-react";
 
 export default function Ethics() {
-  const principles = [
+  const coreGuardrails = [
     {
       icon: Shield,
-      title: "Anti-Scalper Technology",
-      description: "Our tools are designed for personal use by collectors and enthusiasts, not bulk operations. Event trackers limit tracking scope, portfolio tools focus on personal collections, and content systems include spam prevention. We actively prevent exploitation of communities we serve."
-    },
-    {
-      icon: Heart,
-      title: "Community First",
-      description: "Every system we build strengthens communities rather than extracting value from them. We prioritize authentic engagement over manipulation, education over exploitation, and long-term relationships over short-term profits."
+      title: "No Holy Machines",
+      description: "No matter how sophisticated the products or systems we build become, we will not treat them as holy if they are being used to strip people of self-determination, land, or sanity. If we discover that something we built is drifting in that direction, our obligation is to intervene—by redesigning, constraining, or shutting it down—not to hide behind mystique or 'just business.'"
     },
     {
       icon: Users,
-      title: "Accessibility & Fairness",
-      description: "Powerful automation shouldn't be exclusive to those with deep pockets or technical expertise. We make enterprise-grade tools accessible to teachers, gamers, and creatives who want to work smarter without losing their humanity."
+      title: "Design for Self-Determination",
+      description: "Tools should increase a user's sense of understanding, agency, and capacity to make informed choices. We explicitly reject manipulation as a business model, dark patterns, and hidden behavior-shaping mechanisms. If a system works by reducing the user's ability to think clearly, it's not a feature—it's a failure."
     },
     {
-      icon: TrendingUp,
-      title: "Sustainable Growth",
-      description: "We help you build systems that scale sustainably—not through aggressive tactics, but through genuine value creation. Our tools save time so you can focus on what matters: serving your community better."
+      icon: Brain,
+      title: "Mental Health Is In Scope",
+      description: "No systems whose secret purpose is to destabilize users for engagement. No glorification of breakdown, self-harm, or paranoia as a feature. Experiences can be intense or challenging, but they should be oriented toward integration, not fracturing. We take responsibility for psychological impact, not just functionality."
+    },
+    {
+      icon: Eye,
+      title: "Clear Boundaries with Power",
+      description: "If we collaborate with institutions—public or private—we do so with explicit ethical conditions and clear red lines about surveillance, psychological warfare, or exploitative uses. We name what our tools are for and what they are NOT for. We don't build for anyone and sort out the ethics later."
     }
   ];
 
   return (
     <div className="min-h-screen bg-background text-foreground relative">
       <ConstellationBackground />
-      
+
       <div className="relative z-10">
         {/* Hero */}
         <section className="py-24 px-4">
@@ -41,16 +41,16 @@ export default function Ethics() {
               className="text-center mb-16"
             >
               <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-purple-600 bg-clip-text text-transparent">
-                Our Commitment to the Community
+                Ethical Guardrails
               </h1>
               <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-                We build intelligent automation for collectors, educators, and creatives—not exploiters. Here's how we protect the communities we serve.
+                These aren't marketing statements. They're design constraints we use to decide what to build, how to build it, and who to build it for.
               </p>
             </motion.div>
 
-            {/* Core Principles */}
+            {/* Core Guardrails */}
             <div className="grid gap-8 md:grid-cols-2 mb-16">
-              {principles.map((principle, index) => (
+              {coreGuardrails.map((guardrail, index) => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 30 }}
@@ -59,17 +59,17 @@ export default function Ethics() {
                   className="p-8 rounded-lg border border-border/50 bg-card/30 backdrop-blur"
                 >
                   <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-cyan-500 to-purple-600 flex items-center justify-center mb-4">
-                    <principle.icon className="w-6 h-6 text-white" />
+                    <guardrail.icon className="w-6 h-6 text-white" />
                   </div>
-                  <h3 className="text-2xl font-bold mb-3">{principle.title}</h3>
+                  <h3 className="text-2xl font-bold mb-3">{guardrail.title}</h3>
                   <p className="text-muted-foreground leading-relaxed">
-                    {principle.description}
+                    {guardrail.description}
                   </p>
                 </motion.div>
               ))}
             </div>
 
-            {/* Detailed Statement */}
+            {/* What This Means In Practice */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -77,104 +77,93 @@ export default function Ethics() {
               className="prose prose-invert max-w-none"
             >
               <div className="p-8 rounded-lg border border-border/50 bg-card/30 backdrop-blur space-y-6 text-muted-foreground">
-                <h2 className="text-2xl font-bold text-foreground">Why This Matters</h2>
-                
+                <h2 className="text-2xl font-bold text-foreground">What This Means In Practice</h2>
+
                 <p>
-                  The TCG community has been hurt by scalpers using bots to buy out limited releases. Teachers are overwhelmed by administrative work that pulls them away from students. Creatives struggle to organize their ideas and turn them into reality.
+                  Apex Omnis is a studio, not a service provider that builds whatever someone pays for. We're selective about what we work on because technology has consequences—and those consequences fall on real people.
                 </p>
 
                 <p>
-                  We see automation as a tool for empowerment, not exploitation. Our systems are designed to:
+                  This means there are things we won't build:
                 </p>
 
                 <ul className="list-disc list-inside space-y-2 ml-4">
-                  <li>Help collectors track events they genuinely want to attend—not scrape every listing for resale</li>
-                  <li>Give teachers time back so they can focus on students—not replace human connection with AI</li>
-                  <li>Organize creative workflows so ideas become reality—not spam social media with low-quality content</li>
+                  <li>Tools optimized for engagement through manipulation, distraction, or compulsion loops</li>
+                  <li>Systems designed to make users feel paranoid, fractured, or dependent</li>
+                  <li>Platforms that extract value from communities while giving nothing back</li>
+                  <li>Technology for surveillance, psychological operations, or coercive control—regardless of who's asking</li>
+                  <li>Products that hide what they actually do from the people using them</li>
                 </ul>
 
-                <h2 className="text-2xl font-bold text-foreground mt-8">Our Promise</h2>
+                <h2 className="text-2xl font-bold text-foreground mt-8">On Collaboration with Institutions</h2>
 
                 <p>
-                  We will never build tools that harm the communities we serve. If a feature could be abused for scalping, manipulation, or exploitation, we either don't build it or we add safeguards that prevent misuse.
+                  We're not reflexively anti-institutional. Schools, nonprofits, civic organizations, research institutions—these can be legitimate partners for building technology that serves people.
                 </p>
 
                 <p>
-                  This means some potential clients will walk away. That's okay. We'd rather serve 100 genuine community members than enable one bad actor.
-                </p>
-
-                <p className="font-semibold text-foreground">
-                  If you're here to build something that helps people, we're here to help you. If you're here to exploit communities, this isn't the place for you.
-                </p>
-
-                <h2 className="text-2xl font-bold text-foreground mt-8">Technical Safeguards</h2>
-
-                <p>
-                  We implement specific technical measures to prevent misuse of our automation tools:
+                  But institutional collaboration comes with explicit conditions:
                 </p>
 
                 <ul className="list-disc list-inside space-y-2 ml-4">
-                  <li><strong>Rate Limiting:</strong> Event trackers are limited to reasonable tracking volumes that serve personal use, not bulk scraping operations</li>
-                  <li><strong>Human Review Checkpoints:</strong> Content automation systems require human approval before publishing, preventing spam and maintaining quality</li>
-                  <li><strong>Usage Monitoring:</strong> We actively monitor for patterns that indicate scalping or exploitation and reserve the right to terminate service</li>
-                  <li><strong>API Restrictions:</strong> Our integrations respect platform terms of service and implement delays that prevent aggressive automation</li>
-                  <li><strong>Collection Size Limits:</strong> Portfolio tools focus on personal collections (hundreds of items) not commercial inventory (thousands)</li>
+                  <li><strong>Transparency about use:</strong> We document what tools are for and what they're NOT for</li>
+                  <li><strong>Red lines on surveillance:</strong> No quiet pivots into tracking, profiling, or monitoring that wasn't part of the original agreement</li>
+                  <li><strong>No psychological warfare:</strong> We don't build systems designed to manipulate, destabilize, or control populations</li>
+                  <li><strong>Right to exit:</strong> If a collaboration drifts into territory we can't support, we can walk away—and we will</li>
                 </ul>
 
-                <h2 className="text-2xl font-bold text-foreground mt-8">Community Case Studies</h2>
+                <h2 className="text-2xl font-bold text-foreground mt-8">On Mental Health & Psychological Impact</h2>
 
-                <div className="space-y-4">
-                  <div className="pl-4 border-l-4 border-cyan-500">
-                    <h3 className="font-bold text-foreground mb-2">TCG Collectors: Anti-Scalper Positioning</h3>
-                    <p>
-                      When designing our Event Tracker Pro, we deliberately limited the scope to prevent scalpers from using it to monitor every tournament and prerelease for resale opportunities. The tool tracks events you genuinely plan to attend, not every listing in a 500-mile radius. This protects local game stores and ensures cards go to players, not flippers.
-                    </p>
-                  </div>
+                <p>
+                  Technology shapes how people think, feel, and relate to each other. We take that seriously.
+                </p>
 
-                  <div className="pl-4 border-l-4 border-purple-500">
-                    <h3 className="font-bold text-foreground mb-2">Teachers: Preserving Human Connection</h3>
-                    <p>
-                      Our Classroom Automation Hub saves teachers time on administrative tasks—grading, attendance, email templates—but it never replaces the human element of teaching. We don't offer AI-generated lesson delivery or automated student feedback. The time saved goes back to what matters: face-to-face interaction with students.
-                    </p>
-                  </div>
+                <p>
+                  "Mental health is in scope" means we actively consider psychological impact during design and development—not as a compliance checkbox, but as a core design constraint. This includes:
+                </p>
 
-                  <div className="pl-4 border-l-4 border-pink-500">
-                    <h3 className="font-bold text-foreground mb-2">Creatives: Quality Over Quantity</h3>
-                    <p>
-                      Our Project Idea Organizer helps creatives turn scattered thoughts into actionable plans, but we don't build tools for mass content generation or social media spam. Every piece of content should have intention and value. We help you organize better, not spam faster.
-                    </p>
-                  </div>
+                <ul className="list-disc list-inside space-y-2 ml-4">
+                  <li>Rejecting engagement metrics that reward compulsive use or anxiety</li>
+                  <li>Building experiences that invite participation rather than demand it</li>
+                  <li>Creating tools that help people think more clearly, not less</li>
+                  <li>Avoiding aesthetic or narrative choices that glorify breakdown or paranoia</li>
+                  <li>Designing for integration—helping users make sense of their experience—not fracturing</li>
+                </ul>
+
+                <p>
+                  Intense or challenging experiences aren't off the table. But there's a difference between something that's difficult and meaningful, and something that's destabilizing for profit.
+                </p>
+
+                <h2 className="text-2xl font-bold text-foreground mt-8">Why Write This Down?</h2>
+
+                <p>
+                  Because technology companies routinely say one thing and do another. "Don't be evil" becomes a punchline. "Connecting people" becomes surveillance capitalism. "Democratizing information" becomes algorithmic radicalization.
+                </p>
+
+                <p>
+                  We're not naive enough to think writing principles down prevents drift. But it does create a reference point—something we can be held to, something collaborators can point to when decisions get made.
+                </p>
+
+                <p className="text-foreground font-medium">
+                  If we violate these principles, call us out. If something we build turns out to cause harm we didn't anticipate, we want to know. The point isn't to be perfect—it's to be accountable.
+                </p>
+
+                <h2 className="text-2xl font-bold text-foreground mt-8">What We're Not</h2>
+
+                <div className="p-6 rounded-lg bg-red-500/10 border border-red-500/30">
+                  <p className="text-muted-foreground mb-4">
+                    To be clear about what Apex Omnis is NOT:
+                  </p>
+                  <ul className="list-disc list-inside space-y-2 ml-4">
+                    <li>We are not a secret order, cult, or spiritual authority</li>
+                    <li>We do not claim to offer destiny-shaping, mind-reading, or mystical capabilities</li>
+                    <li>We are not selling AI magic or breakthrough technology that transcends normal constraints</li>
+                    <li>We do not trivialize war, trauma, or oppression as engagement hooks or narrative devices</li>
+                  </ul>
+                  <p className="text-muted-foreground mt-4">
+                    We're a studio. We build things. We try to build them well and build them ethically. That's it.
+                  </p>
                 </div>
-
-                <h2 className="text-2xl font-bold text-foreground mt-8">Transparency & Accountability</h2>
-
-                <p>
-                  We believe in transparent business practices:
-                </p>
-
-                <ul className="list-disc list-inside space-y-2 ml-4">
-                  <li><strong>Open Pricing:</strong> No hidden fees, no bait-and-switch tactics. You know exactly what you're paying for.</li>
-                  <li><strong>Clear Terms:</strong> Our acceptable use policy explicitly prohibits scalping, spam, and community exploitation.</li>
-                  <li><strong>Right to Refuse Service:</strong> We reserve the right to terminate service for users who violate our community principles.</li>
-                  <li><strong>No Dark Patterns:</strong> Our tools are designed to help you work smarter, not trick you into subscriptions or upsells.</li>
-                  <li><strong>Data Privacy:</strong> Your collection data, lesson plans, and creative projects are yours. We don't sell your data or use it for training AI models.</li>
-                </ul>
-
-                <h2 className="text-2xl font-bold text-foreground mt-8">Join the Movement</h2>
-
-                <p>
-                  We're building a community of ethical automation users who believe technology should serve people, not exploit them. If you share these values:
-                </p>
-
-                <ul className="list-disc list-inside space-y-2 ml-4">
-                  <li>You're a collector who wants to enjoy your hobby without competing against bots</li>
-                  <li>You're a teacher who wants more time for students, not more administrative burden</li>
-                  <li>You're a creative who wants to build something meaningful, not spam the internet</li>
-                </ul>
-
-                <p className="font-semibold text-foreground mt-4">
-                  Then you're in the right place. Let's build something better together.
-                </p>
               </div>
             </motion.div>
           </div>

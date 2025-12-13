@@ -118,7 +118,7 @@ export default function Home() {
                 <h2 className="text-xl md:text-2xl font-bold bg-gradient-to-r from-cyan-400 to-purple-600 bg-clip-text text-transparent">
                   Apex Omnis Studios
                 </h2>
-                <p className="text-sm text-muted-foreground">Automation for Gamers, Teachers, and Creatives</p>
+                <p className="text-sm text-muted-foreground">Tools and stories that serve life, not mystique</p>
               </div>
             </div>
             
@@ -144,20 +144,20 @@ export default function Home() {
               <div className="inline-block">
                 <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-cyan-500/10 border border-cyan-500/20">
                   <Sparkles className="w-4 h-4 text-cyan-400" />
-                  <span className="text-sm text-cyan-400 font-medium">Intelligence, Impact, Imagination</span>
+                  <span className="text-sm text-cyan-400 font-medium">The Studio Arm of the Apex Ecosystem</span>
                 </div>
               </div>
-              
+
               <h1 className="text-4xl md:text-6xl font-bold tracking-tight">
                 <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent animate-gradient">
-                  Keep Your Business
+                  Building Tools
                 </span>
                 <br />
-                <span className="text-foreground">In Your Control</span>
+                <span className="text-foreground">That Serve Life</span>
               </h1>
-              
+
               <p className="text-lg md:text-xl text-muted-foreground">
-                AI is transforming business—but you don't have to lose control. We build custom systems, data tools, and intelligent platforms that <span className="text-foreground font-medium">amplify your expertise</span> without replacing it. Stay competitive, stay efficient, and stay in control.
+                Apex Omnis is where ideas become real things—ethical AI-assisted tools, interactive prototypes, narrative experiences, and collaborations with artists, engineers, and institutions. We build at the intersection of <span className="text-foreground font-medium">media, technology, and civic life</span>, with ethics as a design constraint, not an afterthought.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 pt-4">
@@ -204,7 +204,7 @@ export default function Home() {
 
         {/* About Section */}
         <section id="about" className="container mx-auto px-4 py-16 md:py-24">
-          <motion.div 
+          <motion.div
             className="max-w-4xl mx-auto space-y-8"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -213,28 +213,31 @@ export default function Home() {
           >
             <div className="text-center space-y-4">
               <h2 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-cyan-400 to-purple-600 bg-clip-text text-transparent">
-                About Apex Omnis Studios
+                About the Studio
               </h2>
             </div>
-            
+
             <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
               <p>
-                Apex Omnis Studios emerged from an unusual convergence: education, <span className="text-foreground font-medium">International Studies</span>, and systems thinking. The founder's background in geography, geopolitical analysis, and diplomacy provided a framework for understanding how complex networks interact—how incentives shape behavior, how data reveals hidden patterns, how systems succeed or fail.
-              </p>
-              
-              <p>
-                Before this, there was teaching business in California public schools, helping students navigate careers and technology. Before that, public service work supporting families through health and food assistance programs. The through-line wasn't obvious at first: systems. How games work. How people learn. How data flows. How technology can serve communities without extracting from them.
-              </p>
-              
-              <p className="text-foreground font-medium">
-                Apex Omnis Studios builds intelligent automation for gaming businesses, collectors, and tournament organizers. Custom solutions that scale with vision, not venture capital. Tools that preserve passion, not just profit.
+                Apex Omnis Studios is the <span className="text-foreground font-medium">production arm</span> of the Apex ecosystem—the place where ideas become actual things: tools, prototypes, experiences, and collaborations with artists, engineers, and institutions.
               </p>
 
-              {/* Anti-Extraction Ethics Statement */}
+              <p>
+                The studio emerged from an unusual convergence: education, <span className="text-foreground font-medium">International Studies</span>, and systems thinking. A background in geography, geopolitical analysis, and diplomacy provided a framework for understanding how complex networks interact—how incentives shape behavior, how data reveals hidden patterns, how narratives structure perception. Before that: teaching business in California public schools, public service work supporting families through health and food assistance programs. The through-line became clear: <span className="text-foreground font-medium">the architecture of systems</span>—how they succeed, fail, and shape the people inside them.
+              </p>
+
+              <p>
+                Apex Omnis plays at the intersection of creative storytelling, interactive media, AI-assisted tools, and civic applications. We work with communities who want technology that increases understanding and agency—not platforms designed to extract attention or manufacture dependency.
+              </p>
+
+              {/* Ecosystem Relationship */}
               <div className="mt-8 p-6 rounded-xl bg-gradient-to-r from-cyan-500/10 to-purple-500/10 border border-cyan-500/20">
-                <h3 className="text-xl font-bold text-cyan-400 mb-3">Preserving the Heart of the Hobby</h3>
+                <h3 className="text-xl font-bold text-cyan-400 mb-3">Where We Fit in the Apex Ecosystem</h3>
+                <p className="text-muted-foreground leading-relaxed mb-4">
+                  <span className="text-foreground font-medium">Apex Commons</span> is the public thinking space—analysis, education, and civic engagement. <span className="text-foreground font-medium">Apex Intelligence</span> develops the frameworks and research architectures. <span className="text-foreground font-medium">Apex Omnis</span> is where those ideas get built into real-world experiments—functional tools, narrative projects, and collaborations that test whether the theory actually works.
+                </p>
                 <p className="text-muted-foreground leading-relaxed">
-                  We build tools for <span className="text-foreground font-medium">gamers, collectors, and community builders who love the hobby</span>—not for corporate extraction or market manipulation. When profits outweigh passion and connections get too tight at the top, the heart of the hobby is lost. Our tools empower individuals, not corporations. <a href="/mission" className="text-cyan-400 hover:text-cyan-300 underline font-medium">Read our full mission →</a>
+                  We are an <span className="text-foreground font-medium">emerging studio</span>—currently exploring what ethical production looks like in practice. Some projects are experimental. We say so when they are.
                 </p>
               </div>
             </div>
@@ -256,7 +259,7 @@ export default function Home() {
               className="w-full h-16 object-cover opacity-80"
             />
           </div>
-          <motion.div 
+          <motion.div
             className="text-center space-y-4 mb-12"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -267,11 +270,11 @@ export default function Home() {
               What We Build
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              From idea to launch, we create the tools and platforms that help you monetize your expertise
+              Tools, prototypes, and experiences at the intersection of media, AI, and civic life
             </p>
           </motion.div>
 
-          <motion.div 
+          <motion.div
             className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
@@ -283,9 +286,9 @@ export default function Home() {
                 <div className="flex justify-center">
                   <AnimatedIconBox Icon={Briefcase} color="cyan" size="lg" />
                 </div>
-                <CardTitle className="text-xl">Collector Platforms</CardTitle>
+                <CardTitle className="text-xl">Ethical AI-Assisted Tools</CardTitle>
                 <p className="text-sm text-muted-foreground">
-                  Marketplaces, databases, and tools for niche collectors
+                  Software that increases user understanding and agency—not dependency or manipulation
                 </p>
               </CardHeader>
             </Card>
@@ -295,9 +298,9 @@ export default function Home() {
                 <div className="flex justify-center">
                   <AnimatedIconBox Icon={PieChart} color="purple" size="lg" />
                 </div>
-                <CardTitle className="text-xl">Data Intelligence</CardTitle>
+                <CardTitle className="text-xl">Narrative Design & Interactive Media</CardTitle>
                 <p className="text-sm text-muted-foreground">
-                  Market analysis and custom dashboards for smarter decisions
+                  Story-driven experiences that respect the audience and serve integration, not fracturing
                 </p>
               </CardHeader>
             </Card>
@@ -307,9 +310,9 @@ export default function Home() {
                 <div className="flex justify-center">
                   <AnimatedIconBox Icon={Lightbulb} color="cyan" size="lg" />
                 </div>
-                <CardTitle className="text-xl">Strategy & Consulting</CardTitle>
+                <CardTitle className="text-xl">Civic & Cultural Applications</CardTitle>
                 <p className="text-sm text-muted-foreground">
-                  Turn expertise into scalable systems and workflows
+                  Collaborations with artists, educators, and institutions exploring technology's role in public life
                 </p>
               </CardHeader>
             </Card>
@@ -327,7 +330,7 @@ export default function Home() {
                 className="w-full h-16 object-cover opacity-80"
               />
             </div>
-            <motion.div 
+            <motion.div
               className="text-center space-y-4 mb-12"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -335,10 +338,10 @@ export default function Home() {
               viewport={{ once: true, margin: "-100px" }}
             >
               <h2 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-cyan-400 to-purple-600 bg-clip-text text-transparent">
-                Who We Serve
+                Who We Collaborate With
               </h2>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                From classrooms to startups, we build intelligent systems for diverse missions
+                We work with people who want technology to serve human flourishing—not extract from it
               </p>
             </motion.div>
 
@@ -352,47 +355,11 @@ export default function Home() {
               <Card className="group hover:shadow-xl hover:shadow-cyan-500/10 transition-all duration-300 bg-card/50 backdrop-blur border-border/50">
                 <CardHeader>
                   <AnimatedIconBox Icon={BookOpen} color="cyan" />
-                  <CardTitle className="text-lg">Schools & Educators</CardTitle>
+                  <CardTitle className="text-lg">Educators & Schools</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p className="text-sm text-muted-foreground">
-                    Dashboards, curriculum tools, and educational platforms that empower students and teachers.
-                  </p>
-                </CardContent>
-              </Card>
-
-              <Card className="group hover:shadow-xl hover:shadow-purple-500/10 transition-all duration-300 bg-card/50 backdrop-blur border-border/50">
-                <CardHeader>
-                  <AnimatedIconBox Icon={Briefcase} color="purple" />
-                  <CardTitle className="text-lg">Startups & Businesses</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-sm text-muted-foreground">
-                    AI automation, data intelligence, and custom platforms that help you scale efficiently.
-                  </p>
-                </CardContent>
-              </Card>
-
-              <Card className="group hover:shadow-xl hover:shadow-blue-500/10 transition-all duration-300 bg-card/50 backdrop-blur border-border/50">
-                <CardHeader>
-                  <AnimatedIconBox Icon={TrendingUp} color="cyan" />
-                  <CardTitle className="text-lg">Collectors & Creators</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-sm text-muted-foreground">
-                    Turn your passion into profit with marketplaces, price trackers, and community platforms.
-                  </p>
-                </CardContent>
-              </Card>
-
-              <Card className="group hover:shadow-xl hover:shadow-cyan-500/10 transition-all duration-300 bg-card/50 backdrop-blur border-border/50">
-                <CardHeader>
-                  <AnimatedIconBox Icon={Target} color="cyan" />
-                  <CardTitle className="text-lg">Nonprofits & Orgs</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-sm text-muted-foreground">
-                    Civic tech, data insights, and tools that amplify your social impact and community reach.
+                    Tools that give teachers time back and help students think—not systems that replace human connection.
                   </p>
                 </CardContent>
               </Card>
@@ -400,11 +367,47 @@ export default function Home() {
               <Card className="group hover:shadow-xl hover:shadow-purple-500/10 transition-all duration-300 bg-card/50 backdrop-blur border-border/50">
                 <CardHeader>
                   <AnimatedIconBox Icon={Sparkles} color="purple" />
-                  <CardTitle className="text-lg">Entrepreneurs</CardTitle>
+                  <CardTitle className="text-lg">Artists & Storytellers</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p className="text-sm text-muted-foreground">
-                    From idea to launch, we help you build the systems and platforms that bring your vision to life.
+                    Collaborations on narrative projects, interactive experiences, and creative tools that respect the craft.
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card className="group hover:shadow-xl hover:shadow-blue-500/10 transition-all duration-300 bg-card/50 backdrop-blur border-border/50">
+                <CardHeader>
+                  <AnimatedIconBox Icon={TrendingUp} color="cyan" />
+                  <CardTitle className="text-lg">Collectors & Hobbyists</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-sm text-muted-foreground">
+                    Personal tools for people who love their hobby—not industrial scraping for resellers and flippers.
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card className="group hover:shadow-xl hover:shadow-cyan-500/10 transition-all duration-300 bg-card/50 backdrop-blur border-border/50">
+                <CardHeader>
+                  <AnimatedIconBox Icon={Target} color="cyan" />
+                  <CardTitle className="text-lg">Civic Organizations</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-sm text-muted-foreground">
+                    Technology for public good—with explicit ethical conditions and clear boundaries on surveillance uses.
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card className="group hover:shadow-xl hover:shadow-purple-500/10 transition-all duration-300 bg-card/50 backdrop-blur border-border/50">
+                <CardHeader>
+                  <AnimatedIconBox Icon={Briefcase} color="purple" />
+                  <CardTitle className="text-lg">Independent Researchers</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-sm text-muted-foreground">
+                    Data tools and frameworks for people doing serious analysis outside institutional gatekeeping.
                   </p>
                 </CardContent>
               </Card>
@@ -412,11 +415,11 @@ export default function Home() {
               <Card className="group hover:shadow-xl hover:shadow-blue-500/10 transition-all duration-300 bg-card/50 backdrop-blur border-border/50">
                 <CardHeader>
                   <AnimatedIconBox Icon={Lightbulb} color="cyan" />
-                  <CardTitle className="text-lg">Niche Communities</CardTitle>
+                  <CardTitle className="text-lg">Community Builders</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p className="text-sm text-muted-foreground">
-                    Custom solutions for specialized markets, hobbies, and communities that need tailored tech.
+                    Platforms that strengthen communities rather than extracting value from them.
                   </p>
                 </CardContent>
               </Card>
@@ -463,7 +466,7 @@ export default function Home() {
               </CardHeader>
               <CardContent className="space-y-4">
                 <p className="text-muted-foreground">
-                  Apex Commons is where we give back. Focused on civic tech, educational access, and creative empowerment, this branch supports schools, educators, and community orgs with free tools, curriculum resources, and workshops.
+                  The <span className="text-foreground font-medium">public thinking space</span>. Apex Commons focuses on analysis, education, and civic engagement—supporting schools, educators, and community organizations with free resources, curriculum tools, and public-facing research on how systems work.
                 </p>
                 <AnimatedButton variant="outline" size="sm" className="w-full" asChild>
                   <a href={PROJECTS.commons.url} target="_blank" rel="noopener noreferrer">
@@ -484,7 +487,7 @@ export default function Home() {
               </CardHeader>
               <CardContent className="space-y-4">
                 <p className="text-muted-foreground">
-                  Inspired by trading cards, strategy games, and real-world data, Apex Intelligence Society is a unique platform that blends research, curation, and gamified intelligence.
+                  The <span className="text-foreground font-medium">frameworks layer</span>. Apex Intelligence Society develops research architectures and analytical frameworks—blending systems analysis, curation, and structured inquiry into how power, media, and technology interact.
                 </p>
                 <AnimatedButton variant="outline" size="sm" className="w-full" asChild>
                   <a href={PROJECTS.society.url} target="_blank" rel="noopener noreferrer">
@@ -505,7 +508,7 @@ export default function Home() {
               </CardHeader>
               <CardContent className="space-y-4">
                 <p className="text-muted-foreground">
-                  ApexIntelligence.io is our publishing layer—the digital library of Apex Omnis Studios. It's where we share original research, insights, tools, and thoughts on AI, data, society, and creativity.
+                  The <span className="text-foreground font-medium">publishing layer</span>. ApexIntelligence.io shares original research, essays, and insights—public writing on AI, narrative architecture, and the UX of power for people who want to understand how things actually work.
                 </p>
                 <AnimatedButton variant="outline" size="sm" className="w-full" asChild>
                   <a href={PROJECTS.intelligence.url} target="_blank" rel="noopener noreferrer">
@@ -661,7 +664,7 @@ export default function Home() {
                 Let's Build Something Together
               </h2>
               <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
-                Whether you're a collector, entrepreneur, or creative, we're here to help you design systems that turn your passion into a sustainable business.
+                If you're working on something that needs ethical technology, narrative design, or interactive tools—and you care about getting it right—we'd like to hear from you.
               </p>
               <ContactForm />
             </div>
@@ -679,7 +682,7 @@ export default function Home() {
                 </h3>
               </div>
               <p className="text-sm text-muted-foreground">
-                Creative tech built for collectors, entrepreneurs, and innovators.
+                A studio building ethically-aware tools, stories, and systems at the intersection of media, AI, and civic life.
               </p>
             </div>
 
